@@ -28,4 +28,8 @@ return [
     'SEO_TITLE_HOME' => 'Home page',
 
     'PAGE_NOT_FOUND' => 'The page you tried to access was not found.',
+    'NAVIGATION' => 'Navigation',
+    'SOCIAL_MEDIA' => 'Social media',
+    'DEVELOPED_BY' => 'Developed by',
+    'STORYSET_TEXT' => 'Illustrations by'
 ];

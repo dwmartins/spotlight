@@ -1,0 +1,61 @@
+@keyframes showPage {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.showPage {
+    opacity: 0;
+    animation: showPage 0.3s ease-in-out forwards;
+}
+
+/**/
+
+@keyframes showItem {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.showItem {
+    opacity: 0;
+    animation: showItem 0.3s ease-in-out forwards;
+}
+
+/**/
+
+.fadeIn {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fadeOut {
+    animation: fadeOut 0.5s ease forwards;
+}
+  
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}

@@ -35,16 +35,18 @@ return Application::configure(basePath: dirname(__DIR__))
         });
 
         //Handles general errors
-        $exceptions->render(function (Throwable $e, Request $request) {
-            if ($request->is('api/*')) {
-                return response()->json([
+        if(!env('APP_DEBUG')) {
+            $exceptions->render(function (Throwable $e, Request $request) {
+                if ($request->is('api/*')) {
+                    return response()->json([
+                        'message' => 'Oops, an error occurred, please try again.'
+                    ], 500);
+                }
+    
+                return response()->view('errors.general', [
                     'message' => 'Oops, an error occurred, please try again.'
                 ], 500);
-            }
-
-            return response()->view('errors.general', [
-                'message' => 'Oops, an error occurred, please try again.'
-            ], 500);
-        });
+            });
+        }
 
     })->create();
