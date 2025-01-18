@@ -5,7 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>Laravel</title>
+        <title>{{ isset($custom_seo_title) ? $custom_seo_title : $seo['title'] }}</title>
+
+        <meta name="description" content="{{ $seo['description'] }}">
+        <meta name="keywords" content="{{ $seo['keywords'] }}">
+        <link rel="icon" href="{{ $seo['icon'] }}">
 
         <!-- font-awesome -->
         <script src="https://kit.fontawesome.com/b019fa643e.js" crossorigin="anonymous"></script>
