@@ -13,7 +13,8 @@ use Illuminate\Support\ServiceProvider;
 
 class AppSettingsProvider extends ServiceProvider
 {
-    private $cacheKey = 'settings_all';
+    private $settingCacheKey = 'settings_all';
+    private $siteInfoCacheKey = 'site_info';
     
     /**
      * Register services.
@@ -33,11 +34,11 @@ class AppSettingsProvider extends ServiceProvider
 
     public function handle() {
         // Fetch the bank settings
-        $settings = Cache::get($this->cacheKey);
+        $settings = Cache::get($this->settingCacheKey);
 
         if(!$settings) {
             $settings = Settings::pluck('value', 'name')->toArray();
-            Cache::put('settings_all', $settings, now()->addMinutes(config('constants.cache_time')));
+            Cache::put($this->settingCacheKey, $settings, now()->addMinutes(config('constants.cache_time')));
         }
 
         // Set the language (if found in the database, otherwise 'pt-BR')
@@ -102,7 +103,12 @@ class AppSettingsProvider extends ServiceProvider
     }
 
     private function setWebsiteInfo() {
-        $siteInfo = WebsiteInfo::first();
+        $siteInfo = Cache::get($this->siteInfoCacheKey);
+
+        if(!$siteInfo) {
+            $siteInfo = WebsiteInfo::first();
+            Cache::put($this->siteInfoCacheKey, $siteInfo, now()->addMinutes(config('constants.cache_time')));
+        }
 
         $defaultPath = "/assets/images/default";
         $imagesPath = "/storage/site/";
