@@ -18,4 +18,9 @@ return [
     'NAV_NAME_USER_PANEL' => 'User Panel',
     'NAV_NAME_USER_PROFILE' => 'User Profile',
     'NAV_NAME_USER_LOGOUT' => 'Logout',
+
+    // SEO Titles
+    'SEO_TITLE_PAGE_NOT_FOND' => "Page not found",
+
+    'PAGE_NOT_FOUND' => 'The page you tried to access was not found.',
 ];

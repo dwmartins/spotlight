@@ -18,4 +18,9 @@ return [
     'NAV_NAME_USER_PANEL' => 'Painel de Usuário',
     'NAV_NAME_USER_PROFILE' => 'Perfil do Usuário',
     'NAV_NAME_USER_LOGOUT' => 'Sair',
+
+    // SEO Titles
+    'SEO_TITLE_PAGE_NOT_FOND' => "Página não encontrada",
+
+    'PAGE_NOT_FOUND' => 'A página que você tentou acessar não foi encontrada.',
 ];
