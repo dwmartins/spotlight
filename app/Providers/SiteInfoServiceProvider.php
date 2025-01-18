@@ -25,6 +25,7 @@ class SiteInfoServiceProvider extends ServiceProvider
             $siteInfo = WebsiteInfo::first();
 
             $defaultPath = "/assets/images/default";
+            $imagesPath = "/storage/site/";
     
             view()->share('website_websiteName', $siteInfo ? $siteInfo->webSiteName : null);
             view()->share('website_email', $siteInfo ? $siteInfo->email : null);
@@ -38,10 +39,10 @@ class SiteInfoServiceProvider extends ServiceProvider
             view()->share('website_description', $siteInfo ? $siteInfo->description : null);
             view()->share('website_keywords', $siteInfo ? $siteInfo->keywords : null);
     
-            view()->share('website_icon', $siteInfo && $siteInfo->icon ? $siteInfo->icon : "$defaultPath/icon.ico");
-            view()->share('website_logoImage', $siteInfo && $siteInfo->logoImage ? $siteInfo->logoImage : "$defaultPath/logo.png");
-            view()->share('website_coverImage', $siteInfo && $siteInfo->coverImage ? $siteInfo->coverImage : "$defaultPath/coverImage.jpg");
-            view()->share('website_defaultImage', $siteInfo && $siteInfo->defaultImage ? $siteInfo->defaultImage : "$defaultPath/defaultImg.png");
+            view()->share('website_icon', $siteInfo && $siteInfo->icon ? "$imagesPath/$siteInfo->icon" : "$defaultPath/icon.ico");
+            view()->share('website_logoImage', $siteInfo && $siteInfo->logoImage ? "$imagesPath/$siteInfo->logoImage" : "$defaultPath/logo.png");
+            view()->share('website_coverImage', $siteInfo && $siteInfo->coverImage ?  "$imagesPath/$siteInfo->coverImage" : "$defaultPath/coverImage.jpg");
+            view()->share('website_defaultImage', $siteInfo && $siteInfo->defaultImage ? "$imagesPath/$siteInfo->defaultImage" : "$defaultPath/defaultImg.png");
         }
     }
 }

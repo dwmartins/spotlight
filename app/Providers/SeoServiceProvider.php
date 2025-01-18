@@ -34,7 +34,7 @@ class SeoServiceProvider extends ServiceProvider
                 'title' => $seoData && $seoData->webSiteName ? $seoData->webSiteName : $defaultSeoData['title'],
                 'description' => $seoData && $seoData->description ? $seoData->description : null,
                 'keywords' => $seoData && $seoData->keywords ? $seoData->keywords : null,
-                'icon' => $seoData && $seoData->icon ? $seoData->icon : $defaultSeoData['icon']
+                'icon' => $seoData && $seoData->icon ? "/storage/site/$seoData->icon" : $defaultSeoData['icon']
             ];
 
             Config::set('webSiteName', $seo['title']);
