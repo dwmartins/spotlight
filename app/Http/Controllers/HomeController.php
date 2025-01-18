@@ -15,5 +15,3 @@ class HomeController extends Controller
         ]);
     }
 }
-
-// ADICIONAR TODAS AS INFORMAÇÕES DO SITE NA CONFIG(""); !!!!!!!!!!!!!!!!!!!!!

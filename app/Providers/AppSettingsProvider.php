@@ -1,21 +1,37 @@
 <?php
 
-namespace App\Http\Middleware;
+namespace App\Providers;
 
 use App\Models\Settings;
 use App\Models\WebsiteInfo;
-use Closure;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\ServiceProvider;
 
-class LoadSettings {
+class AppSettingsProvider extends ServiceProvider
+{
     private $cacheKey = 'settings_all';
+    
+    /**
+     * Register services.
+     */
+    public function register(): void
+    {
+        //
+    }
 
-    public function handle(Request $request, Closure $next) {
+    /**
+     * Bootstrap services.
+     */
+    public function boot(): void
+    {
+        $this->handle();
+    }
+
+    public function handle() {
         // Fetch the bank settings
         $settings = Cache::get($this->cacheKey);
 
@@ -35,8 +51,6 @@ class LoadSettings {
 
         // set website infos
         $this->setWebsiteInfo();
-
-        return $next($request);
     }
 
     private function setLocale($settings) {

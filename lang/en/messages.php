@@ -1,6 +1,9 @@
 <?php
 
 return [
+    // Path to public pages
+    'PUBLIC_PATH_LOGIN' => '/login',
+
     // Name of navigation
     'NAV_NAME_HOME' => 'Home',
     'NAV_NAME_LISTINGS' => 'Listings',
@@ -20,7 +23,9 @@ return [
     'NAV_NAME_USER_LOGOUT' => 'Logout',
 
     // SEO Titles
-    'SEO_TITLE_PAGE_NOT_FOND' => "Page not found",
+    'SEO_TITLE_PAGE_NOT_FOND' => 'Page not found',
+    'SEO_TITLE_LOGIN' => 'Login',
+    'SEO_TITLE_HOME' => 'Home page',
 
     'PAGE_NOT_FOUND' => 'The page you tried to access was not found.',
 ];

@@ -120,11 +120,11 @@
             @guest
                 <div class="flex logged_large">
                     <a href="/" class="btn btn-light border btn-sm me-2 fw-semibold text-dark opacity-75">
-                        {{ __('messages.BUTTON_ADVERTISE_HERE') }}
+                        {{ trans('messages.BUTTON_ADVERTISE_HERE') }}
                     </a>
 
-                    <a href="/" class="btn btn-primary btn-sm fw-semibold rounded-1">
-                        {{ __('messages.NAV_NAME_LOGIN') }}
+                    <a href="{{ route('public_login') }}" class="btn btn-primary btn-sm fw-semibold rounded-1">
+                        {{ trans('messages.NAV_NAME_LOGIN') }}
                     </a>
                 </div>
             @endguest
