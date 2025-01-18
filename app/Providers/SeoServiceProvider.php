@@ -37,8 +37,6 @@ class SeoServiceProvider extends ServiceProvider
                 'icon' => $seoData && $seoData->icon ? "/storage/site/$seoData->icon" : $defaultSeoData['icon']
             ];
 
-            Config::set('webSiteName', $seo['title']);
-
             view()->share('seo', $seo);
         }
     }

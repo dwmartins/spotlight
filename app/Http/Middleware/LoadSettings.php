@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use App\Models\Settings;
+use App\Models\WebsiteInfo;
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
@@ -31,6 +32,9 @@ class LoadSettings {
 
         // Set default date (if found in database)
         $this->setDateFormat($settings);
+
+        // set website infos
+        $this->setWebsiteInfo();
 
         return $next($request);
     }
@@ -81,5 +85,32 @@ class LoadSettings {
     private function setDateFormat($settings) {
         $dateFormat = $settings['date_format'] ?? 'DD-MM-YYYY';
         Config::set('app.date_format', $dateFormat);
+    }
+
+    private function setWebsiteInfo() {
+        $siteInfo = WebsiteInfo::first();
+
+        $defaultPath = "/assets/images/default";
+        $imagesPath = "/storage/site/";
+
+        $websiteData = [
+            'websiteName' => $siteInfo ? $siteInfo->webSiteName : "My listings site",
+            'email' => $siteInfo ? $siteInfo->email : null,
+            'phone' => $siteInfo ? $siteInfo->phone : null,
+            'city' => $siteInfo ? $siteInfo->city : null,
+            'state' => $siteInfo ? $siteInfo->state : null,
+            'address' => $siteInfo ? $siteInfo->address : null,
+            'instagram' => $siteInfo ? $siteInfo->instagram : null,
+            'facebook' => $siteInfo ? $siteInfo->facebook : null,
+            'x' => $siteInfo ? $siteInfo->x : null,
+            'description' => $siteInfo ? $siteInfo->description : null,
+            'keywords' => $siteInfo ? $siteInfo->keywords : null,
+            'icon' => $siteInfo && $siteInfo->icon ? "$imagesPath/$siteInfo->icon" : "$defaultPath/icon.ico",
+            'logoImage' => $siteInfo && $siteInfo->logoImage ? "$imagesPath/$siteInfo->logoImage" : "$defaultPath/logo.png",
+            'coverImage' => $siteInfo && $siteInfo->coverImage ? "$imagesPath/$siteInfo->coverImage" : "$defaultPath/coverImage.jpg",
+            'defaultImage' => $siteInfo && $siteInfo->defaultImage ? "$imagesPath/$siteInfo->defaultImage" : "$defaultPath/defaultImg.png",
+        ];
+
+        Config::set('website_info', $websiteData);
     }
 }

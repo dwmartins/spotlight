@@ -2,7 +2,7 @@
     <div class="container">
         <a href="/" class="navbar-brand">
             <div class="d-flex align-items-center logo_image">
-                <img src="{{ $website_logoImage }}" alt="Logo">
+                <img src="{{ config('website_info.logoImage') }}" alt="Logo">
             </div>
         </a>
 
