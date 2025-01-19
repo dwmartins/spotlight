@@ -169,6 +169,14 @@ input[type="checkbox"]:focus {
     align-items: center;
 }
 
+.icon_show_password {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
 /*--------------------------------------------------------------
 # Public Navigation
 --------------------------------------------------------------*/
@@ -254,4 +262,15 @@ input[type="checkbox"]:focus {
 .public_footer .navbar-nav .nav-link:hover {
     font-weight: 600;
     transition: 0.2s;
+}
+
+/*--------------------------------------------------------------
+# Public Login
+--------------------------------------------------------------*/
+.publicLoginView {
+    height: calc(100vh - 160px);
+}
+
+.publicLoginView .form_login {
+    max-width: 400px;
 }

@@ -31,5 +31,6 @@ return [
     'NAVIGATION' => 'Navigation',
     'SOCIAL_MEDIA' => 'Social media',
     'DEVELOPED_BY' => 'Developed by',
-    'STORYSET_TEXT' => 'Illustrations by'
+    'ILLUSTRATIONS_BY' => 'Illustrations by',
+    'AUTHENTICATION_FAILED' => 'The credentials provided are incorrect.'
 ];

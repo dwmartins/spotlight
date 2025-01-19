@@ -24,13 +24,13 @@
                         <hr>
 
                         <li class="nav-item logged_small">
-                            <a href="{{ route('user.panel') }}" class="nav-link">
+                            <a href="/" class="nav-link">
                                 {{ trans('messages.NAV_NAME_PANEL') }}
                             </a>
                         </li>
 
                         <li class="nav-item logged_small">
-                            <a href="{{ route('user.profile') }}" class="nav-link">
+                            <a href="/" class="nav-link">
                                 {{ trans('messages.NAV_NAME_PROFILE') }}
                             </a>
                         </li>
@@ -133,6 +133,6 @@
     </div>
 </nav>
 
-<form id="logout-form" action="/" method="POST" style="display: none;">
+<form id="logout-form" action="/logout" method="POST" style="display: none;">
     @csrf
 </form>

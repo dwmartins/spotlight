@@ -1,4 +1,4 @@
-<footer class="public_footer bg-gray-200">
+<footer class="public_footer bg-body-tertiary">
     <div class="container py-5">
         <div class="row">
             <div class="col-12 col-sm-4 logo_footer py-2">
@@ -72,7 +72,7 @@
             @endif
         </div>
     </div>
-    <div class="container-fluid gap-3 bg-gray-800 p-3">
+    <div class="container-fluid gap-3 bg-dark bg-opacity-75 p-3">
         <div class="container">
             <div class="row">
                 <p class="col-12 col-sm-6 text-light m-0 fs-7 text-center mb-2 mb-sm-0">

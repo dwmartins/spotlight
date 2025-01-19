@@ -31,5 +31,6 @@ return [
     'NAVIGATION' => 'Navegação',
     'SOCIAL_MEDIA' => 'Redes sociais',
     'DEVELOPED_BY' => 'Desenvolvido por',
-    'STORYSET_TEXT' => 'Ilustrações por'
+    'ILLUSTRATIONS_BY' => 'Ilustrações por',
+    'AUTHENTICATION_FAILED' => 'As credenciais fornecidas estão incorretas.'
 ];
