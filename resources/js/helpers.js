@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 export function showAlert(type, title, messageOrFields) {
     const toastContainer = document.getElementById('toastContainer');
     const toastEl = document.createElement('div');
@@ -79,4 +81,17 @@ export function showAlert(type, title, messageOrFields) {
     toastEl.addEventListener('hidden.bs.toast', function () {
         toastEl.remove();
     });
+}
+
+
+// Function to show or hide the button loading state
+export function showLoadingState(button, isLoading, label = 'Salvar', labelWait = 'Aguarde') {
+    const spinnerHTML = `
+        <span class="m-0 d-flex align-items-center justify-content-center gap-2">
+            <div id="loader"></div>
+            ${labelWait}
+        </span>
+    `;
+
+    $(button).prop('disabled', isLoading).html(isLoading ? spinnerHTML : label);
 }

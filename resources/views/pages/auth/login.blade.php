@@ -28,8 +28,8 @@
                         </label>
                         <a href="/" class="outline_none text-primary fs-7">Esqueci minha senha</a>
                     </div>
-
-                    <button id="btnLogin" class="btn btn-primary w-100">
+                    
+                    <button id="btnLogin" class="btn btn-primary w-100" data-trans-loading="Aguarde...">
                         Entrar
                         <i class="fa-solid fa-arrow-right-to-bracket"></i>
                     </button>
