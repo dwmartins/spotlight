@@ -13,6 +13,7 @@
     },
     "dependencies": {
         "autoprefixer": "^10.4.20",
-        "glob-promise": "^6.0.7"
+        "glob-promise": "^6.0.7",
+        "jquery": "^3.7.1"
     }
 }

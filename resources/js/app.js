@@ -1,6 +1,7 @@
 import { showAlert} from './helpers';
+import $ from 'jquery';
 
-document.addEventListener('DOMContentLoaded', () => {
+$(function() {
     AOS.init();
 
     // Initialize all tooltips automatically
@@ -8,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     var tooltipList = tooltipTriggerList.map((tooltipTriggerEl) => {
         return new bootstrap.Tooltip(tooltipTriggerEl);
     });
-    
+
     // get the notifications if there are any
     if (window.sessionMessage) {
         showAlert(window.sessionMessage.type, window.sessionMessage.title, window.sessionMessage.fields);
