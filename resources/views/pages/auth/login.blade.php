@@ -47,4 +47,6 @@
             </div>
         </div>
     </section>
+
+    @vite('resources/js/auth/index.js')
 @endsection

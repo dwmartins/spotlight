@@ -4,7 +4,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [HomeController::class, 'show']);
+Route::get('/', [HomeController::class, 'show'])->name('home_page');
 
 // Routes for authentication
 Route::middleware(['web'])->group(function () {

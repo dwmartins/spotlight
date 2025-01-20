@@ -26,7 +26,9 @@
         <!-- AOS - Animate -->
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-        @vite('resources/css/app.css') <!-- CSS from Vite -->
+        <!-- CSS from Vite -->
+        @vite('resources/css/app.css')
+        @vite('resources/css/animations.css')
 
         @stack('styles')
     </head>
@@ -44,7 +46,9 @@
         <!-- AOS - Animate -->
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
        
-        @vite('resources/js/app.js') <!-- JS from Vite -->
+        <!-- JS from Vite -->
+        @vite('resources/js/helpers.js') 
+        @vite('resources/js/app.js')
 
         <script>
             window.sessionMessage = @json(session('message'));

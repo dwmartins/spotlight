@@ -29,8 +29,7 @@ class AuthController extends Controller
         if($validator->fails()) {
             $errors = $validator->errors();
 
-            return back()->withInput()
-            ->with('message', ['type' => 'error', 'fields' => $errors]);
+            return redirectWithMessage('error', 'Campos invalidos', $errors);
         }
 
         $credentials = $request->only('email', 'password');
@@ -41,16 +40,12 @@ class AuthController extends Controller
                 if(Auth::attempt($credentials)) {
                     $request->session()->regenerate();
         
-                    return redirect()
-                        ->intended('/')
-                        ->with('message', ['type' => 'success', 'text' => 'Login efetuado com sucesso!']);
+                    return redirectWithMessage('success', '', 'Login efetuado com sucesso!', 'home_page');
                 }
             }
         }
 
-        return back()
-            ->withInput()
-            ->with('message', ['type' => 'error', 'text' => trans('messages.AUTHENTICATION_FAILED')]);
+        return redirectWithMessage('error', '', trans('messages.AUTHENTICATION_FAILED'));
     } 
 
     public function logout(Request $request)
@@ -60,6 +55,6 @@ class AuthController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-        return redirect('/')->with('message', ['type' => 'success', 'text' => 'Você saiu com sucesso!']);
+        return redirectWithMessage('success', '', 'Você saiu com sucesso!', 'home_page');
     }
 }
