@@ -85,13 +85,21 @@ export function showAlert(type, title, messageOrFields) {
 
 
 // Function to show or hide the button loading state
-export function showLoadingState(button, isLoading, label = 'Salvar', labelWait = 'Aguarde') {
+export function toggleButtonLoading(button, isLoading) {
+    
+    if (!button.data('original-text')) {
+        button.data('original-text', button.text());
+    }
+    
+    const loadingText = button.data('trans-loading');
+    const originalText = button.data('original-text');
+
     const spinnerHTML = `
         <span class="m-0 d-flex align-items-center justify-content-center gap-2">
             <div id="loader"></div>
-            ${labelWait}
+            ${loadingText}
         </span>
     `;
 
-    $(button).prop('disabled', isLoading).html(isLoading ? spinnerHTML : label);
+    $(button).prop('disabled', isLoading).html(isLoading ? spinnerHTML : originalText);
 }
