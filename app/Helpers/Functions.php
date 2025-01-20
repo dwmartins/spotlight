@@ -1,4 +1,7 @@
-<?php 
+<?php
+
+use App\Models\Settings;
+use Illuminate\Support\Facades\Cache;
 
 /**
  * @param string $messageType The type of message to display. Can be 'success', 'error', 'info', etc.

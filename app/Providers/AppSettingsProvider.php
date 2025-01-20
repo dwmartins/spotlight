@@ -41,6 +41,8 @@ class AppSettingsProvider extends ServiceProvider
             Cache::put($this->settingCacheKey, $settings, now()->addMinutes(config('constants.cache_time')));
         }
 
+        Config::set('website_settings', $settings);
+
         // Set the language (if found in the database, otherwise 'pt-BR')
         $this->setLocale($settings);
 

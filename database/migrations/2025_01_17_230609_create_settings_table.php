@@ -26,6 +26,7 @@ return new class extends Migration
             ['name' => 'clock_type', 'value' => 24],
             ['name' => 'compress_image', 'value' => 'off'],
             ['name' => 'maintenance', 'value' => 'off'],
+            ['name' => 'min_password_length', 'value' => 6]
         ];
 
         foreach ($settings as $setting) {

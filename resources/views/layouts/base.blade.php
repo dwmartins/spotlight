@@ -52,6 +52,7 @@
 
         <script>
             window.sessionMessage = @json(session('message'));
+            window.website_settings = @json(config('website_settings'));
         </script>
 
         @stack('scripts')
