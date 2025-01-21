@@ -13,6 +13,8 @@
 
         <!-- font-awesome -->
         <script src="https://kit.fontawesome.com/b019fa643e.js" crossorigin="anonymous"></script>
+
+        @vite('resources/js/translations/' . app()->getLocale() . '.js')
         @stack('scripts')
 
         <!-- Bootstrap CSS -->

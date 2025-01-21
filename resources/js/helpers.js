@@ -1,5 +1,28 @@
 import $ from 'jquery';
 
+/**
+ * Retrieves a translated string and replaces placeholders.
+ *
+ * @param {string} key - The translation key to look up.
+ * @param {Object} [replacements={}] - Key-value pairs for placeholder replacements.
+ *   Example: { attribute: 'name' }
+ * @returns {string} - Translated string with placeholders replaced, or the key if not found.
+ *
+ * @example
+ * trans('FIELD_REQUIRED', { attribute: 'name' });
+ * // Returns: "The name field is required."
+ */
+export function trans(key, replacements = {}) {
+    let text = window.Translations[key] || key;
+
+    for (const [placeholder, value] of Object.entries(replacements)) {
+        const regex = new RegExp(`:${placeholder}`, 'g');
+        text = text.replace(regex, value);
+    }
+
+    return text;
+}
+
 export function showAlert(type, title, messageOrFields) {
     const toastContainer = document.getElementById('toastContainer');
     const toastEl = document.createElement('div');
@@ -43,7 +66,7 @@ export function showAlert(type, title, messageOrFields) {
             })
             .join('');
     } else {
-        messageHtml = `<span class="text-secondary">${messageOrFields}</span>`;
+        messageHtml = `<span class="text-secondary ">${messageOrFields}</span>`;
     }
 
     if(titleHtml) {
