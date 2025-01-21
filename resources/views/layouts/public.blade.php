@@ -3,6 +3,7 @@
 @section('title', 'Site - Minha Aplicação')
 
 @section('content')
+    @include('components.admin.adminBar')
     @include('components.public.header')
 
     <main class="container mt-4">

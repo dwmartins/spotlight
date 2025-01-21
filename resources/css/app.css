@@ -300,3 +300,12 @@ input[type="checkbox"]:focus {
 .publicLoginView .form_login {
     max-width: 400px;
 }
+
+/*--------------------------------------------------------------
+# Component adminBar
+--------------------------------------------------------------*/
+@media screen and (max-width: 360px) {
+    #adminBarComponent .publish p {
+        display: none;
+    }
+}

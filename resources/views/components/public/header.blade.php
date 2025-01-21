@@ -133,6 +133,4 @@
     </div>
 </nav>
 
-<form id="logout-form" action="/logout" method="POST" style="display: none;">
-    @csrf
-</form>
+@include('components.shared.logout')

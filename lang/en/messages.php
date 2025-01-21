@@ -32,5 +32,8 @@ return [
     'SOCIAL_MEDIA' => 'Social media',
     'DEVELOPED_BY' => 'Developed by',
     'ILLUSTRATIONS_BY' => 'Illustrations by',
-    'AUTHENTICATION_FAILED' => 'The credentials provided are incorrect.'
+    'AUTHENTICATION_FAILED' => 'The credentials provided are incorrect.',
+    'DASHBOARD' => 'Dashboard',
+    'MAINTENANCE_ALERT' => 'Site under maintenance',
+    'PUBLISH' => 'Publish'
 ];

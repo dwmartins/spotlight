@@ -32,5 +32,8 @@ return [
     'SOCIAL_MEDIA' => 'Redes sociais',
     'DEVELOPED_BY' => 'Desenvolvido por',
     'ILLUSTRATIONS_BY' => 'Ilustrações por',
-    'AUTHENTICATION_FAILED' => 'As credenciais fornecidas estão incorretas.'
+    'AUTHENTICATION_FAILED' => 'As credenciais fornecidas estão incorretas.',
+    'DASHBOARD' => 'Dashboard',
+    'MAINTENANCE_ALERT' => 'Site em manutenção',
+    'PUBLISH' => 'Publicar'
 ];

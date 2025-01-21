@@ -45,4 +45,12 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    /**
+     * @return Boolean Returns true or false if the user has access to the App/Dashboard
+     */
+    public function hasAppAccess() 
+    {
+        return in_array($this->role, config('constants.has_access_app'));
+    }
 }
