@@ -29,7 +29,7 @@ class AuthController extends Controller
         if($validator->fails()) {
             $errors = $validator->errors();
 
-            return redirectWithMessage('error', 'Campos invalidos', $errors);
+            return redirectWithMessage('error', trans('messages.INVALID_FIELDS_MESSAGE'), $errors);
         }
 
         $remember = $request->has('rememberMe');
@@ -44,7 +44,7 @@ class AuthController extends Controller
                     
                     $user->updateLastLogin();
         
-                    return redirectWithMessage('success', '', 'Login efetuado com sucesso!', 'home_page');
+                    return redirectWithMessage('success', '', trans('messages.LOGIN_SUCCESSFULLY_MESSAGE'), 'home_page');
                 }
             }
         }
@@ -59,6 +59,6 @@ class AuthController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-        return redirectWithMessage('success', '', 'Você saiu com sucesso!', 'home_page');
+        return redirectWithMessage('success', '', trans('messages.LOGOUT_SUCCESSFULLY_MESSAGE'), 'home_page');
     }
 }

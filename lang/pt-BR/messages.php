@@ -35,5 +35,8 @@ return [
     'AUTHENTICATION_FAILED' => 'As credenciais fornecidas estão incorretas.',
     'DASHBOARD' => 'Dashboard',
     'MAINTENANCE_ALERT' => 'Site em manutenção',
-    'PUBLISH' => 'Publicar'
+    'PUBLISH' => 'Publicar',
+    'LOGIN_SUCCESSFULLY_MESSAGE' => 'Login efetuado com sucesso!',
+    'INVALID_FIELDS_MESSAGE' => 'Campos inválidos',
+    'LOGOUT_SUCCESSFULLY_MESSAGE' => 'Você saiu com sucesso!'
 ];

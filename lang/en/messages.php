@@ -35,5 +35,8 @@ return [
     'AUTHENTICATION_FAILED' => 'The credentials provided are incorrect.',
     'DASHBOARD' => 'Dashboard',
     'MAINTENANCE_ALERT' => 'Site under maintenance',
-    'PUBLISH' => 'Publish'
+    'PUBLISH' => 'Publish',
+    'LOGIN_SUCCESSFULLY_MESSAGE' => 'Login successful!',
+    'INVALID_FIELDS_MESSAGE' => 'Invalid fields',
+    'LOGOUT_SUCCESSFULLY_MESSAGE' => 'You have successfully exited!'
 ];
