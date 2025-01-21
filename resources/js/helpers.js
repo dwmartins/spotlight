@@ -23,6 +23,14 @@ export function trans(key, replacements = {}) {
     return text;
 }
 
+/**
+ * @param {string} key 
+ * @returns returns the configuration
+ */
+export function getWebsiteSetting(key) {
+    return window.website_settings[key] || key
+}
+
 export function showAlert(type, title, messageOrFields) {
     const toastContainer = document.getElementById('toastContainer');
     const toastEl = document.createElement('div');
