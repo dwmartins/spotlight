@@ -53,4 +53,12 @@ class User extends Authenticatable
     {
         return in_array($this->role, config('constants.has_access_app'));
     }
+
+    public function updateLastLogin()
+    {
+        $this->timestamps = false;
+        $this->last_login_at = now();
+        $this->save();
+        $this->timestamps = true;
+    }
 }

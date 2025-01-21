@@ -32,13 +32,17 @@ class AuthController extends Controller
             return redirectWithMessage('error', 'Campos invalidos', $errors);
         }
 
+        $remember = $request->has('rememberMe');
+
         $credentials = $request->only('email', 'password');
         $user = User::where('email', $credentials['email'])->first();
 
         if($user) {
             if($user->active === 'Y') {
-                if(Auth::attempt($credentials)) {
+                if(Auth::attempt($credentials, $remember)) {
                     $request->session()->regenerate();
+                    
+                    $user->updateLastLogin();
         
                     return redirectWithMessage('success', '', 'Login efetuado com sucesso!', 'home_page');
                 }

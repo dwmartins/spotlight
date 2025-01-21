@@ -29,6 +29,10 @@ class AppSettingsProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        if (App::runningInConsole()) {
+            return;
+        }
+
         $this->handle();
     }
 
