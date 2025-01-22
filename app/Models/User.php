@@ -61,4 +61,16 @@ class User extends Authenticatable
         $this->save();
         $this->timestamps = true;
     }
+
+    public function getAvatar()
+    {
+        return $this->avatar ?
+            config('constants.path_to_user_avatars') . $this->avatar :
+            config('constants.path_to_default_avatar');
+    }
+
+    public function getFullName()
+    {
+        return $this->lastName ? $this->name .' '. $this->lastName : $this->name;
+    }
 }

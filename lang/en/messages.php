@@ -3,6 +3,10 @@
 return [
     // Path to public pages
     'PUBLIC_PATH_LOGIN' => '/login',
+    'PUBLIC_PATH_USER_PANEL' => '/panel',
+
+    // Prefix to route  
+    'PATH_PREFIX_USER' => 'user',
 
     // Name of navigation
     'NAV_NAME_HOME' => 'Home',
@@ -38,5 +42,13 @@ return [
     'PUBLISH' => 'Publish',
     'LOGIN_SUCCESSFULLY_MESSAGE' => 'Login successful!',
     'INVALID_FIELDS_MESSAGE' => 'Invalid fields',
-    'LOGOUT_SUCCESSFULLY_MESSAGE' => 'You have successfully exited!'
+    'LOGOUT_SUCCESSFULLY_MESSAGE' => 'You have successfully exited!',
+    'GOOD_MORNING' => 'Good morning',
+    'GOOD_AFTERNOON' => 'Good afternoon',
+    'GOOD_NIGHT' => 'Good night',
+    'WELCOME_TO_YOU_AREA' => 'Welcome to your user area! Here you can manage your ads and view personal information. Have full control over the content you share and keep your data up to date.',
+    'DONT_HAVE_ADS' => "It looks like you don't have any ads on our site.",
+    'ADVERTISE_NOW' => 'Advertise Now',
+    'EDIT_PROFILE' => 'Edit profile',
+    'MEMBER_SINCE' => 'Member since',
 ];

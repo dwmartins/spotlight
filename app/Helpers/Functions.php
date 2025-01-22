@@ -21,3 +21,27 @@ function redirectWithMessage($messageType, $title, $messageOrFields, $route = nu
 
     return back()->withInput()->with('message', $message);
 }
+
+function setGreeting() {
+    $hour = date('G');
+
+    if ($hour >= 6 && $hour < 12) {
+        return trans('messages.GOOD_MORNING');
+    } elseif ($hour >= 12 && $hour < 18) {
+        return trans('messages.GOOD_AFTERNOON');
+    } else {
+        return trans('messages.GOOD_NIGHT');
+    }
+}
+
+function getDateAsString($date) {
+    $dateTime = new DateTime($date);
+
+    $formatter = new IntlDateFormatter(
+        app()->getLocale(),
+        IntlDateFormatter::LONG,
+        IntlDateFormatter::NONE
+    );
+
+    return $formatter->format($dateTime);
+}

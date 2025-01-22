@@ -4,7 +4,7 @@
     <section class="publicLoginView container item_center">
         <div class="row w-100">
             <div class="col-sm-12 col-md-6 col-xl-7 item_center" data-aos="fade-right">
-                <form action="{{ route('login') }}" method="post" class="form_login w-100">
+                <form action="/login" method="post" class="form_login w-100">
                     @csrf
                     <h1 class="text-center text-secondary-emphasis mb-3">Entrar</h1>
 

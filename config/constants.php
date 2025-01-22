@@ -15,4 +15,10 @@ return [
     // List of roles that have access to the site's administrative panel
     // Only users with these roles will be able to access the dashboard's features.
     'has_access_app' => ['support', 'admin', 'mod', 'test'],
+
+    // path to user avatars
+    'path_to_user_avatars' => '/storage/users/avatars/',
+
+    // paths to default avatar
+    'path_to_default_avatar' => '/assets/images/default/avatar.jpg'
 ];

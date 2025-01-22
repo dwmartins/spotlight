@@ -3,6 +3,10 @@
 return [
     // Path to public pages
     'PUBLIC_PATH_LOGIN' => '/entrar',
+    'PUBLIC_PATH_USER_PANEL' => '/painel',
+
+    // Prefix to route  
+    'PATH_PREFIX_USER' => 'usuario',
 
     // Name of navigation
     'NAV_NAME_HOME' => 'Início',
@@ -38,5 +42,14 @@ return [
     'PUBLISH' => 'Publicar',
     'LOGIN_SUCCESSFULLY_MESSAGE' => 'Login efetuado com sucesso!',
     'INVALID_FIELDS_MESSAGE' => 'Campos inválidos',
-    'LOGOUT_SUCCESSFULLY_MESSAGE' => 'Você saiu com sucesso!'
+    'LOGOUT_SUCCESSFULLY_MESSAGE' => 'Você saiu com sucesso!',
+    'GOOD_MORNING' => 'Bom dia',
+    'GOOD_AFTERNOON' => 'Boa tarde',
+    'GOOD_NIGHT' => 'Boa noite',
+    'WELCOME_TO_YOU_AREA' => 'Bem-vindo à sua área do usuário! Aqui, você pode gerenciar seus anúncios e visualizar informações pessoais. Tenha controle total sobre o conteúdo que você compartilha e mantenha seus dados atualizados.',
+    'DONT_HAVE_ADS' => 'Parece que você não possui nenhum anúncio em nosso site.',
+    'ADVERTISE_NOW' => 'Anunciar agora',
+    'EDIT_PROFILE' => 'Editar perfil',
+    'MEMBER_SINCE' => 'Membro desde',
+    
 ];

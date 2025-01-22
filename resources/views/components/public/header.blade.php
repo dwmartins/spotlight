@@ -24,7 +24,7 @@
                         <hr>
 
                         <li class="nav-item logged_small">
-                            <a href="/" class="nav-link">
+                            <a href="{{ route('user_panel') }}" class="nav-link">
                                 {{ trans('messages.NAV_NAME_PANEL') }}
                             </a>
                         </li>
@@ -74,7 +74,7 @@
                 @guest
                     <hr>
                     <li class="nav-item">
-                        <a href="/" class="nav-link logged_small">
+                        <a href="{{ route('login') }}" class="nav-link logged_small">
                             {{ trans('messages.NAV_NAME_LOGIN') }}
                         </a>
                     </li>
@@ -97,7 +97,7 @@
                         </button>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="/" class="dropdown-item text-secondary">
+                                <a href="{{ route('user_panel') }}" class="dropdown-item text-secondary">
                                     <i class="fa-solid fa-chart-line me-2"></i>{{ trans('messages.NAV_NAME_PANEL') }}
                                 </a>
                             </li>
@@ -123,7 +123,7 @@
                         {{ trans('messages.BUTTON_ADVERTISE_HERE') }}
                     </a>
 
-                    <a href="{{ route('public_login') }}" class="btn btn-primary btn-sm fw-semibold rounded-1">
+                    <a href="{{ route('login') }}" class="btn btn-primary btn-sm fw-semibold rounded-1">
                         {{ trans('messages.NAV_NAME_LOGIN') }}
                     </a>
                 </div>
