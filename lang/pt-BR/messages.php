@@ -30,6 +30,7 @@ return [
     'SEO_TITLE_PAGE_NOT_FOND' => 'Página não encontrada',
     'SEO_TITLE_LOGIN' => 'Entrar',
     'SEO_TITLE_HOME' => 'Página inicial',
+    'SEO_TITLE_USER_PANEL' => 'Painel do usuário',
 
     'PAGE_NOT_FOUND' => 'A página que você tentou acessar não foi encontrada.',
     'NAVIGATION' => 'Navegação',

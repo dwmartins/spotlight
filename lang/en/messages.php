@@ -30,6 +30,7 @@ return [
     'SEO_TITLE_PAGE_NOT_FOND' => 'Page not found',
     'SEO_TITLE_LOGIN' => 'Login',
     'SEO_TITLE_HOME' => 'Home page',
+    'SEO_TITLE_USER_PANEL' => 'User panel',
 
     'PAGE_NOT_FOUND' => 'The page you tried to access was not found.',
     'NAVIGATION' => 'Navigation',
