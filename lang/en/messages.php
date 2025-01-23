@@ -4,6 +4,7 @@ return [
     // Path to public pages
     'PUBLIC_PATH_LOGIN' => '/login',
     'PUBLIC_PATH_USER_PANEL' => '/panel',
+    'PUBLIC_PATH_USER_PROFILE' => '/profile',
 
     // Prefix to route  
     'PATH_PREFIX_USER' => 'user',
@@ -31,6 +32,7 @@ return [
     'SEO_TITLE_LOGIN' => 'Login',
     'SEO_TITLE_HOME' => 'Home page',
     'SEO_TITLE_USER_PANEL' => 'User panel',
+    'SEO_TITLE_USER_PROFILE' => 'User profile',
 
     'PAGE_NOT_FOUND' => 'The page you tried to access was not found.',
     'NAVIGATION' => 'Navigation',
@@ -52,4 +54,12 @@ return [
     'ADVERTISE_NOW' => 'Advertise Now',
     'EDIT_PROFILE' => 'Edit profile',
     'MEMBER_SINCE' => 'Member since',
+    'PERSONAL_INFO' => 'Personal information',
+    'MANAGE_PERSONAL_HERE' => 'Manage your Personal info and settings here.',
+    'BTN_TEXT_SAVE' => 'Save',
+    'BTN_TEXT_CANCEL' => 'Cancelar',
+    'PROFILE_UPDATED_SUCCESSFULLY' => 'Profile image updated successfully!',
+    'NO_FILE_SENT' => 'No file was sent.',
+    'FILE_TYPE' => 'File must be of type :types',
+    'FILE_MAX_SIZE' => 'File must be a maximum of :size MB'
 ];

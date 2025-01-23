@@ -7,6 +7,7 @@ return [
     // Translation files
     'translation_files' => [
         'messages.php',
+        'validation.php'
     ],
 
     // List of all roles that exist in the system

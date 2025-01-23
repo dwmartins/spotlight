@@ -1,0 +1,1 @@
+<div class="loader {{ $size }} bg-{{ $color }}"></div>

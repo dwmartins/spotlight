@@ -181,7 +181,7 @@ input[type="checkbox"]:focus {
     color: #67C23A;
 }
 
-#loader {
+.loader {
     width: 24px;
     padding: 6px;
     aspect-ratio: 1;
@@ -195,6 +195,16 @@ input[type="checkbox"]:focus {
     mask-composite: subtract;
     animation: l3 0.8s infinite linear;
     background-color: #fff;
+}
+
+.loader.sm {
+    width: 21px !important;
+    padding: 5px !important;
+}
+
+.loader.lg {
+    width: 55px !important;
+    padding: 9px !important;
 }
 
 @keyframes l3 {
@@ -330,4 +340,73 @@ input[type="checkbox"]:focus {
     border-radius: 50%;
     border: 8px solid #ffff;
     object-fit: cover; 
+}
+
+/*--------------------------------------------------------------
+# User Profile
+--------------------------------------------------------------*/
+
+.profileView i {
+    width: 20px;
+    text-align: center;
+}
+
+.profileView .user_photo {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 8px solid #ffff;
+    object-fit: cover; 
+}
+
+.profileView .img_no_ads {
+    width: 60%;
+}
+
+@media screen and (max-width: 768px){
+    .profileView .img_no_ads {
+        width: 90%;
+    } 
+}
+
+.profileView .user_photo {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 8px solid #ececec93;
+    object-fit: cover; 
+}
+
+
+.profileView .loadingImg {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: 0;
+    z-index: 999;
+}
+
+.profileView .btn_change_img {
+    position: absolute;
+    background-color: var(--bs-primary);
+    color: #fff;
+    border-radius: 50%;
+    bottom: 20px;
+    right: 0px;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease;
+}
+
+.profileView .btn_change_img:hover {
+    background-color: var(--primary-hover); 
 }

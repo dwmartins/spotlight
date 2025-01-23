@@ -127,7 +127,7 @@ export function toggleButtonLoading(button, isLoading) {
 
     const spinnerHTML = `
         <span class="m-0 d-flex align-items-center justify-content-center gap-2">
-            <div id="loader"></div>
+            <div class="loader"></div>
             ${loadingText}
         </span>
     `;

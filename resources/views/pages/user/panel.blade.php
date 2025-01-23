@@ -21,7 +21,7 @@
                             <p class="text-secondary fs-8 text-break">{{ auth()->user()->city }}, {{ auth()->user()->state }}</p>
                         @endif
 
-                        <a href="/" class="btn btn-sm btn-primary">{{ trans('messages.EDIT_PROFILE') }}<i class="fa-solid fa-user-pen ms-2"></i></a>
+                        <a href="{{ route('user_profile') }}" class="btn btn-sm btn-primary">{{ trans('messages.EDIT_PROFILE') }}<i class="fa-solid fa-user-pen ms-2"></i></a>
                     </div>
                 </div>
             </div>

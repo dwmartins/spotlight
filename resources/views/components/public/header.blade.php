@@ -30,7 +30,7 @@
                         </li>
 
                         <li class="nav-item logged_small">
-                            <a href="/" class="nav-link">
+                            <a href="{{ route('user_profile') }}" class="nav-link">
                                 {{ trans('messages.NAV_NAME_PROFILE') }}
                             </a>
                         </li>
@@ -102,7 +102,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="" class="dropdown-item text-secondary">
+                                <a href="{{ route('user_profile') }}" class="dropdown-item text-secondary">
                                     <i class="fa-regular fa-user me-2"></i>{{ trans('messages.NAV_NAME_PROFILE') }}
                                 </a>
                             </li>

@@ -65,7 +65,7 @@ class User extends Authenticatable
     public function getAvatar()
     {
         return $this->avatar ?
-            config('constants.path_to_user_avatars') . $this->avatar :
+            config('constants.path_to_user_avatars') . $this->avatar . "?v=" . $this->updated_at->timestamp :
             config('constants.path_to_default_avatar');
     }
 
