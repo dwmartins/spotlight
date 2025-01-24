@@ -17,7 +17,7 @@ return [
     'NAV_NAME_CONTACT' => 'Contato',
     'NAV_NAME_PLANS' => 'Planos',
     'NAV_NAME_LOGIN' => 'Entrar',
-    'NAV_NAME_PANEL' => 'Painel de Controle',
+    'NAV_NAME_PANEL' => 'Painel',
     'NAV_NAME_PROFILE' => 'Perfil',
     'NAV_NAME_LOGOUT' => 'Sair',
     'BUTTON_ADVERTISE_HERE' => 'Anuncie Aqui',
@@ -61,5 +61,6 @@ return [
     'PROFILE_UPDATED_SUCCESSFULLY' => 'Imagem de perfil atualizada com sucesso!',
     'NO_FILE_SENT' => 'Nenhuma arquivo foi enviado.',
     'FILE_TYPE' => 'O arquivo deve ser do tipo :types',
-    'FILE_MAX_SIZE' => 'O arquivo deve ter no máximo :size MB'
+    'FILE_MAX_SIZE' => 'O arquivo deve ter no máximo :size MB',
+    'BTN_LABEL_LOADING' => 'Aguarde...'
 ];

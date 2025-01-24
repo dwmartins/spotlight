@@ -1,1 +1,1 @@
-<div class="loader {{ $size }} bg-{{ $color }}"></div>
+<div class="loader {{ $size }} bg-{{ $color }} {{ $class }}"></div>

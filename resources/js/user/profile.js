@@ -1,12 +1,8 @@
 import $ from 'jquery';
-import { showAlert, trans } from '../helpers';
+import { showAlert, toggleLoading, trans } from '../helpers';
 import axios from 'axios';
 
 $(async function() {
-    const currentUserImg = $('#current_user_photo').attr('src');
-    const btnSaveImg = $('#btn_save_img');
-    const btnCancelImg = $('#btn_cancel_img');
-
     $('#new_img').on('change', async function() {
         let file = this.files[0];
 
@@ -14,7 +10,6 @@ $(async function() {
 
         $('.loadingImg').removeClass('d-none');
         $('.btn_change_img').addClass('d-none');
-        $('.options').removeClass('d-none');
 
         const reader = new FileReader();
 
@@ -26,26 +21,26 @@ $(async function() {
 
         $('.loadingImg').addClass('d-none');
         $('.btn_change_img').removeClass('d-none');
-
-        $('#userPanelView .options').removeClass('d-none');
+        $('.changeAvatarComponent .options').removeClass('d-none');
     });
 
-    btnCancelImg.on('click', function() {
+    $('#btn_cancel_img').on('click', function() {
         $('.options').addClass('d-none');
-        $('#current_user_photo').attr('src', currentUserImg);
+        $('#current_user_photo').attr('src', $('#current_user_photo').attr('src'));
     });
 
-    btnSaveImg.on('click', saveAvatar);
+    $('#btn_save_img').on('click', saveAvatar);
 });
 
 async function saveAvatar() {
-    const newImg = $('#new_img')[0];
+    const btnSave = document.getElementById('btn_save_img');
+    const formData = new FormData();
 
-    let formData = new FormData();
-    formData.append('avatar', newImg.files[0]);
+    formData.append('avatar', $('#new_img')[0].files[0]);
 
-    $('.btn_change_img').addClass('d-none');
     $('#btn_cancel_img').addClass('d-none');
+
+    toggleLoading(btnSave, true);
 
     try {
         const url = `/${trans('PATH_PREFIX_USER')}/update-avatar`;
@@ -56,16 +51,15 @@ async function saveAvatar() {
             }
         });
 
+        toggleLoading(btnSave, false);
         $('.options').addClass('d-none');
-        $('.btn_change_img').removeClass('d-none');
-        $('#btn_save_img').prop('disabled', false).text('Salvar');
+        $('#btn_cancel_img').removeClass('d-none');
 
         showAlert('success', '', response.data.message);
     } catch (error) {
         showAlert('error', '', error.response.data.message);
 
-        $('.btn_change_img').removeClass('d-none');
+        toggleLoading(btnSave, false);
         $('#btn_cancel_img').removeClass('d-none');
-        $('#btn_save_img').prop('disabled', false).text('Salvar');
     }
 }

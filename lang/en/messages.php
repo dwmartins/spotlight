@@ -61,5 +61,6 @@ return [
     'PROFILE_UPDATED_SUCCESSFULLY' => 'Profile image updated successfully!',
     'NO_FILE_SENT' => 'No file was sent.',
     'FILE_TYPE' => 'File must be of type :types',
-    'FILE_MAX_SIZE' => 'File must be a maximum of :size MB'
+    'FILE_MAX_SIZE' => 'File must be a maximum of :size MB',
+    'BTN_LABEL_LOADING' => 'Wait...'
 ];

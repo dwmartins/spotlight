@@ -345,22 +345,13 @@ input[type="checkbox"]:focus {
 /*--------------------------------------------------------------
 # User Profile
 --------------------------------------------------------------*/
+.profileView .img_no_ads {
+    width: 60%;
+}
 
 .profileView i {
     width: 20px;
     text-align: center;
-}
-
-.profileView .user_photo {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    border: 8px solid #ffff;
-    object-fit: cover; 
-}
-
-.profileView .img_no_ads {
-    width: 60%;
 }
 
 @media screen and (max-width: 768px){
@@ -369,7 +360,7 @@ input[type="checkbox"]:focus {
     } 
 }
 
-.profileView .user_photo {
+.changeAvatarComponent .user_photo {
     width: 160px;
     height: 160px;
     border-radius: 50%;
@@ -377,21 +368,7 @@ input[type="checkbox"]:focus {
     object-fit: cover; 
 }
 
-
-.profileView .loadingImg {
-    position: absolute;
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 0;
-    right: 0;
-    z-index: 999;
-}
-
-.profileView .btn_change_img {
+.changeAvatarComponent .btn_change_img {
     position: absolute;
     background-color: var(--bs-primary);
     color: #fff;
@@ -407,6 +384,20 @@ input[type="checkbox"]:focus {
     transition: 0.3s ease;
 }
 
-.profileView .btn_change_img:hover {
+.changeAvatarComponent .btn_change_img:hover {
     background-color: var(--primary-hover); 
+}
+
+.changeAvatarComponent .loadingImg {
+    width: 146px;
+    height: 146px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.344);
 }

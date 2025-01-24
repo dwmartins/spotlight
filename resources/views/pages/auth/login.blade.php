@@ -29,7 +29,7 @@
                         <a href="/" class="outline_none text-primary fs-7">Esqueci minha senha</a>
                     </div>
                     
-                    <button id="btnLogin" class="btn btn-primary w-100" data-trans-loading="Aguarde...">
+                    <button id="btnLogin" class="btn btn-primary w-100" data-trans-loading="{{ trans('messages.BTN_LABEL_LOADING') }}">
                         Entrar
                         <i class="fa-solid fa-arrow-right-to-bracket"></i>
                     </button>

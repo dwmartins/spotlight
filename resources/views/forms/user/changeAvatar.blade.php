@@ -1,4 +1,4 @@
-<div class="item_center d-flex flex-wrap gap-3 p-3 rounded rounded-2 my-sm-2 mb-sm-5">
+<div class="changeAvatarComponent item_center d-flex flex-wrap gap-3 p-3 rounded rounded-2 my-sm-2 mb-sm-5">
     <div>
         <div class="position-relative">
             <img src="{{ auth()->user()->getAvatar() }}" alt="Avatar" id="current_user_photo" class="user_photo">
@@ -11,8 +11,14 @@
         </div>
 
         <div class="d-flex justify-content-center gap-2 my-2 options d-none">
-            <button id="btn_save_img" class="btn btn-sm btn-outline-primary">{{ trans('messages.BTN_TEXT_SAVE') }}</button>
             <button id="btn_cancel_img" class="btn btn-sm btn-outline-danger">{{ trans('messages.BTN_TEXT_CANCEL') }}</button>
+            
+            <x-buttons.btn-primary-outline 
+                text="{{ trans('messages.BTN_TEXT_SAVE') }}" 
+                loading-text="{{ trans('messages.BTN_LABEL_LOADING') }}"
+                :use-loader="true" 
+                id="btn_save_img"
+            />  
         </div>
     </div>
 
