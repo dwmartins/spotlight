@@ -34,6 +34,10 @@ return [
     'SEO_TITLE_USER_PANEL' => 'User panel',
     'SEO_TITLE_USER_PROFILE' => 'User profile',
 
+    // Form Labels
+    'LABEL_EMAIL' => 'Email',
+    'LABEL_PASSWORD' => 'Password',
+
     'PAGE_NOT_FOUND' => 'The page you tried to access was not found.',
     'NAVIGATION' => 'Navigation',
     'SOCIAL_MEDIA' => 'Social media',
@@ -62,5 +66,11 @@ return [
     'NO_FILE_SENT' => 'No file was sent.',
     'FILE_TYPE' => 'File must be of type :types',
     'FILE_MAX_SIZE' => 'File must be a maximum of :size MB',
-    'BTN_LABEL_LOADING' => 'Wait...'
+    'BTN_LABEL_LOADING' => 'Wait...',
+    'TITLE_LOGIN' => 'Login',
+    'REMEMBER_ME' => 'Remember me',
+    'FORGOT_PASSWORD' => 'Forgot my password',
+    'NOT_HAVE_ACCOUNT' => "Don't have an account?",
+    'CREATE_MY_ACCOUNT' => 'Create my account',
+    'BTN_TEXT_LOGIN' => 'Login',
 ];
