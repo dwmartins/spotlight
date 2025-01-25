@@ -12,18 +12,20 @@ class BtnPrimaryOutline extends Component
     public $text;
     public $text_loading;
     public $size;
+    public $type;
     public $useLoader;
     public $onclick;
 
     /**
      * Create a new component instance.
      */
-    public function __construct($text = "", $text_loading = null, $useLoader = true, $id = null, $size = null, $onclick = null)
+    public function __construct($text = "", $text_loading = null, $useLoader = true, $id = null, $size = null, $type = 'button', $onclick = null)
     {
         $this->id = $id;
         $this->text = $text ? $text : trans('messages.BTN_TEXT_SAVE');
         $this->text_loading = $text_loading ? $text_loading : trans('messages.BTN_LABEL_LOADING');
         $this->size = $size;
+        $this->type = $type;
         $this->onclick = $onclick;
         $this->useLoader = $useLoader;
     }

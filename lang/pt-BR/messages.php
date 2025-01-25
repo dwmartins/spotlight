@@ -3,11 +3,8 @@
 return [
     // Path to public pages
     'PUBLIC_PATH_LOGIN' => '/entrar',
-    'PUBLIC_PATH_USER_PANEL' => '/painel',
-    'PUBLIC_PATH_USER_PROFILE' => '/perfil',
-
-    // Prefix to route  
-    'PATH_PREFIX_USER' => 'usuario',
+    'PUBLIC_PATH_USER_PANEL' => '/usuario/painel',
+    'PUBLIC_PATH_USER_PROFILE' => '/usuario/perfil',
 
     // Name of navigation
     'NAV_NAME_HOME' => 'Início',
@@ -37,6 +34,11 @@ return [
     // Form Labels
     'LABEL_EMAIL' => 'E-mail',
     'LABEL_PASSWORD' => 'Senha',
+    'LABEL_NAME' => 'Nome',
+    'LABEL_LAST_NAME' => 'Sobrenome',
+    'DATE_BIRTH' => 'Nascimento',
+    'LABEL_PHONE' => 'Telefone',
+    'LABEL_DESCRIPTION' => 'Descrição',
     
     'PAGE_NOT_FOUND' => 'A página que você tentou acessar não foi encontrada.',
     'NAVIGATION' => 'Navegação',
@@ -73,4 +75,8 @@ return [
     'NOT_HAVE_ACCOUNT' => 'Não possui conta?',
     'CREATE_MY_ACCOUNT' => 'Criar minha conta',
     'BTN_TEXT_LOGIN' => 'Entrar',
+    'BASIC_INFO' => 'Informações básicas',
+    'UPDATE_USER_PROFILE' => 'Atualizar',
+    'BTN_TEXT_SAVE_CHANGES' => 'Salvar alterações',
+    'USER_UPDATE_MESSAGE' => 'Usuário atualizado com sucesso.',
 ];

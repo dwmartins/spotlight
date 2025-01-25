@@ -401,3 +401,12 @@ input[type="checkbox"]:focus {
     z-index: 999;
     background-color: rgba(0, 0, 0, 0.344);
 }
+
+/*--------------------------------------------------------------
+# Textarea component
+--------------------------------------------------------------*/
+.textareaComponent .char-counter {
+    position: absolute;
+    right: 5px;
+    bottom: 3px;
+}

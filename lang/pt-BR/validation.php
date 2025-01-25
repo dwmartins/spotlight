@@ -65,4 +65,9 @@ return [
     'same' => 'Os campos :attribute e :other devem coincidir.',
     'distinct' => 'O campo :attribute tem um valor duplicado.',
     'uuid' => 'O campo :attribute deve ser um UUID válido.',
+
+    'attributes' => [
+        'name' => 'Nome',
+        'email' => 'E-mail',
+    ],
 ];

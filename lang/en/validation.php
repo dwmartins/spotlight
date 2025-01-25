@@ -65,4 +65,9 @@ return [
     'same' => 'The :attribute and :other fields must match.',
     'distinct' => 'The :attribute field has a duplicate value.',
     'uuid' => 'The :attribute field must be a valid UUID.',
+
+    'attributes' => [
+        'name' => 'Name',
+        'email' => 'Email',
+    ],
 ];

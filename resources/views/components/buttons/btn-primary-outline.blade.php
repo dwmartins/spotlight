@@ -1,9 +1,9 @@
 <button 
     id="{{ $id }}" 
-    type="button" 
     class="btn btn-outline-primary d-flex align-items-center justify-content-center btn-{{ $size }}"
     data-trans-loading="{{ $text_loading }}"
-    onclick="{{ $onclick }}">
+    onclick="{{ $onclick }}"
+    type="{{ $type }}">
 
     @if ($useLoader)
         <x-loader 

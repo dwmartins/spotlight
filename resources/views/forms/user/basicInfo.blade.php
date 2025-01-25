@@ -1,0 +1,43 @@
+<form id="formUserBasicInfo" action="/user" method="post" class="row">
+    @csrf
+    <div class="mb-3 col-12 col-md-4">
+        <label for="name" class="text-secondary mb-2"><span class="text-danger me-1">*</span>{{ trans('messages.LABEL_NAME') }}</label>
+        <input type="text" name="name" id="name" autocomplete="name" value="{{ auth()->user()->name }}" class="form-control custom_focus text-secondary">
+    </div>
+    <div class="mb-3 col-12 col-md-4">
+        <label for="lastName" class="text-secondary mb-2"><span class="text-danger me-1">*</span>{{ trans('messages.LABEL_LAST_NAME') }}</label>
+        <input type="text" name="lastName" id="lastName" autocomplete="lastName" value="{{ auth()->user()->lastName }}" class="form-control custom_focus text-secondary">
+    </div>
+    <div class="mb-3 col-12 col-md-4">
+        <label for="dateOfBirth" class="text-secondary mb-2">{{ trans('messages.DATE_BIRTH') }}</label>
+        <input type="date" name="dateOfBirth" id="dateOfBirth" value="{{ auth()->user()->dateOfBirth }}" class="form-control custom_focus text-secondary">
+    </div>
+    <div class="mb-3 col-12 col-md-6">
+        <label for="email" class="text-secondary mb-2"><span class="text-danger me-1">*</span>{{ trans('messages.LABEL_EMAIL') }}</label>
+        <input type="email" name="email" id="email" autocomplete="email" value="{{ auth()->user()->email }}" class="form-control custom_focus text-secondary">
+    </div>
+    <div class="mb-3 col-12 col-md-6">
+        <label for="phone" class="text-secondary mb-2">{{ trans('messages.LABEL_PHONE') }}</label>
+        <input type="number" name="phone" id="phone" autocomplete="phone" value="{{ auth()->user()->phone }}" class="form-control custom_focus text-secondary">
+    </div>
+    <div class="mb-3 col-12">
+        <label for="phone" class="text-secondary mb-2">{{ trans('messages.LABEL_DESCRIPTION') }}</label>
+        <x-textarea 
+            id="description" 
+            name="description" 
+            :maxChars="500" 
+            placeholder="Digite aqui sua descrição..."
+            rows='4'
+            value="{{ auth()->user()->description }}"
+        />
+    </div>
+
+    <div class="d-flex justify-content-end mt-3">
+        <x-buttons.btn-primary-outline 
+            text="{{ trans('messages.BTN_TEXT_SAVE_CHANGES') }}" 
+            :use-loader="true"
+            onclick="toggleLoading(this)"
+            type="submit"
+        />  
+    </div>
+</form>

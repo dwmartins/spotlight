@@ -3,8 +3,8 @@
 return [
     // Path to public pages
     'PUBLIC_PATH_LOGIN' => '/login',
-    'PUBLIC_PATH_USER_PANEL' => '/panel',
-    'PUBLIC_PATH_USER_PROFILE' => '/profile',
+    'PUBLIC_PATH_USER_PANEL' => '/user/panel',
+    'PUBLIC_PATH_USER_PROFILE' => '/user/profile',
 
     // Prefix to route  
     'PATH_PREFIX_USER' => 'user',
@@ -37,6 +37,11 @@ return [
     // Form Labels
     'LABEL_EMAIL' => 'Email',
     'LABEL_PASSWORD' => 'Password',
+    'LABEL_NAME' => 'Name',
+    'LABEL_LAST_NAME' => 'Last name',
+    'DATE_BIRTH' => 'Birth',
+    'LABEL_PHONE' => 'Phone',
+    'LABEL_DESCRIPTION' => 'Description',
 
     'PAGE_NOT_FOUND' => 'The page you tried to access was not found.',
     'NAVIGATION' => 'Navigation',
@@ -73,4 +78,8 @@ return [
     'NOT_HAVE_ACCOUNT' => "Don't have an account?",
     'CREATE_MY_ACCOUNT' => 'Create my account',
     'BTN_TEXT_LOGIN' => 'Login',
+    'BASIC_INFO' => 'Basic Information',
+    'UPDATE_USER_PROFILE' => 'Update',
+    'BTN_TEXT_SAVE_CHANGES' => 'Save changes',
+    'USER_UPDATE_MESSAGE' => 'User updated successfully.',
 ];

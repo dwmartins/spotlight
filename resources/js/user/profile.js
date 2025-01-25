@@ -3,6 +3,8 @@ import { showAlert, toggleLoading, trans } from '../helpers';
 import axios from 'axios';
 
 $(async function() {
+
+    // Change profile
     $('#new_img').on('change', async function() {
         let file = this.files[0];
 
@@ -30,6 +32,12 @@ $(async function() {
     });
 
     $('#btn_save_img').on('click', saveAvatar);
+
+    // toggle user forms
+    $('[data-toggle]').on('click', function() {
+        let targetFormId  = $(this).data('toggle');
+        $(`#${targetFormId}`).slideToggle(300);
+    })
 });
 
 async function saveAvatar() {
@@ -43,7 +51,7 @@ async function saveAvatar() {
     toggleLoading(btnSave, true);
 
     try {
-        const url = `/${trans('PATH_PREFIX_USER')}/update-avatar`;
+        const url = `/user/update-avatar`;
 
         const response = await axios.post(url, formData, {
             headers: {

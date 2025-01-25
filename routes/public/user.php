@@ -17,5 +17,8 @@ Route::get(trans('messages.PUBLIC_PATH_USER_PROFILE'), [UserController::class, '
 /**
  * Methods
  */
-Route::post('/update-avatar', [UserController::class, 'updateAvatar'])
+Route::post('/user/update-avatar', [UserController::class, 'updateAvatar'])
+    ->middleware('auth');
+
+Route::post('/user', [UserController::class, 'update'])
     ->middleware('auth');

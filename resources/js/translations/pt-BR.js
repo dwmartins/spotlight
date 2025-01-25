@@ -1,7 +1,4 @@
 window.Translations = {
-    // Prefix url
-    PATH_PREFIX_USER: 'usuario',
-
     // Form labels
     LABEL_EMAIL: 'E-email',
     LABEL_PASSWORD: 'Senha',

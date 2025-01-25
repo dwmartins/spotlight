@@ -35,6 +35,25 @@ class UserController extends Controller
         ]);
     }
 
+    public function update(Request $request) {
+        $user = Auth::user();
+
+        $validator = Validator::make($request->all(), [
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|unique:users,email,' . $user->id,
+        ]);
+
+        if($validator->fails()) {
+            $errors = $validator->errors();
+
+            return redirectWithMessage('error', trans('messages.INVALID_FIELDS_MESSAGE'), $errors, 'user_profile');
+        }
+
+        $user->update($request->all());
+
+        return redirectWithMessage('success', '', trans('messages.USER_UPDATE_MESSAGE'), 'user_profile');
+    }
+
     public function updateAvatar(Request $request) {
         $file = $request->file('avatar');
 
