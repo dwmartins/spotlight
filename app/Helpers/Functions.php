@@ -47,7 +47,7 @@ function getDateAsString($date) {
 }
 
 function getSimpleDate($date) {
-    $format = config('website_settings.dateFormat', 'DD-MM-YYYY');
+    $format = config('website_settings.date_format', 'DD-MM-YYYY');
     $inputFormat = 'Y-m-d';
     $dateTime = DateTime::createFromFormat($inputFormat, $date);
 
