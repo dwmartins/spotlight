@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Models\Settings;
+use App\Models\WebsiteColors;
 use App\Models\WebsiteInfo;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\App;
@@ -15,6 +16,7 @@ class AppSettingsProvider extends ServiceProvider
 {
     private $settingCacheKey = 'settings_all';
     private $siteInfoCacheKey = 'site_info';
+    private $websiteColors = 'website_colors';
     
     /**
      * Register services.
@@ -58,6 +60,9 @@ class AppSettingsProvider extends ServiceProvider
 
         // set website infos
         $this->setWebsiteInfo();
+
+        // Set website colors
+        $this->setWebsiteColors();
     }
 
     private function setLocale($settings) {
@@ -138,5 +143,18 @@ class AppSettingsProvider extends ServiceProvider
         ];
 
         Config::set('website_info', $websiteData);
+    }
+
+    public function setWebsiteColors() {
+        $colors = Cache::get($this->websiteColors);
+
+        if(!$colors) {
+            $colors = WebsiteColors::all();
+            Cache::put($this->websiteColors, $colors, now()->addMinutes(config('constants.cache_time')));
+        }
+
+        foreach ($colors as $color) {
+            Config::set('website_colors.' . $color->name, $color->hex_value);
+        }
     }
 }

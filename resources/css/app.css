@@ -23,13 +23,21 @@
 # Override some default Bootstrap stylings
 --------------------------------------------------------------*/
 .btn-primary {
-    --bs-btn-bg: var(--primary);
-    --bs-btn-border-color: var(--primary);
-    --bs-btn-hover-bg: var(--primary-hover);
-    --bs-btn-hover-border-color: var(--primary-hover);
-    --bs-btn-active-bg: var(--primary-hover);
-    --bs-btn-disabled-bg: var(--primary);
-    --bs-btn-disabled-border-color: var(--primary);
+    --bs-btn-bg: var(--custom-primary);
+    --bs-btn-border-color: var(--custom-primary);
+    --bs-btn-hover-bg: var(--custom-primary-hover);
+    --bs-btn-hover-border-color: var(--custom-primary-hover);
+    --bs-btn-active-bg: var(--custom-primary-hover);
+    --bs-btn-disabled-bg: var(--custom-primary);
+    --bs-btn-disabled-border-color: var(--custom-primary);
+}
+
+.button {
+    background-color: var(--custom-primary);;
+}
+
+.button:hover {
+    background-color: var(--custom-primary-hover);;
 }
 
 .btn-outline-primary {
