@@ -25,8 +25,8 @@
         <x-buttons.btn-primary-outline 
             text="{{ trans('messages.BTN_TEXT_SAVE_CHANGES') }}" 
             :use-loader="true"
-            onclick="toggleLoading(this, true, true)"
             type="submit"
+            id="btn_change_password"
         />  
     </div>
 </form>

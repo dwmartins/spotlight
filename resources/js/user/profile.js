@@ -38,6 +38,47 @@ $(async function() {
         let targetFormId  = $(this).data('toggle');
         $(`#${targetFormId}`).slideToggle(300);
     })
+
+    // Validate the password change form
+    $('#formResetPassword').on('submit', (e) => {
+        const btn = document.getElementById('btn_change_password');
+        toggleLoading(btn, true);
+
+        let errors = {};
+
+        $('#formResetPassword').find('input').each(function() {
+            console.log($(this).attr('name'));
+            if($(this).attr('name') == '_token') {
+                return;
+            }
+
+            $(this).removeClass('invalid_field');
+            const fieldName = $(this).attr('name');
+            const fieldValue = $(this).val();
+            const translatedFieldName = trans(`ATTRIBUTES.${fieldName}`);
+
+            if(!fieldValue) {
+                errors[fieldName] = [
+                    trans('FIELD_REQUIRED_MESSAGE', { attribute: translatedFieldName })
+                ];
+
+                $(this).addClass('invalid_field');
+            }
+        });
+
+        if(Object.keys(errors).length > 0) {
+            e.preventDefault();
+            toggleLoading(btn, false);
+            showAlert('error', trans('INVALID_FIELDS'), errors);
+            return;
+        }
+
+        if($('#newPassword').val() !== $('#confirmPassword').val()) {
+            e.preventDefault();
+            toggleLoading(btn, false);
+            showAlert('error', trans('ALERT_TITLE_ERROR'), trans('PASSWORDS_NOT_MATCH'));
+        }
+    })
 });
 
 async function saveAvatar() {

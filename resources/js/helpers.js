@@ -13,7 +13,11 @@ import $ from 'jquery';
  * // Returns: "The name field is required."
  */
 export function trans(key, replacements = {}) {
-    let text = window.Translations[key] || key;
+    const resolveKey = (obj, path) => {
+        return path.split('.').reduce((acc, part) => acc && acc[part], obj);
+    };
+
+    let text = resolveKey(window.Translations, key) || key;
 
     for (const [placeholder, value] of Object.entries(replacements)) {
         const regex = new RegExp(`:${placeholder}`, 'g');
