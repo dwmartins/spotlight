@@ -65,9 +65,14 @@ return [
     'same' => 'Os campos :attribute e :other devem coincidir.',
     'distinct' => 'O campo :attribute tem um valor duplicado.',
     'uuid' => 'O campo :attribute deve ser um UUID válido.',
+    'FIELD_INVALID_CHARACTERS' => 'O campo :attribute contém caracteres inválidos.',
 
     'attributes' => [
         'name' => 'Nome',
+        'lastName' => 'Sobrenome',
         'email' => 'E-mail',
+        'phone' => 'Telefone',
+        'dateOfBirth' => 'Nascimento',
+        'description' => 'Descrição',
     ],
 ];

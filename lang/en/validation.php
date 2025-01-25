@@ -65,9 +65,14 @@ return [
     'same' => 'The :attribute and :other fields must match.',
     'distinct' => 'The :attribute field has a duplicate value.',
     'uuid' => 'The :attribute field must be a valid UUID.',
+    'FIELD_INVALID_CHARACTERS' => 'The field :attribute contains invalid characters.',
 
     'attributes' => [
         'name' => 'Name',
+        'lastName' => 'Last Name',
         'email' => 'Email',
+        'phone' => 'Phone',
+        'dateOfBirth' => 'Date of Birth',
+        'description' => 'Description',
     ],
 ];

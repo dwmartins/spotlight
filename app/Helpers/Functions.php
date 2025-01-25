@@ -60,3 +60,28 @@ function getSimpleDate($date) {
 
     return $date;
 }
+
+/**
+ * Validate form fields to check for malicious characters.
+ * 
+ * @param array $data The submitted form data (e.g., $_POST).
+ * @return array An associative array of errors, where the key is the field name 
+ *               and the value is the error message if any malicious characters are found.
+ */
+function validateFields($data) {
+    $errors = [];
+
+    $maliciousPattern = '/<[^>]*>|javascript:|data:|url\(|<script.*?>.*?<\/script>/i';
+
+    foreach ($data as $key => $value) {
+        if($key === '_token') {
+            continue;
+        }
+
+        if (preg_match($maliciousPattern, $value)) {
+            $errors[$key] = [trans('validation.FIELD_INVALID_CHARACTERS', ['attribute' => trans('validation.attributes.' . $key)])];
+        }
+    }
+
+    return $errors;
+}

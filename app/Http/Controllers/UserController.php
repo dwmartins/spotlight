@@ -36,6 +36,11 @@ class UserController extends Controller
     }
 
     public function update(Request $request) {
+        $errors = validateFields($request->all());
+        if($errors) {
+            return redirectWithMessage('error', trans('messages.INVALID_FIELDS_MESSAGE'), $errors);
+        }
+        
         $user = Auth::user();
 
         $validator = Validator::make($request->all(), [
