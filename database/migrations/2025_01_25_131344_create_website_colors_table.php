@@ -24,6 +24,8 @@ return new class extends Migration
             ['name' => 'success', 'hex_value' => '#67C23A'],
             ['name' => 'warning', 'hex_value' => '#FFC107'],
             ['name' => 'danger', 'hex_value' => '#DC3545'],
+            
+            ['name' => 'link_color', 'hex_value' => '#409EFF'],
         ];
 
         foreach ($colors as $color) {

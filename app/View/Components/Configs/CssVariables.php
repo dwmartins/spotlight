@@ -19,6 +19,9 @@ class CssVariables extends Component
 
     public $danger;
     public $danger_hover;
+
+    public $link_color;
+    public $link_color_hover;
     /**
      * Create a new component instance.
      */
@@ -35,6 +38,9 @@ class CssVariables extends Component
 
         $this->danger_hover = $this->darken_color(config('website_colors.danger'), 10);
         $this->danger = config('website_colors.danger');
+
+        $this->link_color_hover = $this->darken_color(config('website_colors.link_color'), 10);
+        $this->link_color = config('website_colors.link_color');
     }
 
     /**
