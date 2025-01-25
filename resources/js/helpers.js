@@ -45,7 +45,7 @@ export function showAlert(type, title, messageOrFields) {
 
     switch (type) {
         case 'success':
-            iconClass = 'fa-solid fa-circle-check custom_success';
+            iconClass = 'fa-solid fa-circle-check text-success';
             toastClasses.push('bg-success', 'text-dark');
             break;
         case 'error':

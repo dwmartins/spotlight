@@ -30,6 +30,7 @@
 
         <!-- CSS from Vite -->
         @vite('resources/css/app.css')
+        @vite('resources/css/bootstrap-overrides.css')
         @vite('resources/css/animations.css')
         
         <x-configs.css-variables />

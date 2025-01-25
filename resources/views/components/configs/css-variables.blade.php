@@ -14,5 +14,7 @@
 
         --custom-link_color: {{ $link_color }};
         --custom-link_color-hover: {{ $link_color_hover }};
+
+        --input-focus: {{ $input_focus }};
     }
 </style>

@@ -1,0 +1,52 @@
+/*--------------------------------------------------------------
+# Override some default Bootstrap stylings
+--------------------------------------------------------------*/
+
+.btn-primary {
+    --bs-btn-bg: var(--custom-primary);
+    --bs-btn-border-color: var(--custom-primary);
+    --bs-btn-hover-bg: var(--custom-primary-hover);
+    --bs-btn-hover-border-color: var(--custom-primary-hover);
+    --bs-btn-active-bg: var(--custom-primary-hover);
+    --bs-btn-disabled-bg: var(--custom-primary);
+    --bs-btn-disabled-border-color: var(--custom-primary);
+}
+
+.btn-outline-primary {
+    --bs-btn-color: var(--custom-primary);
+    --bs-btn-border-color: var(--custom-primary);
+    --bs-btn-hover-bg: var(--custom-primary);
+    --bs-btn-hover-border-color: var(--custom-primary);
+    --bs-btn-active-bg: var(--custom-primary);
+    --bs-btn-active-border-color: var(--custom-primary);
+    --bs-btn-disabled-color: var(--custom-primary);
+    --bs-btn-disabled-border-color: var(--custom-primary);
+}
+
+.bg-primary {
+    background-color: var(--custom-primary);
+}
+
+.bg-danger {
+    background-color: var(--custom-danger);
+}
+
+.bg-warning {
+    background-color: var(--custom-warning);
+}
+
+.text-primary {
+    color: var(--custom-primary) !important;
+}
+
+.text-success {
+    color: var(--custom-success) !important;;
+}
+
+.link-primary {
+    color: var(--custom-primary) !important;
+}
+
+.link-primary:hover {
+    color: var(--custom-primary-hover) !important;
+}
