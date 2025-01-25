@@ -22,3 +22,6 @@ Route::post('/user/update-avatar', [UserController::class, 'updateAvatar'])
 
 Route::post('/user', [UserController::class, 'update'])
     ->middleware('auth');
+
+Route::post('/user/change-password', [UserController::class, 'changePassword'])
+    ->middleware('auth');

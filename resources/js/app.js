@@ -14,4 +14,18 @@ $(function() {
     if (window.sessionMessage) {
         showAlert(window.sessionMessage.type, window.sessionMessage.title, window.sessionMessage.fields);
     }
+
+    // Click event to toggle password visibility and icon
+    $('.icon_show_password').on('click', function () {
+        var $icon = $(this);
+        var $input = $(this).siblings('input');
+
+        if ($input.attr('type') === 'password') {
+            $input.attr('type', 'text');
+            $icon.removeClass('fa-eye').addClass('fa-eye-slash');
+        } else {
+            $input.attr('type', 'password');
+            $icon.removeClass('fa-eye-slash').addClass('fa-eye');
+        }
+    });
 });

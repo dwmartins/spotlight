@@ -79,6 +79,9 @@ return [
         'city' => 'City',
         'zipCode' => 'Zip code',
         'state' => 'State',
-        'country' => 'Country'
+        'country' => 'Country',
+        'currentPassword' => 'Current password',
+        'newPassword' => 'New password',
+        'confirmPassword' => 'Confirm password'
     ],
 ];

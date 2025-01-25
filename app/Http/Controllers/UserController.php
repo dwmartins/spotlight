@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\View\View;
@@ -117,5 +118,39 @@ class UserController extends Controller
                 'avatar' => $this->pathToAvatas .'/'. $user->getAvatar(),
             ], 200);
         }
+    }
+
+    public function changePassword(Request $request) {
+        $errors = validateFields($request->all());
+        if($errors) {
+            return redirectWithMessage('error', trans('messages.INVALID_FIELDS_MESSAGE'), $errors);
+        }
+
+        $validator = Validator::make($request->all(), [
+            'currentPassword' => 'required|string|max:100',
+            'newPassword' => 'required|string|max:100|min:'. config('constants.min_password_length'),
+            'confirmPassword' => 'required|string|max:100',
+        ]);
+
+        if($validator->fails()) {
+            $errors = $validator->errors();
+
+            return redirectWithMessage('error', trans('messages.INVALID_FIELDS_MESSAGE'), $errors);
+        }
+
+        if($request->newPassword !== $request->confirmPassword) {
+            return redirectWithMessage('error', trans('messages.ALERT_TITLE_ERROR'), trans('messages.PASSWORDS_NOT_MATCH'));
+        }
+
+        $user = Auth::user();
+
+        if (!Hash::check($request->currentPassword, $user->password)) {
+            return redirectWithMessage('error', trans('messages.ALERT_TITLE_ERROR'), trans('messages.CURRENT_PASSWORD_INCORRECT'));
+        }
+
+        $user->password = Hash::make($request->newPassword);
+        $user->save();
+
+        return redirectWithMessage('success', trans('messages.ALERT_TITLE_SUCCESS'), trans('messages.PASSWORD_UPDATE'), 'user_profile');
     }
 }

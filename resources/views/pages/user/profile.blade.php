@@ -81,6 +81,20 @@
 
                     <hr class="text-secondary">
                 </div>
+
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <p class="fs-5 custom_dark mb-0">{{ trans('messages.USER_PROFILE_PASSWORD') }}</p>
+                    <button class="btn link-primary fs-7 fw-semibold letter-spacing text-uppercase p-0" data-toggle="password_form">{{ trans('messages.UPDATE_USER_PROFILE') }}</button>
+                </div>
+
+                <div>
+                    <!-- form password -->
+                    <div id="password_form" class="my-4" style="display: none">
+                        @include('forms.user.password')
+                    </div>
+
+                    <hr class="text-secondary">
+                </div>
             </div>
 
             <div class="col-12 col-lg-5 col-xxl-6 p-3 pt-0 d-none d-lg-flex justify-content-end align-items-baseline">

@@ -79,6 +79,9 @@ return [
         'city' => 'Cidade',
         'zipCode' => 'Cep',
         'state' => 'Estado',
-        'country' => 'País'
+        'country' => 'País',
+        'currentPassword' => 'Senha atual',
+        'newPassword' => 'Nova senha',
+        'confirmPassword' => 'Confirmar senha'
     ],
 ];
