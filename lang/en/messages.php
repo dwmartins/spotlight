@@ -88,6 +88,7 @@ return [
     'WELCOME_BACK' => 'Welcome back',
     'USER_PROFILE_ADDRESS' => 'Address',
     'USER_PROFILE_PASSWORD' => 'Password',
+    'USER_PROFILE_SETTINGS' => 'Settings',
     'LABEL_CURRENT_PASSWORD' => 'Current password',
     'LABEL_NEW_PASSWORD' => 'New password',
     'LABEL_CONFIRM_PASSWORD' => 'Confirm password',
@@ -97,4 +98,6 @@ return [
     'PASSWORD_UPDATE' => 'Your password has been changed successfully.',
     'ALERT_TITLE_SUCCESS' => 'Success',
     'ALERT_TITLE_ERROR' => 'Error',
+    'AGREE_RECEIVE_MAIL' => 'I agree to receive informational and promotional emails.',
+    'UPDATED_USER_SETTINGS' => 'Updated user settings'
 ];

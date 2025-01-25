@@ -33,7 +33,6 @@ return new class extends Migration
             $table->string('country', 100)->nullable();
             $table->string('avatar', 255)->nullable();
             $table->enum('acceptsEmails', ['Y', 'N'])->default('Y')->nullable();
-            $table->enum('publishContactInfo', ['Y', 'N'])->default('N')->nullable();
             $table->timestamp('last_login_at')->nullable();
             $table->rememberToken();
             $table->timestamps();

@@ -153,4 +153,13 @@ class UserController extends Controller
 
         return redirectWithMessage('success', trans('messages.ALERT_TITLE_SUCCESS'), trans('messages.PASSWORD_UPDATE'), 'user_profile');
     }
+
+    public function updateSettings(Request $request) {
+        $user = Auth::user();
+
+        $user->acceptsEmails = $request->has('acceptsEmails') ? 'Y' : 'N';
+        $user->save();
+
+        return redirectWithMessage('success', trans('messages.ALERT_TITLE_SUCCESS'), trans('messages.UPDATED_USER_SETTINGS'), 'user_profile');
+    }
 }

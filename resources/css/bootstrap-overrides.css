@@ -55,3 +55,12 @@
 .link-primary:hover {
     color: var(--custom-primary-hover) !important;
 }
+
+.form-check-input {
+    margin-top: 0;
+}
+
+.form-check-input:checked {
+    background-color: var(--custom-primary);
+    border-color: var(--custom-primary);
+}

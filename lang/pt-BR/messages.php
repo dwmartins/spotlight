@@ -88,6 +88,7 @@ return [
     'WELCOME_BACK' => 'Bem vindo de volta',
     'USER_PROFILE_ADDRESS' => 'Endereço',
     'USER_PROFILE_PASSWORD' => 'Senha',
+    'USER_PROFILE_SETTINGS' => 'Configurações',
     'LABEL_CURRENT_PASSWORD' => 'Senha atual',
     'LABEL_NEW_PASSWORD' => 'Nova senha',
     'LABEL_CONFIRM_PASSWORD' => 'Confirmar senha',
@@ -97,4 +98,6 @@ return [
     'PASSWORD_UPDATE' => 'Sua senha foi alterada com sucesso.',
     'ALERT_TITLE_SUCCESS' => 'Sucesso',
     'ALERT_TITLE_ERROR' => 'Erro',
+    'AGREE_RECEIVE_MAIL' => 'Concordo em receber e-mails informativos e promocionais.',
+    'UPDATED_USER_SETTINGS' => 'Configurações do usuário atualizadas'
 ];
