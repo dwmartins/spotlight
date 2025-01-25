@@ -135,20 +135,24 @@ export function toggleButtonLoading(button, isLoading) {
     $(button).prop('disabled', isLoading).html(isLoading ? spinnerHTML : originalText);
 }
 
-export function toggleLoading(button, isLoading = false) {
+export function toggleLoading(button, isLoading = false, isForm = false) {
     const spinner = button.querySelector('.spinner-loader');
     const btnText = button.querySelector('.btn-text');
 
     if (isLoading) {
-        console.log('foi')
         button.setAttribute('disabled', 'true');
-
+        
         const loadingText = button.getAttribute('data-trans-loading');
         if (spinner) spinner.classList.remove('d-none');
 
         if (btnText && loadingText) {
             button.setAttribute('data-default-text', btnText.textContent.trim());
             btnText.textContent = loadingText;
+        }
+
+        if(isForm) {
+            const form = button.closest('form');
+            form.submit();
         }
     } else {
         button.removeAttribute('disabled');
