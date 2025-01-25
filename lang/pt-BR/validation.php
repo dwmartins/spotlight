@@ -74,5 +74,11 @@ return [
         'phone' => 'Telefone',
         'dateOfBirth' => 'Nascimento',
         'description' => 'Descrição',
+        'address' => 'Endereço',
+        'complement' => 'Complemento',
+        'city' => 'Cidade',
+        'zipCode' => 'Cep',
+        'state' => 'Estado',
+        'country' => 'País'
     ],
 ];

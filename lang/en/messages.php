@@ -6,9 +6,6 @@ return [
     'PUBLIC_PATH_USER_PANEL' => '/user/panel',
     'PUBLIC_PATH_USER_PROFILE' => '/user/profile',
 
-    // Prefix to route  
-    'PATH_PREFIX_USER' => 'user',
-
     // Name of navigation
     'NAV_NAME_HOME' => 'Home',
     'NAV_NAME_LISTINGS' => 'Listings',
@@ -42,6 +39,12 @@ return [
     'DATE_BIRTH' => 'Birth',
     'LABEL_PHONE' => 'Phone',
     'LABEL_DESCRIPTION' => 'Description',
+    'LABEL_ADDRESS' => 'Address',
+    'LABEL_COMPLEMENT' => 'Complement',
+    'LABEL_CITY' => 'City',
+    'LABEL_ZIP_CODE' => 'Zip code',
+    'LABEL_STATE' => 'Estate',
+    'LABEL_COUNTRY' => 'Country',
 
     'PAGE_NOT_FOUND' => 'The page you tried to access was not found.',
     'NAVIGATION' => 'Navigation',
@@ -82,5 +85,6 @@ return [
     'UPDATE_USER_PROFILE' => 'Update',
     'BTN_TEXT_SAVE_CHANGES' => 'Save changes',
     'USER_UPDATE_MESSAGE' => 'User updated successfully.',
-    'WELCOME_BACK' => 'Welcome back'
+    'WELCOME_BACK' => 'Welcome back',
+    'USER_PROFILE_ADDRESS' => 'Address',
 ];

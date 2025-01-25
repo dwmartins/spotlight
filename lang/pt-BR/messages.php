@@ -39,6 +39,12 @@ return [
     'DATE_BIRTH' => 'Nascimento',
     'LABEL_PHONE' => 'Telefone',
     'LABEL_DESCRIPTION' => 'Descrição',
+    'LABEL_ADDRESS' => 'Endereço',
+    'LABEL_COMPLEMENT' => 'Complemento',
+    'LABEL_CITY' => 'Cidade',
+    'LABEL_ZIP_CODE' => 'Cep',
+    'LABEL_STATE' => 'Estado',
+    'LABEL_COUNTRY' => 'País',
     
     'PAGE_NOT_FOUND' => 'A página que você tentou acessar não foi encontrada.',
     'NAVIGATION' => 'Navegação',
@@ -79,5 +85,6 @@ return [
     'UPDATE_USER_PROFILE' => 'Atualizar',
     'BTN_TEXT_SAVE_CHANGES' => 'Salvar alterações',
     'USER_UPDATE_MESSAGE' => 'Usuário atualizado com sucesso.',
-    'WELCOME_BACK' => 'Bem vindo de volta'
+    'WELCOME_BACK' => 'Bem vindo de volta',
+    'USER_PROFILE_ADDRESS' => 'Endereço',
 ];

@@ -44,8 +44,19 @@ class UserController extends Controller
         $user = Auth::user();
 
         $validator = Validator::make($request->all(), [
-            'name' => 'required|string|max:255',
-            'email' => 'required|email|unique:users,email,' . $user->id,
+            'name' => $request->has('name') ? 'required|string|max:255' : 'nullable|string|max:255',
+            'email' => $request->has('email') ? 'required|email|unique:users,email,' . $user->id : 'nullable',
+
+            'lastName' => 'nullable|string|max:100',
+            'phone' => 'nullable|string|max:100',
+            'dateOfBirth' => 'nullable|date',
+            'description' => 'nullable|string|max:500',
+            'address' => 'nullable|string|max:255',
+            'complement' => 'nullable|string|max:255',
+            'city' => 'nullable|string|max:100',
+            'zipCode' => 'nullable|string|max:20',
+            'state' => 'nullable|string|max:100',
+            'country' => 'nullable|string|max:100',
         ]);
 
         if($validator->fails()) {

@@ -79,7 +79,11 @@ function validateFields($data) {
         }
 
         if (preg_match($maliciousPattern, $value)) {
-            $errors[$key] = [trans('validation.FIELD_INVALID_CHARACTERS', ['attribute' => trans('validation.attributes.' . $key)])];
+            $errors[$key] = [
+                trans('validation.FIELD_INVALID_CHARACTERS', [
+                    'attribute' => trans('validation.attributes.' . $key)
+                ])
+            ];
         }
     }
 

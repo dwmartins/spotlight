@@ -47,9 +47,43 @@
 
                     <hr class="text-secondary">
                 </div>
+
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <p class="fs-5 custom_dark mb-0">{{ trans('messages.USER_PROFILE_ADDRESS') }}</p>
+                    <button class="btn link-primary fs-7 fw-semibold letter-spacing text-uppercase p-0" data-toggle="address_form">{{ trans('messages.UPDATE_USER_PROFILE') }}</button>
+                </div>
+
+                <div class="address">
+                    <!-- form address -->
+                    @if(auth()->user()->address)
+                        <p class="text-secondary fs-7 mb-0">
+                            <i class="fa-solid fa-location-dot me-2"></i>
+                            {{ auth()->user()->address }}
+                        </p>
+                        <p class="text-secondary fs-7 mb-0">
+                            @if(auth()->user()->city)
+                                {{ auth()->user()->city }}
+                            @endif
+
+                            @if(auth()->user()->state)
+                                {{ auth()->user()->city ? ', ' : '' }} {{ auth()->user()->state }}
+                            @endif
+
+                            @if(auth()->user()->zipCode)
+                            {{ auth()->user()->city || auth()->user()->state ? ', ' : '' }} {{ auth()->user()->zipCode }}
+                            @endif
+                        </p>
+                    @endif
+
+                    <div id="address_form" class="my-4" style="display: none">
+                        @include('forms.user.address')
+                    </div>
+
+                    <hr class="text-secondary">
+                </div>
             </div>
 
-            <div class="col-12 col-lg-5 col-xxl-6 p-3 pt-0 d-none d-lg-flex justify-content-center align-items-baseline">
+            <div class="col-12 col-lg-5 col-xxl-6 p-3 pt-0 d-none d-lg-flex justify-content-end align-items-baseline">
                 <img src="{{ asset('assets/svg/account.svg') }}" alt="Account" class="w-100">
             </div>
         </div>

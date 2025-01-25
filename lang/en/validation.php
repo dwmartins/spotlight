@@ -74,5 +74,11 @@ return [
         'phone' => 'Phone',
         'dateOfBirth' => 'Date of Birth',
         'description' => 'Description',
+        'address' => 'Address',
+        'complement' => 'Complement',
+        'city' => 'City',
+        'zipCode' => 'Zip code',
+        'state' => 'State',
+        'country' => 'Country'
     ],
 ];
