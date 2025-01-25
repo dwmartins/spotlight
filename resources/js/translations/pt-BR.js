@@ -11,6 +11,7 @@ window.Translations = {
     PASSWORDS_NOT_MATCH: 'As senhas não coincidem.',
     ALERT_TITLE_SUCCESS: 'Sucesso',
     ALERT_TITLE_ERROR : 'Erro',
+    ALERT_DELETE_ACCOUNT: 'Você precisa confirmar se realmente deseja excluir sua conta',
 
     ATTRIBUTES : {
         name: 'Nome',

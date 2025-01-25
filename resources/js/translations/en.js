@@ -11,6 +11,7 @@ window.Translations = {
     PASSWORDS_NOT_MATCH: 'Passwords do not match.',
     ALERT_TITLE_SUCCESS: 'Success',
     ALERT_TITLE_ERROR : 'Error',
+    ALERT_DELETE_ACCOUNT: 'You need to confirm that you really want to delete your account',
 
     ATTRIBUTES : {
         name: 'Name',

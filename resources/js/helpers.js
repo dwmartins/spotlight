@@ -56,7 +56,7 @@ export function showAlert(type, title, messageOrFields) {
             iconClass = 'fa-solid fa-circle-xmark text-danger';
             toastClasses.push('bg-danger', 'text-dark');
             break;
-        case 'info':
+        case 'warning':
             iconClass = 'fa-solid fa-circle-exclamation text-warning';
             toastClasses.push('bg-warning', 'text-dark');
             break;

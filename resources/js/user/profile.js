@@ -78,7 +78,19 @@ $(async function() {
             toggleLoading(btn, false);
             showAlert('error', trans('ALERT_TITLE_ERROR'), trans('PASSWORDS_NOT_MATCH'));
         }
-    })
+    });
+
+    // Form Delete account
+    $('#formDeleteAccount').on('submit', (e) => {
+        if(!$("#confirmAccountDeletion").is(":checked")) {
+            showAlert('warning', '', trans('ALERT_DELETE_ACCOUNT'));
+            e.preventDefault();
+            return;
+        }
+
+        const btn = document.getElementById('btn_delete_account');
+        toggleLoading(btn, true);
+    });
 });
 
 async function saveAvatar() {

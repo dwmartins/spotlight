@@ -110,6 +110,8 @@
                     <hr class="text-secondary">
                 </div>
 
+                <!-- Form delete account -->
+                @include('forms.user.deleteAccount')
             </div>
 
             <div class="col-12 col-lg-5 col-xxl-6 p-3 pt-0 d-none d-lg-flex justify-content-end align-items-baseline">

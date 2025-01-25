@@ -162,4 +162,18 @@ class UserController extends Controller
 
         return redirectWithMessage('success', trans('messages.ALERT_TITLE_SUCCESS'), trans('messages.UPDATED_USER_SETTINGS'), 'user_profile');
     }
+
+    public function deleteAccount(Request $request) {
+        $user = Auth::user();
+        $confirmDelete = $request->has('confirmAccountDeletion');
+
+        if($confirmDelete) {
+            $user->delete();
+            Auth::logout();
+
+            return redirectWithMessage('success', trans('messages.ALERT_TITLE_SUCCESS'), trans('messages.ACCOUNT_DELETED_SUCCESSFULLY'), 'home_page');
+        }
+
+        return back();
+    }
 }

@@ -45,6 +45,9 @@ return [
     'LABEL_ZIP_CODE' => 'Cep',
     'LABEL_STATE' => 'Estado',
     'LABEL_COUNTRY' => 'País',
+    'LABEL_CURRENT_PASSWORD' => 'Senha atual',
+    'LABEL_NEW_PASSWORD' => 'Nova senha',
+    'LABEL_CONFIRM_PASSWORD' => 'Confirmar senha',
     
     'PAGE_NOT_FOUND' => 'A página que você tentou acessar não foi encontrada.',
     'NAVIGATION' => 'Navegação',
@@ -89,9 +92,7 @@ return [
     'USER_PROFILE_ADDRESS' => 'Endereço',
     'USER_PROFILE_PASSWORD' => 'Senha',
     'USER_PROFILE_SETTINGS' => 'Configurações',
-    'LABEL_CURRENT_PASSWORD' => 'Senha atual',
-    'LABEL_NEW_PASSWORD' => 'Nova senha',
-    'LABEL_CONFIRM_PASSWORD' => 'Confirmar senha',
+    'USER_PROFILE_DELETE' => 'Excluir conta',
     'MINIMUM_CHARACTERS_PASSWORD' => 'Mínimo de :min caracteres - quanto mais, melhor',
     'PASSWORDS_NOT_MATCH' => 'As senhas não coincidem.',
     'CURRENT_PASSWORD_INCORRECT' => 'A senha atual está incorreta.',
@@ -99,5 +100,10 @@ return [
     'ALERT_TITLE_SUCCESS' => 'Sucesso',
     'ALERT_TITLE_ERROR' => 'Erro',
     'AGREE_RECEIVE_MAIL' => 'Concordo em receber e-mails informativos e promocionais.',
-    'UPDATED_USER_SETTINGS' => 'Configurações do usuário atualizadas'
+    'UPDATED_USER_SETTINGS' => 'Configurações do usuário atualizadas',
+    'DELETE_ACCOUNT_TEXT' => 'Se você excluir sua conta, você perderá todos os seus dados',
+    'ACTION_CANNOT_UNDONE' => 'Esta ação não pode ser desfeita',
+    'CONFIRM_DELETE_ACCOUNT' => 'Confirmo que gostaria de excluir minha conta',
+    'BTN_TEXT_DELETE_ACCOUNT' => 'Excluir conta',
+    'ACCOUNT_DELETED_SUCCESSFULLY' => 'Conta excluída com sucesso.'
 ];

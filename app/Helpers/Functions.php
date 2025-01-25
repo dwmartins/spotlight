@@ -4,7 +4,7 @@ use App\Models\Settings;
 use Illuminate\Support\Facades\Cache;
 
 /**
- * @param string $messageType The type of message to display. Can be 'success', 'error', 'info', etc.
+ * @param string $messageType The type of message to display. Can be 'success', 'error', 'warning', etc.
  * @param string $title The title of the message. May be an empty string if there is no title.
  * @param string|array $messageOrFields The message or an array of field errors. It can be a simple string
  * or an associative array with fields as key and messages as value.

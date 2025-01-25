@@ -45,6 +45,9 @@ return [
     'LABEL_ZIP_CODE' => 'Zip code',
     'LABEL_STATE' => 'Estate',
     'LABEL_COUNTRY' => 'Country',
+    'LABEL_CURRENT_PASSWORD' => 'Current password',
+    'LABEL_NEW_PASSWORD' => 'New password',
+    'LABEL_CONFIRM_PASSWORD' => 'Confirm password',
 
     'PAGE_NOT_FOUND' => 'The page you tried to access was not found.',
     'NAVIGATION' => 'Navigation',
@@ -89,9 +92,7 @@ return [
     'USER_PROFILE_ADDRESS' => 'Address',
     'USER_PROFILE_PASSWORD' => 'Password',
     'USER_PROFILE_SETTINGS' => 'Settings',
-    'LABEL_CURRENT_PASSWORD' => 'Current password',
-    'LABEL_NEW_PASSWORD' => 'New password',
-    'LABEL_CONFIRM_PASSWORD' => 'Confirm password',
+    'USER_PROFILE_DELETE' => 'Delete account',
     'MINIMUM_CHARACTERS_PASSWORD' => 'Minimum of :min characters - the more the better',
     'PASSWORDS_NOT_MATCH' => 'Passwords do not match.',
     'CURRENT_PASSWORD_INCORRECT' => 'Current password is incorrect.',
@@ -99,5 +100,10 @@ return [
     'ALERT_TITLE_SUCCESS' => 'Success',
     'ALERT_TITLE_ERROR' => 'Error',
     'AGREE_RECEIVE_MAIL' => 'I agree to receive informational and promotional emails.',
-    'UPDATED_USER_SETTINGS' => 'Updated user settings'
+    'UPDATED_USER_SETTINGS' => 'Updated user settings',
+    'DELETE_ACCOUNT_TEXT' => 'If you delete your account, you will lose all your data',
+    'ACTION_CANNOT_UNDONE' => 'This action cannot be undone',
+    'CONFIRM_DELETE_ACCOUNT' => 'I confirm that I would like to delete my account',
+    'BTN_TEXT_DELETE_ACCOUNT' => 'Delete account',
+    'ACCOUNT_DELETED_SUCCESSFULLY' => 'Account deleted successfully.'
 ];

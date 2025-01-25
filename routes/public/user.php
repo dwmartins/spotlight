@@ -28,3 +28,6 @@ Route::post('/user/change-password', [UserController::class, 'changePassword'])
 
 Route::post('/user/settings', [UserController::class, 'updateSettings'])
     ->middleware('auth');
+
+Route::post('/user/delete', [UserController::class, 'deleteAccount'])
+    ->middleware('auth');
