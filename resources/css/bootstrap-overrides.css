@@ -1,6 +1,11 @@
 /*--------------------------------------------------------------
 # Override some default Bootstrap stylings
 --------------------------------------------------------------*/
+:root {
+    --bs-primary: var(--custom-primary);
+    --bs-link-color: var(--custom-primary);
+    --bs-link-hover-color: var(--custom-primary-hover);
+}
 
 .btn-primary {
     --bs-btn-bg: var(--custom-primary);

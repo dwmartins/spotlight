@@ -1,12 +1,14 @@
-@extends('layouts.public')
+@extends('layouts.base')
 
-@section('main-content')
-    <section class="publicLoginView container item_center">
+@section('content')
+    <section class="publicLoginView container item_center vh-100">
         <div class="row w-100">
-            <div class="col-sm-12 col-md-6 col-xl-7 item_center" data-aos="fade-right">
+            <div class="col-sm-12 col-md-6 col-xl-6 d-flex justify-content-center align-items-center" data-aos="fade-right">
                 <form action="/login" method="post" class="form_login w-100">
                     @csrf
-                    <h1 class="text-center text-secondary-emphasis mb-3">{{ trans('messages.TITLE_LOGIN') }}</h1>
+                    <div class="website_logo item_center mb-2">
+                        <img src="{{ config('website_info.logoImage') }}" alt="Logo">
+                    </div>
 
                     <div class="mb-3">
                         <label for="email" class="text-secondary mb-2"><span class="text-danger me-1">*</span>{{ trans('messages.LABEL_EMAIL') }}</label>
@@ -26,7 +28,7 @@
                             <input type="checkbox" name="rememberMe" class="form-check-input custom_focus" id="rememberMe">
                             {{ trans('messages.REMEMBER_ME') }}
                         </label>
-                        <a href="/" class="outline_none text-primary fs-7">{{ trans('messages.FORGOT_PASSWORD') }}</a>
+                        <a href="/" class="link-primary outline_none fs-7">{{ trans('messages.FORGOT_PASSWORD') }}</a>
                     </div>
                     
                     <button id="btnLogin" class="btn btn-primary w-100" data-trans-loading="{{ trans('messages.BTN_LABEL_LOADING') }}">
@@ -38,11 +40,11 @@
 
                     <p class="text-secondary fs-7 text-center">
                         {{ trans('messages.NOT_HAVE_ACCOUNT') }}
-                        <a href="/" class="text-primary outline_none">{{ trans('messages.CREATE_MY_ACCOUNT') }}</a>
+                        <a href="/" class="link-primary outline_none">{{ trans('messages.CREATE_MY_ACCOUNT') }}</a>
                     </p>
                 </form>
             </div>
-            <div class="col-md-6 col-xl-5 d-none d-md-flex justify-content-center align-items-center" data-aos="fade-left">
+            <div class="col-md-6 col-xl-6 d-none d-md-flex justify-content-center align-items-center" data-aos="fade-left">
                 <img src="{{ asset('assets/svg/login.svg') }}" alt="Login" class="w-100">
             </div>
         </div>

@@ -3,15 +3,7 @@
 }
 
 :root {
-    /* Main colors */
-    --primary: #409EFF;
-    --primary-hover: #1c88f5;
-
-    /* Bootstrap */
-    --bs-primary: var(--primary);
-    --bs-link-color: var(--primary);
-    --bs-link-hover-color: var(--primary-hover);
-
+    --svg-colors: #CCCCCC;
     /* Customs */
     --custom-dark: #303F4E;
 
@@ -273,6 +265,11 @@ input[type="checkbox"]:focus {
 
 .publicLoginView .form_login {
     max-width: 400px;
+}
+
+.publicLoginView .website_logo img{
+    max-width: 200px;
+    max-height: 100px;
 }
 
 /*--------------------------------------------------------------

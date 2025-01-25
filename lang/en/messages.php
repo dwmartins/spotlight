@@ -82,4 +82,5 @@ return [
     'UPDATE_USER_PROFILE' => 'Update',
     'BTN_TEXT_SAVE_CHANGES' => 'Save changes',
     'USER_UPDATE_MESSAGE' => 'User updated successfully.',
+    'WELCOME_BACK' => 'Welcome back'
 ];

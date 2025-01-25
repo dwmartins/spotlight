@@ -79,4 +79,5 @@ return [
     'UPDATE_USER_PROFILE' => 'Atualizar',
     'BTN_TEXT_SAVE_CHANGES' => 'Salvar alterações',
     'USER_UPDATE_MESSAGE' => 'Usuário atualizado com sucesso.',
+    'WELCOME_BACK' => 'Bem vindo de volta'
 ];
