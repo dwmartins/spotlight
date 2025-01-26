@@ -168,6 +168,10 @@ class UserController extends Controller
         $confirmDelete = $request->has('confirmAccountDeletion');
 
         if($confirmDelete) {
+            if ($user->avatar && Storage::disk('public')->exists($this->pathToAvatas . '/' . $user->avatar)) {
+                Storage::disk('public')->delete($this->pathToAvatas . '/' . $user->avatar);
+            }
+            
             $user->delete();
             Auth::logout();
 
