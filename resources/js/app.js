@@ -51,7 +51,7 @@ $(function() {
      */
     if ($('.toggle-sidebar-btn').length) {
         $('.toggle-sidebar-btn').on('click', function() {
-        $('body').toggleClass('toggle-sidebar');
+            $('body').toggleClass('toggle-sidebar');
         });
     }
 });

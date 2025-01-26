@@ -169,6 +169,26 @@ input[type="checkbox"]:focus {
     }
 }
 
+.min-height-300 {
+    min-height: 300px;
+}
+
+.custom-text-white {
+    color: #fff;
+}
+
+.custom-bg-white {
+    color: #fff;
+}
+
+.custom-text-dark {
+    color: #000;
+} 
+
+.custom-bg-dark {
+    color: #000;
+} 
+
 /*--------------------------------------------------------------
 # Public Navigation
 --------------------------------------------------------------*/
@@ -398,10 +418,12 @@ input[type="checkbox"]:focus {
 .app_layout .header {
     transition: all 0.5s;
     z-index: 997;
-    height: 60px;
-    box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.1);
-    background-color: #fff;
-    padding-left: 5px;
+    height: 80px;
+    margin-left: 318px;
+}
+
+body.toggle-sidebar .app_layout .header {
+    margin-left: 15px;
 }
 
 .app_layout .header .logo {
@@ -423,6 +445,18 @@ input[type="checkbox"]:focus {
 
 @media (max-width: 364px) {
     .app_layout .header .logo {
+        display: none;
+    }
+}
+
+@media (max-width: 1199px) {
+    .app_layout .header {
+        margin-left: 15px;
+    }
+}
+
+@media (min-width: 1199px) {
+    .toggle-sidebar-btn {
         display: none;
     }
 }
@@ -591,23 +625,30 @@ input[type="checkbox"]:focus {
 --------------------------------------------------------------*/
 .app_layout .sidebar {
     position: fixed;
-    top: 60px;
+    top: 0px;
     left: 0;
     bottom: 0;
-    width: 300px;
-    z-index: 996;
+    width: 280px;
+    z-index: 998;
     transition: all 0.3s;
-    padding: 20px;
+    padding: 10px;
     overflow-y: auto;
     scrollbar-width: thin;
     scrollbar-color: #aab7cf transparent;
-    box-shadow: 0px 0px 20px rgba(1, 41, 112, 0.1);
+    box-shadow: 0 0 2rem 0 rgba(136, 152, 170, .15);
     background-color: #fff;
+    border-radius: 1rem;
+    margin: 15px 0 15px 15px;
+}
+
+.app_layout .sidebar .logo img{
+    max-width: 200px;
+    max-height: 100px;
 }
 
 @media (max-width: 1199px) {
     .app_layout .sidebar {
-        left: -300px;
+        left: -315px;
     }
 }
 
@@ -645,7 +686,7 @@ input[type="checkbox"]:focus {
     }
 
     .toggle-sidebar .sidebar {
-        left: -300px;
+        left: -318px;
     }
 }
 
@@ -784,4 +825,15 @@ input[type="checkbox"]:focus {
 .app_layout .back-to-top.active {
     visibility: visible;
     opacity: 1;
+}
+
+.app_layout #main {
+    margin-top: 80px;
+    transition: all 0.5s;
+}
+
+@media (max-width: 475px) {
+    .close_nav_mobile {
+        display: block !important;
+    }
 }

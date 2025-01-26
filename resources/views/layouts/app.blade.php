@@ -4,29 +4,18 @@
     <section class="app_layout">
         <!-- ======= Header ======= -->
         <header id="header" class="header fixed-top d-flex align-items-center">
-
-            <div class="d-flex align-items-center justify-content-center">
-                <div class="logo">
-                    <img src="{{ config('website_info.logoImage') }}" alt="Logo">
-                </div>
-
-                <a href="javascript:void(0);" class="text-black">
-                    <i class="fa-solid fa-bars toggle-sidebar-btn mt-1"></i>
-                </a>
-            </div><!-- End Logo -->
-
+            <h5 class="custom-text-white mb-0">{{$page_name}}</h5>
             <nav class="header-nav ms-auto">
                 <ul class="d-flex align-items-center">
-                    <a href="/" class="btn btn-sm btn-outline-primary visite-site" target="_blank">
-                        <i class="fa-solid fa-globe"></i>
-                        <span>Site</span>
+                    <a href="javascript:void(0);" class="text-white me-4">
+                        <i class="fa-solid fa-bars toggle-sidebar-btn mt-1"></i>
                     </a>
                     
                     <li class="nav-item dropdown">
 
                         <a class="nav-link nav-icon mt-2" href="javascript:void(0);" data-bs-toggle="dropdown">
                             <i class="fa-regular fa-bell"></i>
-                            <span class="badge bg-primary badge-number">4</span>
+                            <span class="badge bg-white text-dark badge-number">4</span>
                         </a><!-- End Notification Icon -->
 
                         <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
@@ -101,7 +90,7 @@
 
                         <a class="nav-link nav-icon mt-2" href="javascript:void(0);" data-bs-toggle="dropdown">
                             <i class="fa-regular fa-message"></i>
-                            <span class="badge bg-success badge-number">3</span>
+                            <span class="badge bg-white text-dark badge-number">3</span>
                         </a><!-- End Messages Icon -->
 
                         <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
@@ -199,6 +188,15 @@
         <aside id="sidebar" class="sidebar">
 
             <ul class="sidebar-nav" id="sidebar-nav">
+                <div class="logo item_center">
+                    <img src="{{ config('website_info.logoImage') }}" alt="Logo">
+
+                    <a href="javascript:void(0);" class="custom-text-dark close_nav_mobile d-none">
+                        <i class="fa-solid fa-xmark toggle-sidebar-btn fs-2 ms-4"></i>
+                    </a>
+                </div>
+                
+                <hr class="text-secondary m-0 mb-2">
 
                 <li class="nav-item">
                     <a class="nav-link collapsed" href="/app">
@@ -269,7 +267,7 @@
         </aside><!-- End Sidebar-->
 
         <!-- Main Content -->
-        <main id="main" class="main">
+        <main id="main" class="main px-3">
             @yield('main-content')
         </main>
 
