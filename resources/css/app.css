@@ -272,6 +272,10 @@ input[type="checkbox"]:focus {
     max-height: 100px;
 }
 
+.publicLoginView .illustration {
+    max-width: 500px;
+}
+
 /*--------------------------------------------------------------
 # Component adminBar
 --------------------------------------------------------------*/

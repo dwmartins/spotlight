@@ -45,7 +45,7 @@
                 </form>
             </div>
             <div class="col-md-6 col-xl-6 d-none d-md-flex justify-content-center align-items-center" data-aos="fade-left">
-                <img src="{{ asset('assets/svg/login.svg') }}" alt="Login" class="w-100">
+                <img src="{{ asset('assets/svg/login.svg') }}" alt="Login" class="w-100 illustration">
             </div>
         </div>
     </section>
