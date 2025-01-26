@@ -3,6 +3,7 @@
 return [
     // Path to public pages
     'PUBLIC_PATH_LOGIN' => '/entrar',
+    'PUBLIC_PATH_REGISTER' => '/criar-conta',
     'PUBLIC_PATH_USER_PANEL' => '/usuario/painel',
     'PUBLIC_PATH_USER_PROFILE' => '/usuario/perfil',
 
@@ -30,6 +31,7 @@ return [
     'SEO_TITLE_HOME' => 'Página inicial',
     'SEO_TITLE_USER_PANEL' => 'Painel do usuário',
     'SEO_TITLE_USER_PROFILE' => 'Perfil do usuário',
+    'SEO_TITLE_REGISTER' => 'Criar conta',
 
     // Form Labels
     'LABEL_EMAIL' => 'E-mail',
@@ -105,5 +107,11 @@ return [
     'ACTION_CANNOT_UNDONE' => 'Esta ação não pode ser desfeita',
     'CONFIRM_DELETE_ACCOUNT' => 'Confirmo que gostaria de excluir minha conta',
     'BTN_TEXT_DELETE_ACCOUNT' => 'Excluir conta',
-    'ACCOUNT_DELETED_SUCCESSFULLY' => 'Conta excluída com sucesso.'
+    'ACCOUNT_DELETED_SUCCESSFULLY' => 'Conta excluída com sucesso.',
+    'TITLE_REGISTER' => 'Criar conta',
+    'ACCEPT_OUR_PRIVACY' => 'Ao se inscrever, você concorda com nossa',
+    'PRIVACY_PAGE' => 'Política de privacidade',
+    'BTN_TEXT_CREATE_ACCOUNT' => 'Criar minha conta',
+    'HAVE_ACCOUNT' => 'Já possui conta?',
+    'USER_CREATED' => 'Usuário criado com sucesso!'
 ];

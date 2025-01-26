@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\View\View;
 
@@ -16,6 +17,19 @@ class AuthController extends Controller
 
         return view('pages.auth.login', [
             'custom_seo_title' => trans('messages.SEO_TITLE_LOGIN') . ' | ' . $webSiteName
+        ]);
+    }
+
+     /**
+     * returns the user register view  /pages/auth/register.blade.php
+     * @return View
+     */
+    public function registerView():  View
+    {
+        $webSiteName = config('website_info.websiteName');
+
+        return view('pages.auth.register', [
+            'custom_seo_title' => trans('messages.SEO_TITLE_REGISTER') . ' | ' . $webSiteName
         ]);
     }
 
@@ -51,6 +65,36 @@ class AuthController extends Controller
 
         return redirectWithMessage('error', '', trans('messages.AUTHENTICATION_FAILED'));
     } 
+
+    public function register(Request $request)
+    {
+        $errors = validateFields($request->all());
+        if($errors) {
+            return redirectWithMessage('error', trans('messages.INVALID_FIELDS_MESSAGE'), $errors);
+        }
+
+        $validator = Validator::make($request->all(), [
+            'name' => 'required|string|max:255',
+            'lastName' => 'nullable|string|max:255',
+            'email' => 'required|email|unique:users,email',
+            'password' => 'required|string|min:'. config('constants.min_password_length')
+        ]);
+
+        if($validator->fails()) {
+            $errors = $validator->errors();
+
+            return redirectWithMessage('error', trans('messages.INVALID_FIELDS_MESSAGE'), $errors);
+        }
+
+        $validatedData = $validator->validated();
+
+        $user = new User($validatedData);
+        $user->role = 'visitor';
+        $user->password = Hash::make($validatedData['password']);
+        $user->save();
+
+        return redirectWithMessage('success', trans('messages.ALERT_TITLE_SUCCESS'), trans('messages.USER_CREATED'), 'login', ['email' => $user->email]);
+    }
 
     public function logout(Request $request)
     {

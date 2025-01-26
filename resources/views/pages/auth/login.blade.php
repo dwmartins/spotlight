@@ -40,7 +40,7 @@
 
                     <p class="text-secondary fs-7 text-center">
                         {{ trans('messages.NOT_HAVE_ACCOUNT') }}
-                        <a href="/" class="link-primary outline_none">{{ trans('messages.CREATE_MY_ACCOUNT') }}</a>
+                        <a href="{{ route('register') }}" class="link-primary outline_none">{{ trans('messages.CREATE_MY_ACCOUNT') }}</a>
                     </p>
                 </form>
             </div>

@@ -277,6 +277,17 @@ input[type="checkbox"]:focus {
 }
 
 /*--------------------------------------------------------------
+# Register view
+--------------------------------------------------------------*/
+.registerView #formRegister {
+    max-width: 400px;
+}
+
+.registerView .illustration {
+    max-width: 500px;
+}
+
+/*--------------------------------------------------------------
 # Component adminBar
 --------------------------------------------------------------*/
 @media screen and (max-width: 360px) {

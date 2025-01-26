@@ -3,6 +3,7 @@
 return [
     // Path to public pages
     'PUBLIC_PATH_LOGIN' => '/login',
+    'PUBLIC_PATH_REGISTER' => '/register',
     'PUBLIC_PATH_USER_PANEL' => '/user/panel',
     'PUBLIC_PATH_USER_PROFILE' => '/user/profile',
 
@@ -30,6 +31,7 @@ return [
     'SEO_TITLE_HOME' => 'Home page',
     'SEO_TITLE_USER_PANEL' => 'User panel',
     'SEO_TITLE_USER_PROFILE' => 'User profile',
+    'SEO_TITLE_REGISTER' => 'register',
 
     // Form Labels
     'LABEL_EMAIL' => 'Email',
@@ -105,5 +107,11 @@ return [
     'ACTION_CANNOT_UNDONE' => 'This action cannot be undone',
     'CONFIRM_DELETE_ACCOUNT' => 'I confirm that I would like to delete my account',
     'BTN_TEXT_DELETE_ACCOUNT' => 'Delete account',
-    'ACCOUNT_DELETED_SUCCESSFULLY' => 'Account deleted successfully.'
+    'ACCOUNT_DELETED_SUCCESSFULLY' => 'Account deleted successfully.',
+    'TITLE_REGISTER' => 'Create an account',
+    'ACCEPT_OUR_PRIVACY' => 'By signing up, you agree to our',
+    'PRIVACY_PAGE' => 'Privacy Policy',
+    'BTN_TEXT_CREATE_ACCOUNT' => 'Create my account',
+    'HAVE_ACCOUNT' => 'Already have an account?',
+    'USER_CREATED' => 'User created successfully!'
 ];
