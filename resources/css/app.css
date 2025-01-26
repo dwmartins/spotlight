@@ -325,6 +325,10 @@ input[type="checkbox"]:focus {
     } 
 }
 
+.profileView .illustration {
+    max-width: 500px;
+}
+
 .changeAvatarComponent .user_photo {
     width: 160px;
     height: 160px;
