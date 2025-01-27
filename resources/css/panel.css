@@ -1,6 +1,8 @@
 :root {
     --bg-white: #f8f9fa;
     --bg-dark: #051139;
+
+    --success: #2DCEB8;
 }
 
 /*--------------------------------------------------------------
@@ -282,7 +284,6 @@ body.toggle-sidebar .app_layout .header {
     scrollbar-width: thin;
     scrollbar-color: #aab7cf transparent;
     box-shadow: 0 0 2rem 0 rgba(136, 152, 170, .15);
-    border-radius: 1rem;
     margin: 15px 0 10px 15px;
 }
 
@@ -484,4 +485,15 @@ body.toggle-sidebar .app_layout .header {
     .close_nav_mobile {
         display: block !important;
     }
+}
+
+/*--------------------------------------------------------------
+# Customizations
+--------------------------------------------------------------*/
+.custom-bg-success {
+    background-color: var(--success);
+}
+
+.custom-text-success {
+    color: var(--success);
 }

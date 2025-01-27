@@ -5,7 +5,7 @@
         <!-- ======= Header ======= -->
         <header id="header" class="header d-flex align-items-center position-relative z-2">
             <h5 class="mb-0 custom-text-white">{{ $page_name }}</h5>
-            <button class="change_theme">TESTE</button>
+            {{-- <button class="change_theme">TESTE</button> --}}
             <nav class="header-nav ms-auto">
                 <ul class="d-flex align-items-center">
                     <a href="javascript:void(0);" class="custom-text-white me-4">
@@ -186,7 +186,7 @@
         </header><!-- End Header -->
 
         <!-- ======= Sidebar ======= -->
-        <aside id="sidebar" class="sidebar">
+        <aside id="sidebar" class="sidebar rounded-3">
 
             <ul class="sidebar-nav" id="sidebar-nav">
                 <div class="logo item_center">
