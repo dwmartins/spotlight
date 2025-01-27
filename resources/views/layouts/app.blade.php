@@ -1,21 +1,22 @@
 @extends('layouts.base')
 
 @section('content')
-    <section class="app_layout">
+    <section class="app_layout {{ isset($_COOKIE['theme']) ? 'dark-mode' : '' }}">
         <!-- ======= Header ======= -->
-        <header id="header" class="header fixed-top d-flex align-items-center">
-            <h5 class="custom-text-white mb-0">{{$page_name}}</h5>
+        <header id="header" class="header d-flex align-items-center position-relative z-2">
+            <h5 class="mb-0 custom-text-white">{{ $page_name }}</h5>
+            <button class="change_theme">TESTE</button>
             <nav class="header-nav ms-auto">
                 <ul class="d-flex align-items-center">
-                    <a href="javascript:void(0);" class="text-white me-4">
+                    <a href="javascript:void(0);" class="custom-text-white me-4">
                         <i class="fa-solid fa-bars toggle-sidebar-btn mt-1"></i>
                     </a>
                     
                     <li class="nav-item dropdown">
 
-                        <a class="nav-link nav-icon mt-2" href="javascript:void(0);" data-bs-toggle="dropdown">
-                            <i class="fa-regular fa-bell"></i>
-                            <span class="badge bg-white text-dark badge-number">4</span>
+                        <a class="nav-link nav-icon mt-2 custom-text-dark" href="javascript:void(0);" data-bs-toggle="dropdown">
+                            <i class="fa-regular fa-bell custom-text-dark"></i>
+                            <span class="badge badge-number custom-bg-white custom-text-dark">4</span>
                         </a><!-- End Notification Icon -->
 
                         <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
@@ -89,8 +90,8 @@
                     <li class="nav-item dropdown">
 
                         <a class="nav-link nav-icon mt-2" href="javascript:void(0);" data-bs-toggle="dropdown">
-                            <i class="fa-regular fa-message"></i>
-                            <span class="badge bg-white text-dark badge-number">3</span>
+                            <i class="fa-regular fa-message custom-text-dark"></i>
+                            <span class="badge custom-bg-white badge-number custom-text-dark">3</span>
                         </a><!-- End Messages Icon -->
 
                         <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
@@ -156,10 +157,10 @@
 
                         <a class="nav-link nav-profile d-flex align-items-center pe-0" href="javascript:void(0);" data-bs-toggle="dropdown">
                             <img src="{{ auth()->user()->getAvatar() }}" alt="Profile">
-                            <span class="d-none d-md-block dropdown-toggle ps-2 text-black fs-6">{{ auth()->user()->name }}</span>
+                            <span class="d-none d-md-block dropdown-toggle ps-2 fs-6">{{ auth()->user()->name }}</span>
                         </a><!-- End Profile Iamge Icon -->
 
-                        <ul class="dropdown-menu dropdown-profile shadow">
+                        <ul class="dropdown-menu dropdown-profile shadow custom-bg-white">
                             <li>
                                 <a href="{{ route('user_panel') }}" class="dropdown-item text-secondary">
                                     <i class="fa-solid fa-chart-line me-2"></i>{{ trans('messages.NAV_NAME_PANEL') }}
@@ -191,7 +192,7 @@
                 <div class="logo item_center">
                     <img src="{{ config('website_info.logoImage') }}" alt="Logo">
 
-                    <a href="javascript:void(0);" class="custom-text-dark close_nav_mobile d-none">
+                    <a href="javascript:void(0);" class="close_nav_mobile d-none custom-text-dark">
                         <i class="fa-solid fa-xmark toggle-sidebar-btn fs-2 ms-4"></i>
                     </a>
                 </div>
@@ -211,17 +212,17 @@
                     </a>
                     <ul id="contents-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                         <li>
-                            <a href="#" class="outline_none">
+                            <a href="#" class="outline_none custom-text-dark">
                                 <i class="fa-regular fa-circle"></i></i><span>Anúncios</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="outline_none">
+                            <a href="#" class="outline_none custom-text-dark">
                                 <i class="fa-regular fa-circle"></i></i><span>Eventos</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="outline_none">
+                            <a href="#" class="outline_none custom-text-dark">
                                 <i class="fa-regular fa-circle"></i></i><span>Blog</span>
                             </a>
                         </li>
@@ -232,24 +233,24 @@
                     <a class="nav-link collapsed" data-bs-target="#settings-nav" data-bs-toggle="collapse" href="javascript:void(0);">
                         <i class="fa-solid fa-gears"></i><span>Configurações</span><i class="fa-solid fa-chevron-down ms-auto"></i>
                     </a>
-                    <ul id="settings-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                    <ul id="settings-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
                         <li>
-                            <a href="/" class="outline_none">
+                            <a href="/" class="outline_none custom-text-dark">
                                 <i class="fa-regular fa-circle"></i><span>Informações básicas</span>
                             </a>
                         </li>
                         <li>
-                            <a href="/" class="outline_none">
+                            <a href="/" class="outline_none custom-text-dark">
                                 <i class="fa-regular fa-circle"></i><span>Configurações gerais</span>
                             </a>
                         </li>
                         <li>
-                            <a href="/" class="outline_none">
+                            <a href="/" class="outline_none custom-text-dark">
                                 <i class="fa-regular fa-circle"></i><span>E-mail</span>
                             </a>
                         </li>
                         <li>
-                            <a href="/" class="outline_none">
+                            <a href="/" class="outline_none custom-text-dark">
                                 <i class="fa-regular fa-circle"></i><span>Editor CSS</span>
                             </a>
                         </li>
@@ -273,4 +274,7 @@
 
         <a href="#" class="back-to-top d-flex align-items-center justify-content-center outline_none"><i class="fa-solid fa-arrow-up"></i></a>
     </section>
+
+    @vite('resources/css/panel.css')
+    @vite('resources/js/panel/theme.js')
 @endsection

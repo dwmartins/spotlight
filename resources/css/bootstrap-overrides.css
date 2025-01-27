@@ -5,6 +5,7 @@
     --bs-primary: var(--custom-primary);
     --bs-link-color: var(--custom-primary);
     --bs-link-hover-color: var(--custom-primary-hover);
+    --bs-body-color: var(--default-color);
 }
 
 .btn-primary {
@@ -29,15 +30,15 @@
 }
 
 .bg-primary {
-    background-color: var(--custom-primary);
+    background-color: var(--custom-primary) !important;
 }
 
 .bg-danger {
-    background-color: var(--custom-danger);
+    background-color: var(--custom-danger) !important;
 }
 
 .bg-warning {
-    background-color: var(--custom-warning);
+    background-color: var(--custom-warning) !important;
 }
 
 .text-primary {
@@ -57,10 +58,10 @@
 }
 
 .form-check-input {
-    margin-top: 0;
+    margin-top: 0 !important;
 }
 
 .form-check-input:checked {
-    background-color: var(--custom-primary);
-    border-color: var(--custom-primary);
+    background-color: var(--custom-primary) !important;
+    border-color: var(--custom-primary) !important;
 }
