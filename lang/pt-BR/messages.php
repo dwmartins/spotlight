@@ -116,4 +116,5 @@ return [
     'USER_CREATED' => 'Usuário criado com sucesso!',
     'CHANGE_YOUR_THEME_HERE' => 'Altere o tema do seu site aqui',
     'COLORS_UPDATED' => 'Cores atualizadas com sucesso.',
+    'VISITE_WEBSITE' => 'Visitar site',
 ];

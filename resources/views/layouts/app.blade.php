@@ -266,7 +266,7 @@
             </ul>
 
             <div class="d-flex justify-content-center">
-                <a href="/" target="_blank"class="btn btn-outline-primary">Visitar site <i class="fa-solid fa-globe"></i></a>
+                <a href="/" target="_blank"class="btn btn-outline-primary">{{ trans('messages.VISITE_WEBSITE') }} <i class="fa-solid fa-globe"></i></a>
             </div>
 
         </aside><!-- End Sidebar-->
