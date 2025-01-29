@@ -114,5 +114,6 @@ return [
     'BTN_TEXT_CREATE_ACCOUNT' => 'Criar minha conta',
     'HAVE_ACCOUNT' => 'Já possui conta?',
     'USER_CREATED' => 'Usuário criado com sucesso!',
-    'CHANGE_YOUR_THEME_HERE' => 'Altere o tema do seu site aqui'
+    'CHANGE_YOUR_THEME_HERE' => 'Altere o tema do seu site aqui',
+    'COLORS_UPDATED' => 'Cores atualizadas com sucesso.',
 ];

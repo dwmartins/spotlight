@@ -1,6 +1,10 @@
+import axios from 'axios';
 import $ from 'jquery';
+import { showAlert } from '../helpers';
 
 $(function() {
+    const csrfToken = $('meta[name="csrf-token"]').attr('content')
+
     $('#darkMode').on('input', (e) => {
         const app_layout = $('.app_layout');
         const darkModeClass = 'dark-mode';
@@ -30,6 +34,9 @@ $(function() {
 
         if (colorMapping[inputId]) {
             document.documentElement.style.setProperty(colorMapping[inputId], newColor);
+
+            const hoverColor = darkenColor(newColor, 10);
+            document.documentElement.style.setProperty(`${colorMapping[inputId]}-hover`, hoverColor);
         }
 
         $(`#${inputId}`).val(newColor);
@@ -58,19 +65,6 @@ $(function() {
         updateColor(inputId, newColor);
     });
 
-    $(".btn-save-colors").on("click", function() {
-        let colors = {
-            primary: $("#custom-primary").val(),
-            success: $("#custom-success").val(),
-            warning: $("#custom-warning").val(),
-            danger: $("#custom-danger").val(),
-            link_color: $("#custom-link-color").val()
-        };
-
-        saveChangesContainer.fadeOut();
-        alert('Cores atualizadas com sucesso.');
-    });
-
     $(".btn-cancel-colors").on("click", function() {
         $(".customColorInput__select-input").each(function() {
             let inputId = $(this).attr("id").replace("preview-", "");
@@ -88,4 +82,23 @@ $(function() {
         let inputId = $(this).attr("id").replace("preview-", "");
         initialColors[inputId] = $(this).val();
     });
+
+    function darkenColor(hexColor, percent) {
+        hexColor = hexColor.replace(/^#/, '');
+    
+        let r = parseInt(hexColor.substring(0, 2), 16);
+        let g = parseInt(hexColor.substring(2, 4), 16);
+        let b = parseInt(hexColor.substring(4, 6), 16);
+    
+        r = Math.max(0, Math.min(255, r - (r * percent / 100)));
+        g = Math.max(0, Math.min(255, g - (g * percent / 100)));
+        b = Math.max(0, Math.min(255, b - (b * percent / 100)));
+    
+        const toHex = (value) => {
+            const hex = Math.round(value).toString(16);
+            return hex.length === 1 ? '0' + hex : hex;
+        };
+    
+        return `#${toHex(r)}${toHex(g)}${toHex(b)}`;
+    }
 });
