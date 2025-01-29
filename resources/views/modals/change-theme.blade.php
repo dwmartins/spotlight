@@ -9,44 +9,44 @@
 
         <div class="mb-4">
             <h6 class="text-center custom-text-dark mb-3">Colors</h6>
-        
+
             <div class="mb-2">
                 <span class="custom-text-dark fs-7">Primary:</span>
                 <div class="customColorInput custom-text-dark">
-                    <input type="text" id="colorPrimaryText" name="themePrimary" class="customColorInput__text-input jsColorValue custom-text-dark" value="{{ config('website_colors.primary') }}">
-                    <input type="color" id="colorPrimary" class="customColorInput__select-input custom-text-dark" value="{{ config('website_colors.primary') }}">
+                    <input type="text" id="custom-primary" name="themePrimary" class="customColorInput__text-input jsColorValue custom-text-dark" value="{{ config('website_colors.primary') }}">
+                    <input type="color" id="preview-custom-primary" class="customColorInput__select-input custom-text-dark" value="{{ config('website_colors.primary') }}">
                 </div>
             </div>
-        
+
             <div class="mb-2">
                 <span class="custom-text-dark fs-7">Success:</span>
                 <div class="customColorInput custom-text-dark">
-                    <input type="text" id="colorSuccessText" name="themeSuccess" class="customColorInput__text-input jsColorValue custom-text-dark" value="{{ config('website_colors.success') }}">
-                    <input type="color" id="colorSuccess" class="customColorInput__select-input custom-text-dark" value="{{ config('website_colors.success') }}">
+                    <input type="text" id="custom-success" name="themeSuccess" class="customColorInput__text-input jsColorValue custom-text-dark" value="{{ config('website_colors.success') }}">
+                    <input type="color" id="preview-custom-success" class="customColorInput__select-input custom-text-dark" value="{{ config('website_colors.success') }}">
                 </div>
             </div>
-        
+
             <div class="mb-2">
                 <span class="custom-text-dark fs-7">Warning:</span>
                 <div class="customColorInput custom-text-dark">
-                    <input type="text" id="colorWarningText" name="themeWarning" class="customColorInput__text-input jsColorValue custom-text-dark" value="{{ config('website_colors.warning') }}">
-                    <input type="color" id="colorWarning" class="customColorInput__select-input custom-text-dark" value="{{ config('website_colors.warning') }}">
+                    <input type="text" id="custom-warning" name="themeWarning" class="customColorInput__text-input jsColorValue custom-text-dark" value="{{ config('website_colors.warning') }}">
+                    <input type="color" id="preview-custom-warning" class="customColorInput__select-input custom-text-dark" value="{{ config('website_colors.warning') }}">
                 </div>
             </div>
-        
+
             <div class="mb-2">
                 <span class="custom-text-dark fs-7">Danger:</span>
                 <div class="customColorInput custom-text-dark">
-                    <input type="text" id="colorDangerText" name="themeDanger" class="customColorInput__text-input jsColorValue custom-text-dark" value="{{ config('website_colors.danger') }}">
-                    <input type="color" id="colorDanger" class="customColorInput__select-input custom-text-dark" value="{{ config('website_colors.danger') }}">
+                    <input type="text" id="custom-danger" name="themeDanger" class="customColorInput__text-input jsColorValue custom-text-dark" value="{{ config('website_colors.danger') }}">
+                    <input type="color" id="preview-custom-danger" class="customColorInput__select-input custom-text-dark" value="{{ config('website_colors.danger') }}">
                 </div>
             </div>
 
             <div class="mb-2">
                 <span class="custom-text-dark fs-7">Links:</span>
                 <div class="customColorInput custom-text-dark">
-                    <input type="text" id="colorLinksText" name="themeLinks" class="customColorInput__text-input jsColorValue custom-text-dark" value="{{ config('website_colors.danger') }}">
-                    <input type="color" id="colorLinks" class="customColorInput__select-input custom-text-dark" value="{{ config('website_colors.link_color') }}">
+                    <input type="text" id="custom-link-color" name="themeLinks" class="customColorInput__text-input jsColorValue custom-text-dark" value="{{ config('website_colors.link_color') }}">
+                    <input type="color" id="preview-custom-link-color" class="customColorInput__select-input custom-text-dark" value="{{ config('website_colors.link_color') }}">
                 </div>
             </div>
 

@@ -15,46 +15,31 @@ $(function() {
         }
     });
 
-    // Change color
+    // Change colors
     const saveChangesContainer = $(".confirm_new_colors");
     let initialColors = {};
 
-    $(".customColorInput__select-input").each(function() {
-        let inputId = $(this).attr("id");
-        initialColors[inputId] = $(this).val();
-    });
-
-    $(".customColorInput__select-input").on("input", function() {
-        let newColor = $(this).val();
-        let inputId = $(this).attr("id");
-
-        let colorMapping = {
-            "colorPrimary": "--custom-primary",
-            "colorSuccess": "--custom-success",
-            "colorWarning": "--custom-warning",
-            "colorDanger": "--custom-danger",
-            "colorLinks": "--custom-link_color"
+    function updateColor(inputId, newColor) {
+        const colorMapping = {
+            "custom-primary": "--custom-primary",
+            "custom-success": "--custom-success",
+            "custom-warning": "--custom-warning",
+            "custom-danger": "--custom-danger",
+            "custom-link-color": "--custom-link_color"
         };
 
         if (colorMapping[inputId]) {
             document.documentElement.style.setProperty(colorMapping[inputId], newColor);
         }
 
-        $("#" + inputId + "Text").val(newColor);
-    });
-
-    $(".customColorInput__select-input").on("input", function() {
-        let newColor = $(this).val();
-        let inputId = $(this).attr("id");
-
-        $("#" + inputId + "Text").val(newColor);
-        updateColor(inputId, newColor);
+        $(`#${inputId}`).val(newColor);
+        $(`#preview-${inputId}`).val(newColor);
         saveChangesContainer.fadeIn();
-    });
+    }
 
     $(".customColorInput__text-input").on("input", function() {
-        let newColor = $(this).val();
-        let inputId = $(this).attr("id").replace("Text", "");
+        let newColor = $(this).val().trim();
+        let inputId = $(this).attr("id");
 
         if (newColor === "") return;
 
@@ -63,60 +48,44 @@ $(function() {
         }
 
         if (/^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/.test(newColor)) {
-            $("#" + inputId).val(newColor);
             updateColor(inputId, newColor);
-            saveChangesContainer.fadeIn();
         }
     });
 
-    $(".customColorInput__text-input").on("blur keypress", function(e) {
-        if (e.type === "keypress" && e.which !== 13) return;
-
-        let newColor = $(this).val().trim();
-        if (newColor === "") return;
-
-        if (!newColor.startsWith("#")) {
-            newColor = "#" + newColor;
-            $(this).val(newColor);
-        }
+    $(".customColorInput__select-input").on("input", function() {
+        let newColor = $(this).val();
+        let inputId = $(this).attr("id").replace("preview-", "");
+        updateColor(inputId, newColor);
     });
 
     $(".btn-save-colors").on("click", function() {
         let colors = {
-            primary: $("#colorPrimary").val(),
-            success: $("#colorSuccess").val(),
-            warning: $("#colorWarning").val(),
-            danger: $("#colorDanger").val(),
-            link_color: $("#colorLinks").val()
+            primary: $("#custom-primary").val(),
+            success: $("#custom-success").val(),
+            warning: $("#custom-warning").val(),
+            danger: $("#custom-danger").val(),
+            link_color: $("#custom-link-color").val()
         };
-        
+
         saveChangesContainer.fadeOut();
-        alert('Cores atualizadas com sucesso.')
+        alert('Cores atualizadas com sucesso.');
     });
 
     $(".btn-cancel-colors").on("click", function() {
         $(".customColorInput__select-input").each(function() {
-            let inputId = $(this).attr("id");
+            let inputId = $(this).attr("id").replace("preview-", "");
             let originalColor = initialColors[inputId];
 
             $(this).val(originalColor);
-            $("#" + inputId + "Text").val(originalColor);
+            $(`#${inputId}`).val(originalColor);
             updateColor(inputId, originalColor);
         });
 
         saveChangesContainer.fadeOut();
     });
 
-    function updateColor(inputId, newColor) {
-        let colorMapping = {
-            "colorPrimary": "--custom-primary",
-            "colorSuccess": "--custom-success",
-            "colorWarning": "--custom-warning",
-            "colorDanger": "--custom-danger"
-        };
-
-        if (colorMapping[inputId]) {
-            document.documentElement.style.setProperty(colorMapping[inputId], newColor);
-        }
-    }
+    $(".customColorInput__select-input").each(function() {
+        let inputId = $(this).attr("id").replace("preview-", "");
+        initialColors[inputId] = $(this).val();
+    });
 });

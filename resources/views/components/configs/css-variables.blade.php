@@ -12,8 +12,8 @@
         --custom-danger: {{ $danger }};
         --custom-danger-hover: {{ $danger_hover }};
 
-        --custom-link_color: {{ $link_color }};
-        --custom-link_color-hover: {{ $link_color_hover }};
+        --custom-link-color: {{ $link_color }};
+        --custom-link-color-hover: {{ $link_color_hover }};
 
         --input-focus: {{ $input_focus }};
     }
