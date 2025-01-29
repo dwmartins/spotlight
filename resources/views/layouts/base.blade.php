@@ -60,6 +60,10 @@
             window.website_settings = @json(config('website_settings'));
         </script>
 
+        @if (auth()->check())
+            @include('components.shared.logout')
+        @endif
+
         @stack('scripts')
     </body>
 </html>

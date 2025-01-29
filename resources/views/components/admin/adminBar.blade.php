@@ -19,6 +19,4 @@
             </a>
         </div>
     </section>
-
-    @include('components.shared.logout')
 @endif

@@ -132,5 +132,3 @@
         </div>
     </div>
 </nav>
-
-@include('components.shared.logout')
