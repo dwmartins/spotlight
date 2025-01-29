@@ -273,6 +273,12 @@
         </main>
 
         <a href="#" class="back-to-top d-flex align-items-center justify-content-center outline_none"><i class="fa-solid fa-arrow-up"></i></a>
+
+        <button class="btn btn-primary btn-change-theme" type="button" data-bs-toggle="offcanvas" data-bs-target="#changeTheme" aria-controls="changeTheme">
+            <i class="fa-solid fa-gears"></i>
+        </button>
+
+        @include('modals.change-theme')
     </section>
 
     @vite('resources/css/panel.css')

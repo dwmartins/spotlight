@@ -113,5 +113,6 @@ return [
     'PRIVACY_PAGE' => 'Privacy Policy',
     'BTN_TEXT_CREATE_ACCOUNT' => 'Create my account',
     'HAVE_ACCOUNT' => 'Already have an account?',
-    'USER_CREATED' => 'User created successfully!'
+    'USER_CREATED' => 'User created successfully!',
+    'CHANGE_YOUR_THEME_HERE' => 'Change your website theme here'
 ];
