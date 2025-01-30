@@ -2,7 +2,7 @@
 
 @section('content')
     <section class="publicLoginView container-fluid item_center vh-100 bg-gray-100 position-relative">
-        <div class="cover-image-login rounded-4" style="background-image: url({{ asset('assets/images/cover-image-login.jpg') }})"></div>
+        <div class="cover-image-login rounded-4" style="background-image: url({{ asset('assets/images/cover-image-auth.jpg') }})"></div>
 
         <form action="/login" method="post" class="form_login w-100 bg-white p-4 rounded-4 position-relative z-1">
             @csrf

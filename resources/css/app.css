@@ -343,12 +343,33 @@ input[type="checkbox"]:focus {
 /*--------------------------------------------------------------
 # Register view
 --------------------------------------------------------------*/
-.registerView #formRegister {
+.registerView .form_register {
     max-width: 400px;
+    box-shadow: 0 0 2rem 0 rgba(136, 152, 170, .15);
 }
 
-.registerView .illustration {
-    max-width: 500px;
+.registerView .cover-image-auth {
+    width: 98%;
+    height: 450px;
+    position: absolute; 
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(310deg, #212229 0%, #212529 100%);
+}
+
+.registerView .cover-image-auth::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #00000085;
+    border-radius: 1rem;
 }
 
 /*--------------------------------------------------------------
