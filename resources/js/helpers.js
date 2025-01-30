@@ -50,15 +50,12 @@ export function showAlert(type, title, messageOrFields) {
     switch (type) {
         case 'success':
             iconClass = 'fa-solid fa-circle-check text-success';
-            toastClasses.push('bg-success', 'text-dark');
             break;
         case 'error':
             iconClass = 'fa-solid fa-circle-xmark text-danger';
-            toastClasses.push('bg-danger', 'text-dark');
             break;
         case 'warning':
             iconClass = 'fa-solid fa-circle-exclamation text-warning';
-            toastClasses.push('bg-warning', 'text-dark');
             break;
         default:
             break;

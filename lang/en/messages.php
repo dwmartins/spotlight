@@ -80,12 +80,12 @@ return [
     'FILE_TYPE' => 'File must be of type :types',
     'FILE_MAX_SIZE' => 'File must be a maximum of :size MB',
     'BTN_LABEL_LOADING' => 'Wait...',
-    'TITLE_LOGIN' => 'Login',
+    'TITLE_LOGIN' => 'Sign In',
     'REMEMBER_ME' => 'Remember me',
     'FORGOT_PASSWORD' => 'Forgot my password',
     'NOT_HAVE_ACCOUNT' => "Don't have an account?",
-    'CREATE_MY_ACCOUNT' => 'Create my account',
-    'BTN_TEXT_LOGIN' => 'Login',
+    'CREATE_MY_ACCOUNT' => 'Sign up',
+    'BTN_TEXT_LOGIN' => 'Sign In',
     'BASIC_INFO' => 'Basic Information',
     'UPDATE_USER_PROFILE' => 'Update',
     'BTN_TEXT_SAVE_CHANGES' => 'Save changes',
@@ -117,4 +117,5 @@ return [
     'CHANGE_YOUR_THEME_HERE' => 'Change your website theme here',
     'COLORS_UPDATED' => 'Colors updated successfully.',
     'VISITE_WEBSITE' => 'Visit website',
+    'ENTER_YOUR_EMAIL_AND_PASSWORD' => 'Enter your email and password to sign in'
 ];

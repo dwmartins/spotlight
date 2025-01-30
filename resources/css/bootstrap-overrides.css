@@ -18,6 +18,43 @@
     --bs-btn-disabled-border-color: var(--custom-primary);
 }
 
+.btn-primary:active {
+    border-color: var(--custom-primary) !important;
+}
+
+.btn-primary:focus {
+    border-color: var(--custom-primary) !important;
+}
+
+.btn-outline-primary {
+    --bs-btn-color: var(--custom-primary);
+    --bs-btn-border-color: var(--custom-primary);
+    --bs-btn-hover-bg: var(--custom-primary);
+    --bs-btn-hover-border-color: var(--custom-primary);
+    --bs-btn-active-bg: var(--custom-primary);
+    --bs-btn-active-border-color: var(--custom-primary);
+    --bs-btn-disabled-color: var(--custom-primary);
+    --bs-btn-disabled-border-color: var(--custom-primary);
+}
+
+.btn-danger {
+    --bs-btn-bg: var(--custom-danger);
+    --bs-btn-border-color: var(--custom-danger);
+    --bs-btn-hover-bg: var(--custom-danger-hover);
+    --bs-btn-hover-border-color: var(--custom-danger-hover);
+    --bs-btn-active-bg: var(--custom-danger-hover);
+    --bs-btn-disabled-bg: var(--custom-danger);
+    --bs-btn-disabled-border-color: var(--custom-danger);
+}
+
+.btn-danger:active {
+    border-color: var(--custom-danger) !important;
+}
+
+.btn-danger:focus {
+    border-color: var(--custom-danger) !important;
+}
+
 .btn-outline-primary {
     --bs-btn-color: var(--custom-primary);
     --bs-btn-border-color: var(--custom-primary);
@@ -55,6 +92,10 @@
 
 .link-primary:hover {
     color: var(--custom-primary-hover) !important;
+}
+
+.link-primary:focus {
+    color: var(--custom-primary) !important;
 }
 
 .form-check-input {

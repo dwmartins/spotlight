@@ -84,7 +84,7 @@ return [
     'REMEMBER_ME' => 'Lembrar de mim',
     'FORGOT_PASSWORD' => 'Esqueci minha senha',
     'NOT_HAVE_ACCOUNT' => 'Não possui conta?',
-    'CREATE_MY_ACCOUNT' => 'Criar minha conta',
+    'CREATE_MY_ACCOUNT' => 'Inscreva-se',
     'BTN_TEXT_LOGIN' => 'Entrar',
     'BASIC_INFO' => 'Informações básicas',
     'UPDATE_USER_PROFILE' => 'Atualizar',
@@ -117,4 +117,5 @@ return [
     'CHANGE_YOUR_THEME_HERE' => 'Altere o tema do seu site aqui',
     'COLORS_UPDATED' => 'Cores atualizadas com sucesso.',
     'VISITE_WEBSITE' => 'Visitar site',
+    'ENTER_YOUR_EMAIL_AND_PASSWORD' => 'Digite seu e-mail e senha para fazer login'
 ];

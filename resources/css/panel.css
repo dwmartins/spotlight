@@ -514,43 +514,6 @@ body.toggle-sidebar .app_layout .header {
     color: var(--success);
 }
 
-.switch {
-    position: relative;
-    height: 1.1rem;
-    width: 2.4rem;
-    cursor: pointer;
-    appearance: none;
-    -webkit-appearance: none;
-    border-radius: 9999px;
-    background-color: rgba(100, 116, 139, 0.377);
-    transition: all .3s ease;
-}
-
-.switch:checked {
-    background-color: var(--custom-primary);
-}
-
-.switch::before {
-    position: absolute;
-    content: "";
-    left: calc(1.2rem - 1.3rem);
-    top: calc(1.2rem - 1.3rem);
-    display: block;
-    height: 1.3rem;
-    width: 1.3rem;
-    cursor: pointer;
-    border: 1px solid rgba(100, 116, 139, 0.527);
-    border-radius: 9999px;
-    background-color: rgba(255, 255, 255, 1);
-    box-shadow: 0 3px 10px rgba(100, 116, 139, 0.327);
-    transition: all .3s ease;
-}
-
-.switch:checked::before {
-    transform: translateX(100%);
-    border-color: var(--custom-primary);
-}
-
 .color-picker-container {
     display: flex;
     align-items: center;
