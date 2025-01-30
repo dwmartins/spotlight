@@ -70,6 +70,7 @@ return [
     'attributes' => [
         'name' => 'Name',
         'lastName' => 'Last Name',
+        'password' => 'Password',
         'email' => 'Email',
         'phone' => 'Phone',
         'dateOfBirth' => 'Date of Birth',
