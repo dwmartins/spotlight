@@ -27,7 +27,7 @@ class EmailSettingsController extends Controller
         $validator = Validator::make($request->all(), [
             'host' => 'required|string|max:255',
             'port' => 'required|integer',
-            'authentication' => 'required|in:SSL,TLS',
+            'encryption' => 'required|in:SSL,TLS',
             'from_address' => 'required|email|max:255',
             'username' => 'required|string|max:255'
         ]);

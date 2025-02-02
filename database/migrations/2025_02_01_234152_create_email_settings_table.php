@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('host');
             $table->integer('port');
-            $table->enum('authentication', ['SSL', 'TLS'])->default('TLS');
+            $table->enum('encryption', ['SSL', 'TLS'])->default('TLS');
             $table->string('from_address');
             $table->string('username');
             $table->string('password')->nullable();

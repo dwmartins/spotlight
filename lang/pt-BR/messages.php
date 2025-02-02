@@ -55,7 +55,7 @@ return [
     'LABEL_CONFIRM_PASSWORD' => 'Confirmar senha',
     'LABEL_SERVER' => 'Servidor',
     'LABEL_PORT' => 'Porta',
-    'LABEL_AUTHENTICATION' => 'Autenticação',
+    'LABEL_ENCRYPTION' => 'Autenticação',
     'LABEL_EMAIL_ADDRESS' => 'Endereço de e-mail',
     'LABEL_USERNAME_EMAIL' => 'Usuário/E-mail',
 
@@ -127,5 +127,6 @@ return [
     'VISITE_WEBSITE' => 'Visitar site',
     'ENTER_YOUR_EMAIL_AND_PASSWORD' => 'Digite seu e-mail e senha para fazer login',
     'EMAIL_SETTINGS_TITLE' => 'Propriedades do servidor SMTP',
-    'EMAIL_SETTINGS_UPDATED' => 'Configurações de email atualizadas'
+    'EMAIL_SETTINGS_UPDATED' => 'Configurações de email atualizadas',
+    'TOOLTIP_EMAIL_ADDRESS' => 'Endereço de e-mail que será usado como remetente para o envio de mensagens.'
 ];

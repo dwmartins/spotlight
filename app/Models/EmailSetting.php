@@ -14,7 +14,7 @@ class EmailSetting extends Model
     protected $fillable = [
         'host',
         'port',
-        'authentication',
+        'encryption',
         'from_address',
         'username',
     ];

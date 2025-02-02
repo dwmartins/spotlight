@@ -55,7 +55,7 @@ return [
     'LABEL_CONFIRM_PASSWORD' => 'Confirm password',
     'LABEL_SERVER' => 'Server',
     'LABEL_PORT' => 'Port',
-    'LABEL_AUTHENTICATION' => 'Authentication',
+    'LABEL_ENCRYPTION' => 'Authentication',
     'LABEL_EMAIL_ADDRESS' => 'Address email',
     'LABEL_USERNAME_EMAIL' => 'Username/Email',
 
@@ -127,5 +127,6 @@ return [
     'VISITE_WEBSITE' => 'Visit website',
     'ENTER_YOUR_EMAIL_AND_PASSWORD' => 'Enter your email and password to sign in',
     'EMAIL_SETTINGS_TITLE' => 'SMTP Server Properties',
-    'EMAIL_SETTINGS_UPDATED' => 'Email settings updated'
+    'EMAIL_SETTINGS_UPDATED' => 'Email settings updated',
+    'TOOLTIP_EMAIL_ADDRESS' => 'Email address that will be used as the sender for sending messages.'
 ];

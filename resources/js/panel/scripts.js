@@ -4,7 +4,7 @@ import selectize from '@selectize/selectize';
 $(function() {
 
     // Email settings
-    $('#authentication').selectize({
+    $('#encryption').selectize({
         create: false,
         maxItems: 1,
         persist: false

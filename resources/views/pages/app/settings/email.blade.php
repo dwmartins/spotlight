@@ -21,15 +21,18 @@
                     </div>
 
                     <div class="mb-4 col-sm-3">
-                        <label class="form-label text-secondary fs-7">{{ trans('messages.LABEL_AUTHENTICATION') }}</label>
-                        <select class="custom_focus text-secondary" name="authentication" id="authentication">
-                            <option value="SSL">SSL</option>
-                            <option value="TLS">TLS</option>
+                        <label class="form-label text-secondary fs-7">{{ trans('messages.LABEL_ENCRYPTION') }}</label>
+                        <select class="custom_focus text-secondary" name="encryption" id="encryption">
+                            <option @if (($emailSettings->encryption ?? 'SSL') === "SSL") selected @endif value="SSL">SSL</option>
+                            <option @if (($emailSettings->encryption ?? 'SSL') === "TLS") selected @endif  value="TLS">TLS</option>
                         </select>
                     </div>
     
                     <div class="mb-4 col-sm-4">
-                        <label for="from_address" class="form-label text-secondary">{{ trans('messages.LABEL_EMAIL_ADDRESS') }}</label>
+                        <label for="from_address" class="form-label text-secondary">
+                            {{ trans('messages.LABEL_EMAIL_ADDRESS') }} 
+                            <span><i class="fa-regular fa-circle-question" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="{{ trans('messages.TOOLTIP_EMAIL_ADDRESS') }}"></i></span>
+                        </label>
                         <input name="from_address" type="text" class="form-control form-control custom_focus text-secondary" id="from_address" value="{{ old('from_address', $emailSettings->from_address ?? '') }}">
                     </div>
     
