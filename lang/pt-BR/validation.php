@@ -83,6 +83,11 @@ return [
         'country' => 'País',
         'currentPassword' => 'Senha atual',
         'newPassword' => 'Nova senha',
-        'confirmPassword' => 'Confirmar senha'
+        'confirmPassword' => 'Confirmar senha',
+        'host' => 'Servidor',
+        'port' => 'Porta',
+        'authentication' => 'Autenticação',
+        'from_address' => 'Endereço de e-mail',
+        'username' => 'Usuário/E-mail',
     ],
 ];

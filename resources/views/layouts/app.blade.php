@@ -4,7 +4,7 @@
     <section class="app_layout {{ isset($_COOKIE['theme']) ? 'dark-mode' : '' }}">
         <!-- ======= Header ======= -->
         <header id="header" class="header d-flex align-items-center position-relative z-2">
-            <h5 class="mb-0 custom-text-white">{{ $page_name }}</h5>
+            <h6 class="mb-0 custom-text-white">{{ $page_name }}</h6>
             {{-- <button class="change_theme">TESTE</button> --}}
             <nav class="header-nav ms-auto">
                 <ul class="d-flex align-items-center">
@@ -186,7 +186,7 @@
         </header><!-- End Header -->
 
         <!-- ======= Sidebar ======= -->
-        <aside id="sidebar" class="sidebar rounded-3">
+        <aside id="sidebar" class="sidebar rounded-3 custom-bg-white shadow">
 
             <ul class="sidebar-nav" id="sidebar-nav">
                 <div class="logo item_center">
@@ -245,7 +245,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="/" class="outline_none custom-text-dark">
+                            <a href="{{ route('app_settings_email') }}" class="outline_none custom-text-dark">
                                 <i class="fa-regular fa-circle"></i><span>E-mail</span>
                             </a>
                         </li>
@@ -287,4 +287,5 @@
 
     @vite('resources/css/panel.css')
     @vite('resources/js/panel/theme.js')
+    @vite('resources/js/panel/scripts.js')
 @endsection

@@ -1,0 +1,20 @@
+.selectize-input {
+    border: 1px solid #d0d0d0;
+    padding: 9px 8px;
+    border-radius: 0.375rem;
+    border: var(--bs-border-width) solid var(--bs-border-color);
+}
+
+.selectize-control.single .selectize-input, .selectize-dropdown.single {
+    border: var(--bs-border-width) solid var(--bs-border-color);
+}
+
+.selectize-dropdown .selected {
+    background-color: var(--custom-primary);
+}
+
+.selectize-control.single .selectize-input {
+    box-shadow: none;
+    background-color: #fff;
+    background-image: none;
+}

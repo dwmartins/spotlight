@@ -1,3 +1,5 @@
+@import '@selectize/selectize/dist/css/selectize.default.css';
+
 * {
     font-family: 'Poppins', sans-serif;
 }

@@ -1,5 +1,5 @@
 :root {
-    --bg-white: #f8f9fa;
+    --bg-white: #ffff;
     --bg-dark: #051139;
 
     --success: #2DCEB8;
@@ -14,13 +14,13 @@
 }
 
 .app_layout:not(.dark-mode) {
-    background-color: var(--bg-white);
+    background-color: #f8f9fa;
     color: var(--default-color);
 }
 
 /*****************************************/
 .custom-bg-dark {
-    background-color: var(--bg-dark);
+    background-color: #111c44;
 }
 
 .custom-bg-white {
@@ -41,7 +41,7 @@
 }
 
 .app_layout.dark-mode .custom-bg-white {
-    background-color: var(--bg-dark);
+    background-color: #111c44;
 }
 
 .app_layout.dark-mode .custom-text-dark {
@@ -283,19 +283,10 @@ body.toggle-sidebar .app_layout .header {
     overflow-y: auto;
     scrollbar-width: thin;
     scrollbar-color: #aab7cf transparent;
-    box-shadow: 0 0 2rem 0 rgba(136, 152, 170, .15);
     margin: 15px 0 10px 15px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
-
-.app_layout.dark-mode .sidebar{
-    background-color: var(--bg-dark);
-}
-
-.app_layout:not(.dark-mode) .sidebar{
-    background-color: var(--bg-white);
 }
 
 .app_layout .sidebar .logo img{

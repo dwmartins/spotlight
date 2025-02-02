@@ -33,6 +33,9 @@ return [
     'SEO_TITLE_USER_PROFILE' => 'User profile',
     'SEO_TITLE_REGISTER' => 'register',
 
+    // Name for pages
+    'APP_PAGE_EMAIL_SETTINGS' => 'Settings / email',
+
     // Form Labels
     'LABEL_EMAIL' => 'Email',
     'LABEL_PASSWORD' => 'Password',
@@ -50,6 +53,11 @@ return [
     'LABEL_CURRENT_PASSWORD' => 'Current password',
     'LABEL_NEW_PASSWORD' => 'New password',
     'LABEL_CONFIRM_PASSWORD' => 'Confirm password',
+    'LABEL_SERVER' => 'Server',
+    'LABEL_PORT' => 'Port',
+    'LABEL_AUTHENTICATION' => 'Authentication',
+    'LABEL_EMAIL_ADDRESS' => 'Address email',
+    'LABEL_USERNAME_EMAIL' => 'Username/Email',
 
     'PAGE_NOT_FOUND' => 'The page you tried to access was not found.',
     'NAVIGATION' => 'Navigation',
@@ -117,5 +125,7 @@ return [
     'CHANGE_YOUR_THEME_HERE' => 'Change your website theme here',
     'COLORS_UPDATED' => 'Colors updated successfully.',
     'VISITE_WEBSITE' => 'Visit website',
-    'ENTER_YOUR_EMAIL_AND_PASSWORD' => 'Enter your email and password to sign in'
+    'ENTER_YOUR_EMAIL_AND_PASSWORD' => 'Enter your email and password to sign in',
+    'EMAIL_SETTINGS_TITLE' => 'SMTP Server Properties',
+    'EMAIL_SETTINGS_UPDATED' => 'Email settings updated'
 ];

@@ -33,6 +33,9 @@ return [
     'SEO_TITLE_USER_PROFILE' => 'Perfil do usuário',
     'SEO_TITLE_REGISTER' => 'Criar conta',
 
+    // Name for pages
+    'APP_PAGE_EMAIL_SETTINGS' => 'Configurações / E-mail',
+
     // Form Labels
     'LABEL_EMAIL' => 'E-mail',
     'LABEL_PASSWORD' => 'Senha',
@@ -50,7 +53,12 @@ return [
     'LABEL_CURRENT_PASSWORD' => 'Senha atual',
     'LABEL_NEW_PASSWORD' => 'Nova senha',
     'LABEL_CONFIRM_PASSWORD' => 'Confirmar senha',
-    
+    'LABEL_SERVER' => 'Servidor',
+    'LABEL_PORT' => 'Porta',
+    'LABEL_AUTHENTICATION' => 'Autenticação',
+    'LABEL_EMAIL_ADDRESS' => 'Endereço de e-mail',
+    'LABEL_USERNAME_EMAIL' => 'Usuário/E-mail',
+
     'PAGE_NOT_FOUND' => 'A página que você tentou acessar não foi encontrada.',
     'NAVIGATION' => 'Navegação',
     'SOCIAL_MEDIA' => 'Redes sociais',
@@ -117,5 +125,7 @@ return [
     'CHANGE_YOUR_THEME_HERE' => 'Altere o tema do seu site aqui',
     'COLORS_UPDATED' => 'Cores atualizadas com sucesso.',
     'VISITE_WEBSITE' => 'Visitar site',
-    'ENTER_YOUR_EMAIL_AND_PASSWORD' => 'Digite seu e-mail e senha para fazer login'
+    'ENTER_YOUR_EMAIL_AND_PASSWORD' => 'Digite seu e-mail e senha para fazer login',
+    'EMAIL_SETTINGS_TITLE' => 'Propriedades do servidor SMTP',
+    'EMAIL_SETTINGS_UPDATED' => 'Configurações de email atualizadas'
 ];
