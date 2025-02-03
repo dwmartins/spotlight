@@ -22,7 +22,9 @@ class WebsiteInfoController extends Controller
             Cache::put($this->siteInfoCacheKey, $siteInfo, now()->addMinutes(config('constants.cache_time')));
         }
 
-        $siteInfo->keywords = json_decode($siteInfo->keywords);
+        if($siteInfo) {
+            $siteInfo->keywords = json_decode($siteInfo->keywords);
+        }
 
         return view('pages.app.settings.site-info', [
             'page_name' => trans('messages.APP_PAGE_SITE_INFO'),
