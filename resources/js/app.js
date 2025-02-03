@@ -28,30 +28,4 @@ $(function() {
             $icon.removeClass('fa-eye-slash').addClass('fa-eye');
         }
     });
-
-    /**
-     * Back to top button in admin panel
-     */
-    var $backtotop = $('.back-to-top');
-    if ($backtotop.length) {
-        var toggleBacktotop = function () {
-            if ($(window).scrollTop() > 100) {
-                $backtotop.addClass('active');
-            } else {
-                $backtotop.removeClass('active');
-            }
-        };
-
-        // Call the function on page load and on scroll
-        $(window).on('load scroll', toggleBacktotop);
-    }
-
-    /**
-     * Sidebar toggle in admin panel
-     */
-    if ($('.toggle-sidebar-btn').length) {
-        $('.toggle-sidebar-btn').on('click', function() {
-            $('body').toggleClass('toggle-sidebar');
-        });
-    }
 });

@@ -310,6 +310,13 @@ body.toggle-sidebar .app_layout .header {
     background-color: #aab7cf;
 }
 
+@media (max-width: 475px) {
+    #main {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
+
 @media (min-width: 1200px) {
     #main {
         margin-left: 300px;
@@ -482,7 +489,7 @@ body.toggle-sidebar .app_layout .header {
 }
 
 .app_layout .btn-change-theme {
-    position: absolute;
+    position: fixed;
     right: 20px;
     bottom: 20px;
     width: 45px;
