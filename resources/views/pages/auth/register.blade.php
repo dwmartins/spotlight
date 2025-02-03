@@ -35,9 +35,13 @@
                 <a href="/" class="text-primary outline_none">{{ trans('messages.PRIVACY_PAGE') }}</a>
             </div>
 
-            <button id="btnLogin" class="btn btn-primary w-100">
-                {{ trans('messages.BTN_TEXT_CREATE_ACCOUNT') }}
-            </button>
+            <x-buttons.btn-primary 
+                text="{{ trans('messages.BTN_TEXT_CREATE_ACCOUNT') }}" 
+                :use-loader="true"
+                onclick="toggleLoading(this, true, true)"
+                type="submit"
+                class="w-100"
+            />  
 
             <hr class="text-secondary">
 
