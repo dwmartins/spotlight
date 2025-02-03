@@ -3,6 +3,13 @@
     padding: 9px 8px;
     border-radius: 0.375rem;
     border: var(--bs-border-width) solid var(--bs-border-color);
+    box-shadow: none;
+}
+
+.selectize-input.focus {
+    box-shadow: none;
+    border-color: var(--custom-primary);
+    box-shadow: var(--input-focus);
 }
 
 .selectize-control.single .selectize-input, .selectize-dropdown.single {
@@ -16,5 +23,33 @@
 .selectize-control.single .selectize-input {
     box-shadow: none;
     background-color: #fff;
+    background-image: none;
+}
+
+.selectize-control.multi .selectize-input [data-value] {
+    background-color: var(--custom-primary);
+    background-image: none;
+}
+
+.selectize-control.multi .selectize-input>div {
+    background: var(--custom-primary);
+    border: 1px solid var(--custom-primary);
+}
+
+.selectize-control.plugin-remove_button .item .remove {
+    text-decoration: none;
+    border-left: none;
+    border-radius: 0 2px 2px 0;
+    font-size: 23px;
+}
+
+.selectize-control.multi .selectize-input>div.active {
+    background: var(--custom-primary-hover);
+    color: #fff;
+    border: 1px solid var(--custom-primary-hover);
+}
+
+.selectize-control.multi .selectize-input [data-value].active {
+    background-color: var(--custom-primary-hover);
     background-image: none;
 }

@@ -90,5 +90,10 @@ return [
         'authentication' => 'Authentication',
         'from_address' => 'Email address',
         'username' => 'Username/Email',
+        'webSiteName' => 'website name',
+        'instagram' => 'Instagram',
+        'facebook' => 'Facebook',
+        'x' => 'X',
+        'keywords' => 'Keywords'
     ],
 ];

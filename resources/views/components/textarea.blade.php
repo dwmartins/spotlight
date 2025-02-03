@@ -7,9 +7,7 @@
         rows="{{ $rows }}"
         class="form-control custom_focus text-secondary {{ $class }}"
         oninput="updateCharCount('{{ $id }}', {{ $maxChars }})"
-    >
-        {{ $value }}
-    </textarea>
+    >{{ $value }}</textarea>
 
     <div class="char-counter text-secondary fs-7">
         <span id="char-counter-{{ $id }}">{{ strlen($value ?? '') }}</span>|{{ $maxChars }}

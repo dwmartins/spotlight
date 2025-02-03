@@ -89,5 +89,10 @@ return [
         'authentication' => 'Autenticação',
         'from_address' => 'Endereço de e-mail',
         'username' => 'Usuário/E-mail',
+        'webSiteName' => 'Nome do site',
+        'instagram' => 'Instagram',
+        'facebook' => 'Facebook',
+        'x' => 'X',
+        'keywords' => 'Palavras chaves'
     ],
 ];

@@ -9,4 +9,5 @@ require base_path('routes/public/user.php');
 require base_path('routes/app/app.php');
 require base_path('routes/app/custom/colors.php');
 require base_path('routes/app/settings/email.php');
+require base_path('routes/app/settings/basic-info.php');
 

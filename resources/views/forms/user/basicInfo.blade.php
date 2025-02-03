@@ -26,7 +26,7 @@
             id="description" 
             name="description" 
             :maxChars="500" 
-            placeholder="Digite aqui sua descrição..."
+            placeholder="{{ trans('messages.PLACEHOLDER_DESCRIPTION') }}"
             rows='4'
             value="{{ old('description', auth()->user()->description) }}"
         />

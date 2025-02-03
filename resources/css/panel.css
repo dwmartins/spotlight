@@ -620,3 +620,10 @@ input::-webkit-color-swatch-wrapper {
 .customColorInput__select-input::-webkit-color-swatch-wrapper {
     padding: 0;
 }
+
+/*--------------------------------------------------------------
+# Basic info view
+--------------------------------------------------------------*/
+.site-info-view .form-basic-info .selectize-input {
+    min-height: 109.6px;
+}

@@ -78,6 +78,10 @@ function validateFields($data) {
             continue;
         }
 
+        if($key === 'keywords') {
+            $value = json_encode($value);
+        }
+
         if (preg_match($maliciousPattern, $value)) {
             $errors[$key] = [
                 trans('validation.FIELD_INVALID_CHARACTERS', [

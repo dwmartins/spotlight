@@ -24,6 +24,8 @@ return [
     'NAV_NAME_USER_PANEL' => 'Painel de Usuário',
     'NAV_NAME_USER_PROFILE' => 'Perfil do Usuário',
     'NAV_NAME_USER_LOGOUT' => 'Sair',
+    'NAV_NAME_BASIC_INFO' => 'Informações básicas',
+    'NAV_NAME_SETTINGS_EMAIL' => 'E-mail',
 
     // SEO Titles
     'SEO_TITLE_PAGE_NOT_FOND' => 'Página não encontrada',
@@ -35,6 +37,7 @@ return [
 
     // Name for pages
     'APP_PAGE_EMAIL_SETTINGS' => 'Configurações / E-mail',
+    'APP_PAGE_SITE_INFO' => 'Configurações / Informações básicas',
 
     // Form Labels
     'LABEL_EMAIL' => 'E-mail',
@@ -58,6 +61,11 @@ return [
     'LABEL_ENCRYPTION' => 'Autenticação',
     'LABEL_EMAIL_ADDRESS' => 'Endereço de e-mail',
     'LABEL_USERNAME_EMAIL' => 'Usuário/E-mail',
+    'LABEL_SITE_NAME' => 'Nome do site',
+    'LABEL_INSTAGRAM' => 'Instagram',
+    'LABEL_FACEBOOK' => 'Facebook',
+    'LABEL_X' => 'X',
+    'LABEL_KEYWORDS' => 'Palavras chaves',
 
     'PAGE_NOT_FOUND' => 'A página que você tentou acessar não foi encontrada.',
     'NAVIGATION' => 'Navegação',
@@ -128,5 +136,9 @@ return [
     'ENTER_YOUR_EMAIL_AND_PASSWORD' => 'Digite seu e-mail e senha para fazer login',
     'EMAIL_SETTINGS_TITLE' => 'Propriedades do servidor SMTP',
     'EMAIL_SETTINGS_UPDATED' => 'Configurações de email atualizadas',
-    'TOOLTIP_EMAIL_ADDRESS' => 'Endereço de e-mail que será usado como remetente para o envio de mensagens.'
+    'TOOLTIP_EMAIL_ADDRESS' => 'Endereço de e-mail que será usado como remetente para o envio de mensagens.',
+    'BASIC_INFO_SETTINGS_TITLE' => 'Informações básicas',
+    'OLD_TWITTER' => 'Antigo twitter',
+    'SAVED_WEBSITE_INFORMATION' => 'Informações do site salvas com sucesso.',
+    'PLACEHOLDER_DESCRIPTION' => 'Digite aqui a descrição...'
 ];

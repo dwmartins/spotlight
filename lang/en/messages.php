@@ -24,6 +24,8 @@ return [
     'NAV_NAME_USER_PANEL' => 'User Panel',
     'NAV_NAME_USER_PROFILE' => 'User Profile',
     'NAV_NAME_USER_LOGOUT' => 'Logout',
+    'NAV_NAME_BASIC_INFO' => 'Basic info',
+    'NAV_NAME_SETTINGS_EMAIL' => 'Email',
 
     // SEO Titles
     'SEO_TITLE_PAGE_NOT_FOND' => 'Page not found',
@@ -35,6 +37,7 @@ return [
 
     // Name for pages
     'APP_PAGE_EMAIL_SETTINGS' => 'Settings / email',
+    'APP_PAGE_SITE_INFO' => 'Settings / basic info',
 
     // Form Labels
     'LABEL_EMAIL' => 'Email',
@@ -58,6 +61,11 @@ return [
     'LABEL_ENCRYPTION' => 'Authentication',
     'LABEL_EMAIL_ADDRESS' => 'Address email',
     'LABEL_USERNAME_EMAIL' => 'Username/Email',
+    'LABEL_SITE_NAME' => 'Website name',
+    'LABEL_INSTAGRAM' => 'Instagram',
+    'LABEL_FACEBOOK' => 'Facebook',
+    'LABEL_X' => 'X',
+    'LABEL_KEYWORDS' => 'Keywords',
 
     'PAGE_NOT_FOUND' => 'The page you tried to access was not found.',
     'NAVIGATION' => 'Navigation',
@@ -128,5 +136,9 @@ return [
     'ENTER_YOUR_EMAIL_AND_PASSWORD' => 'Enter your email and password to sign in',
     'EMAIL_SETTINGS_TITLE' => 'SMTP Server Properties',
     'EMAIL_SETTINGS_UPDATED' => 'Email settings updated',
-    'TOOLTIP_EMAIL_ADDRESS' => 'Email address that will be used as the sender for sending messages.'
+    'TOOLTIP_EMAIL_ADDRESS' => 'Email address that will be used as the sender for sending messages.',
+    'BASIC_INFO_SETTINGS_TITLE' => 'Basic info',
+    'OLD_TWITTER' => 'Old twitter',
+    'SAVED_WEBSITE_INFORMATION' => 'Website information saved successfully.',
+    'PLACEHOLDER_DESCRIPTION' => 'Enter the description here...'
 ];

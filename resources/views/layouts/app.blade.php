@@ -235,8 +235,8 @@
                     </a>
                     <ul id="settings-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
                         <li>
-                            <a href="/" class="outline_none custom-text-dark">
-                                <i class="fa-regular fa-circle"></i><span>Informações básicas</span>
+                            <a href="{{ route('app_settings_basic_info') }}" class="outline_none custom-text-dark">
+                                <i class="fa-regular fa-circle"></i><span>{{ trans('messages.NAV_NAME_BASIC_INFO') }}</span>
                             </a>
                         </li>
                         <li>
@@ -246,7 +246,7 @@
                         </li>
                         <li>
                             <a href="{{ route('app_settings_email') }}" class="outline_none custom-text-dark">
-                                <i class="fa-regular fa-circle"></i><span>E-mail</span>
+                                <i class="fa-regular fa-circle"></i><span>{{ trans('messages.NAV_NAME_SETTINGS_EMAIL') }}</span>
                             </a>
                         </li>
                         <li>
