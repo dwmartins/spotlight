@@ -19,7 +19,7 @@
         </div>
     </div>
 
-    <p class="text-secondary fs-7 my-0">{{ trans('messages.MINIMUM_CHARACTERS_PASSWORD', ['min' => config('constants.min_password_length')]) }}</p>
+    <p class="text-secondary fs-7 my-0">{{ trans('messages.MINIMUM_CHARACTERS_PASSWORD', ['min' => config('website_settings.min_password_length')]) }}</p>
 
     <div class="d-flex justify-content-end mt-3">
         <x-buttons.btn-primary-outline 

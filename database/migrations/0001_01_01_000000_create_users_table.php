@@ -38,15 +38,6 @@ return new class extends Migration
             $table->timestamps();
         });
 
-        DB::table('users')->insert([
-            'name' => env('ADMIN_NAME', 'Administrador'),
-            'email' => env('ADMIN_EMAIL', 'admin@example.com'),
-            'password' => Hash::make(env('ADMIN_PASSWORD', 'abc123')),
-            'role' => 'support',
-            'created_at' => now(),
-            'updated_at' => now(),
-        ]);
-
         Schema::create('password_reset_tokens', function (Blueprint $table) {
             $table->string('email')->primary();
             $table->string('token');

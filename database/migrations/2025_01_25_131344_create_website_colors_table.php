@@ -18,19 +18,6 @@ return new class extends Migration
             $table->string('hex_value', 20);
             $table->timestamps();
         });
-
-        $colors = [
-            ['name' => 'primary', 'hex_value' => '#409EFF'],
-            ['name' => 'success', 'hex_value' => '#67C23A'],
-            ['name' => 'warning', 'hex_value' => '#FFC107'],
-            ['name' => 'danger', 'hex_value' => '#DC3545'],
-            
-            ['name' => 'link_color', 'hex_value' => '#409EFF'],
-        ];
-
-        foreach ($colors as $color) {
-            DB::table('website_colors')->insert($color);
-        }
     }
 
     /**

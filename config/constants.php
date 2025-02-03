@@ -10,8 +10,6 @@ return [
         'validation.php'
     ],
 
-    'min_password_length' => 6,
-
     // List of all roles that exist in the system
     'allowed_roles' => ['support', 'admin', 'mod', 'test', 'visitor', 'sponsor'],
 

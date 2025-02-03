@@ -128,7 +128,7 @@ class UserController extends Controller
 
         $validator = Validator::make($request->all(), [
             'currentPassword' => 'required|string|max:100',
-            'newPassword' => 'required|string|max:100|min:'. config('constants.min_password_length'),
+            'newPassword' => 'required|string|max:100|min:'. config('website_settings.min_password_length'),
             'confirmPassword' => 'required|string|max:100',
         ]);
 

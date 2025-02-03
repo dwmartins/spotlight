@@ -77,7 +77,7 @@ class AuthController extends Controller
             'name' => 'required|string|max:255',
             'lastName' => 'nullable|string|max:255',
             'email' => 'required|email|unique:users,email',
-            'password' => 'required|string|min:'. config('constants.min_password_length')
+            'password' => 'required|string|min:'. config('website_settings.min_password_length')
         ]);
 
         if($validator->fails()) {
