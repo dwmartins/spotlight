@@ -475,7 +475,7 @@ body.toggle-sidebar .app_layout .header {
 
 .app_layout #main {
     transition: all 0.5s;
-    height: calc(100vh - 80px);
+    min-height: calc(100vh - 80px);
 }
 
 .app_layout #main > section {
@@ -633,4 +633,16 @@ input::-webkit-color-swatch-wrapper {
 --------------------------------------------------------------*/
 .site-info-view .form-basic-info .selectize-input {
     min-height: 109.6px;
+}
+
+.site-info-view .previewImg {
+    max-width: 180px;
+    max-height: 180px;
+    object-fit: cover;
+}
+
+.site-info-view .previewFavicon {
+    max-width: 80px;
+    max-height: 80px;
+    object-fit: cover;
 }

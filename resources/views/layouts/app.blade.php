@@ -272,7 +272,7 @@
         </aside><!-- End Sidebar-->
 
         <!-- Main Content -->
-        <main id="main" class="main px-3">
+        <main id="main" class="main px-2">
             @yield('main-content')
         </main>
 

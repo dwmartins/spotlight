@@ -140,5 +140,15 @@ return [
     'BASIC_INFO_SETTINGS_TITLE' => 'Informações básicas',
     'OLD_TWITTER' => 'Antigo twitter',
     'SAVED_WEBSITE_INFORMATION' => 'Informações do site salvas com sucesso.',
-    'PLACEHOLDER_DESCRIPTION' => 'Digite aqui a descrição...'
+    'PLACEHOLDER_DESCRIPTION' => 'Digite aqui a descrição...',
+    'VISUAL_IDENTITY_SETTINGS_TITLE' => 'Identidade visual', 
+    'CHOOSE_YOUR_LOGO_IMAGE' => 'Escolha a imagem do seu logotipo',
+    'FORMAT_LOGO_IMAGE' => 'Recomenda-se dimensão de 200px por 100px, tamanho máximo 5MB, (JPG, JPEG ou PNG.)',
+    'SELECT_FILE' => 'Selecionar aquivo',
+    'CHOOSE_YOUR_COVER_IMAGE' => 'Escolha a imagem de capa',
+    'FORMAT_IMAGE' => 'Tamanho máximo 5MB, (JPG, JPEG ou PNG)',
+    'CHOOSE_YOUR_FAVICON' => 'Escolha um favicon para o seu site',
+    'FORMAT_ICON' => 'Favicon são pequenas imagens de 16 x 16 pixels associadas a um site, geralmente mostradas na barra de endereços do navegador e na lista de favoritos.',
+    'CHOSE_YOUR_DEFAULT_IMAGE' => 'Escolha uma imagem padrão',
+    'DEFAULT_IMAGE_MESSAGE' => 'Esta imagem será usada para conteúdos que não tenha imagens.'
 ];

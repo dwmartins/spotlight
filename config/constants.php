@@ -21,5 +21,9 @@ return [
     'path_to_user_avatars' => '/storage/users/avatars/',
 
     // paths to default avatar
-    'path_to_default_avatar' => '/assets/images/default/avatar.jpg'
+    'path_to_default_avatar' => '/assets/images/default/avatar.jpg',
+
+    //Types of files that the system accepts
+    'accepted_image' => 'image/jpeg, image/jpg, image/png',
+    'accepted_favicon' => 'image/vnd.microsoft.icon, image/x-icon, image/jpeg, image/jpg, image/png'
 ];

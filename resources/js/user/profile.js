@@ -47,7 +47,6 @@ $(async function() {
         let errors = {};
 
         $('#formResetPassword').find('input').each(function() {
-            console.log($(this).attr('name'));
             if($(this).attr('name') == '_token') {
                 return;
             }

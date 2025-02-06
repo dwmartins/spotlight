@@ -167,8 +167,8 @@ input[type="checkbox"]:focus {
 }
 
 .loader.lg {
-    width: 55px !important;
-    padding: 9px !important;
+    width: 40px !important;
+    padding: 8px !important;
 }
 
 @keyframes l3 {

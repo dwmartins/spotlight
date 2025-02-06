@@ -12,6 +12,11 @@ window.Translations = {
     ALERT_TITLE_SUCCESS: 'Sucesso',
     ALERT_TITLE_ERROR : 'Erro',
     ALERT_DELETE_ACCOUNT: 'Você precisa confirmar se realmente deseja excluir sua conta',
+    IMG_FORMAT: 'O formato da imagem deve ser (png, jpg ou jpeg).',
+    IMG_MAX_SIZE: 'A imagem deve ter no máximo :attributeMB.',
+    FAVICON_FORMAT: 'O formato do favicon deve ser um ícone ICO ou JPG, JPEG ou PNG.',
+    FAVICON_MAX_SIZE: 'O favicon deve ter no máximo :attributeMB.',
+    MESSAGE_SELECT_IMAGE: 'Por favor, selecione ao menos uma imagem',
 
     ATTRIBUTES : {
         name: 'Nome',
