@@ -4,7 +4,7 @@
     <section class="recoverPasswordView container-fluid item_center vh-100 bg-gray-100 position-relative">
         <div class="cover-image-reset-password rounded-4" style="background-image: url({{ asset('assets/images/cover-image-auth.jpg') }})"></div>
 
-        <form action="/recover-password" method="post" class="form_recover_password w-100 bg-white p-4 rounded-4 position-relative z-1">
+        <form class="form_recover_password w-100 bg-white p-4 rounded-4 position-relative z-1">
             @csrf
             <h5 class="mb-1">{{ trans('messages.CANT_LOG_IN') }}</h5>
             <p>{{ trans('messages.RESTORE_ACCESS_ACCOUNT') }}</p>
@@ -17,7 +17,7 @@
             <x-buttons.btn-primary 
                 text="{{ trans('messages.BTN_TEXT_RESET_PASSWORD') }}" 
                 :use-loader="true"
-                onclick="toggleLoading(this, true, true)"
+                id="btn_send_code"
                 type="submit"
                 class="w-100 shadow"
             />  

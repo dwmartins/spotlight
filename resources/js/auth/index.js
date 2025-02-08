@@ -1,8 +1,11 @@
-import { toggleButtonLoading, trans } from "../helpers";
+import { showAlert, toggleButtonLoading, trans } from "../helpers";
 import $ from 'jquery';
 import { validateForm } from "../validators/user";
+import axios from "axios";
 
 $(function() {
+    const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+
     $('.form_login').on('submit', function(e) {
         const btn = $('#btnLogin');
 
@@ -22,5 +25,37 @@ $(function() {
         }
 
         toggleButtonLoading(btn, true);
+    });
+
+    // Send password recovery link
+    $('.form_recover_password').on('submit', async (e) => {
+        e.preventDefault();
+        const btn_send_code = document.getElementById('btn_send_code');
+
+        const formData = {
+            email: $(this).find('#email').val(),
+            _token: csrfToken
+        }
+
+        const requiredFields = {
+            email: { label: trans('LABEL_EMAIL'), required: true},
+        }
+
+        if(!validateForm(formData, requiredFields)) {
+            return;
+        }
+
+        toggleLoading(btn_send_code, true);
+
+        try {
+            const url = '/recover-password';
+            const response = await axios.post(url, formData);
+            $(this).find('#email').val('');
+            showAlert('success', '', response.data.message);
+        } catch (error) {
+            showAlert('error', '', error.response.data.message);
+        } finally {
+            toggleLoading(btn_send_code, false);
+        }
     });
 })  
