@@ -28,7 +28,7 @@
                     <input class="switch" name="rememberMe" id="rememberMe" type="checkbox">
                     {{ trans('messages.REMEMBER_ME') }}
                 </label>
-                <a href="/" class="link-primary outline_none fs-7">{{ trans('messages.FORGOT_PASSWORD') }}</a>
+                <a href="{{ route('recover_password') }}" class="link-primary outline_none fs-7">{{ trans('messages.FORGOT_PASSWORD') }}</a>
             </div>
 
             <button id="btnLogin" class="btn btn-primary btn-lg w-100 fs-6" data-trans-loading="{{ trans('messages.BTN_LABEL_LOADING') }}">

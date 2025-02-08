@@ -18,7 +18,7 @@
 # Customizations
 --------------------------------------------------------------*/
 body {
-    color: #67748e;
+    color: #535a69;
 }
 
 html {
@@ -380,6 +380,37 @@ input[type="checkbox"]:focus {
     object-fit: contain;
 }
 
+/*--------------------------------------------------------------
+# Recovery password view
+--------------------------------------------------------------*/
+.recoverPasswordView .form_recover_password {
+    max-width: 420px;
+    box-shadow: 0 0 2rem 0 rgba(136, 152, 170, .15);
+}
+
+.recoverPasswordView .cover-image-reset-password {
+    width: 98%;
+    height: 500px;
+    position: absolute; 
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(310deg, #212229 0%, #212529 100%);
+}
+
+.recoverPasswordView .cover-image-reset-password::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #00000085;
+    border-radius: 1rem;
+}
 /*--------------------------------------------------------------
 # Component adminBar
 --------------------------------------------------------------*/

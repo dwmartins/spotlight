@@ -6,6 +6,7 @@ return [
     'PUBLIC_PATH_REGISTER' => '/criar-conta',
     'PUBLIC_PATH_USER_PANEL' => '/usuario/painel',
     'PUBLIC_PATH_USER_PROFILE' => '/usuario/perfil',
+    'PUBLIC_PATH_RESET_PASSWORD' => '/recuperar-senha',
 
     // Name of navigation
     'NAV_NAME_HOME' => 'Início',
@@ -34,6 +35,7 @@ return [
     'SEO_TITLE_USER_PANEL' => 'Painel do usuário',
     'SEO_TITLE_USER_PROFILE' => 'Perfil do usuário',
     'SEO_TITLE_REGISTER' => 'Criar conta',
+    'SEO_TITLE_RESET_PASSWORD' => 'Recuperar senha',
 
     // Name for pages
     'APP_PAGE_EMAIL_SETTINGS' => 'Configurações / E-mail',
@@ -66,6 +68,8 @@ return [
     'LABEL_FACEBOOK' => 'Facebook',
     'LABEL_X' => 'X',
     'LABEL_KEYWORDS' => 'Palavras chaves',
+    'LABEL_YOUR_EMAIL' => 'Seu e-mail',
+    'LABEL_SEND_RECOVERY_LINK' => 'Enviaremos um link de recuperação para',
 
     'FILE_ATRIBUTES' => [
         'logoImage' => 'Logo',
@@ -135,6 +139,7 @@ return [
     'ACCEPT_OUR_PRIVACY' => 'Ao se inscrever, você concorda com nossa',
     'PRIVACY_PAGE' => 'Política de privacidade',
     'BTN_TEXT_CREATE_ACCOUNT' => 'Criar minha conta',
+    'BTN_TEXT_RESET_PASSWORD' => 'Redefinir senha',
     'HAVE_ACCOUNT' => 'Já possui conta?',
     'USER_CREATED' => 'Usuário criado com sucesso!',
     'CHANGE_YOUR_THEME_HERE' => 'Altere o tema do seu site aqui',
@@ -161,4 +166,6 @@ return [
     'DEFAULT_IMAGE_MESSAGE' => 'Esta imagem será usada para conteúdos que não tenha imagens.',
     'SPECIFY_FILE_TYPE' => 'O arquivo :attribute deve ser do tipo :types',
     'SPECIFY_FILE_SIZE' => 'O arquivo :attribute deve ter no máximo :sizeMB',
+    'CANT_LOG_IN' => 'Não consegue fazer login?',
+    'RESTORE_ACCESS_ACCOUNT' => 'Restaurar acesso à sua conta'
 ];

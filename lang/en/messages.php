@@ -6,6 +6,7 @@ return [
     'PUBLIC_PATH_REGISTER' => '/register',
     'PUBLIC_PATH_USER_PANEL' => '/user/panel',
     'PUBLIC_PATH_USER_PROFILE' => '/user/profile',
+    'PUBLIC_PATH_RESET_PASSWORD' => '/recover-password',
 
     // Name of navigation
     'NAV_NAME_HOME' => 'Home',
@@ -34,6 +35,7 @@ return [
     'SEO_TITLE_USER_PANEL' => 'User panel',
     'SEO_TITLE_USER_PROFILE' => 'User profile',
     'SEO_TITLE_REGISTER' => 'register',
+    'SEO_TITLE_RESET_PASSWORD' => 'Reset password',
 
     // Name for pages
     'APP_PAGE_EMAIL_SETTINGS' => 'Settings / email',
@@ -66,6 +68,8 @@ return [
     'LABEL_FACEBOOK' => 'Facebook',
     'LABEL_X' => 'X',
     'LABEL_KEYWORDS' => 'Keywords',
+    'LABEL_YOUR_EMAIL' => 'Your email',
+    'LABEL_SEND_RECOVERY_LINK' => 'We will send a recovery link to',
 
     'FILE_ATRIBUTES' => [
         'logoImage' => 'Logo',
@@ -135,6 +139,7 @@ return [
     'ACCEPT_OUR_PRIVACY' => 'By signing up, you agree to our',
     'PRIVACY_PAGE' => 'Privacy Policy',
     'BTN_TEXT_CREATE_ACCOUNT' => 'Create my account',
+    'BTN_TEXT_RESET_PASSWORD' => 'Reset password',
     'HAVE_ACCOUNT' => 'Already have an account?',
     'USER_CREATED' => 'User created successfully!',
     'CHANGE_YOUR_THEME_HERE' => 'Change your website theme here',
@@ -161,4 +166,6 @@ return [
     'DEFAULT_IMAGE_MESSAGE' => 'This image will be used for contents that does not have images.',
     'SPECIFY_FILE_TYPE' => 'The :attribute file must be of type :types',
     'SPECIFY_FILE_SIZE' => 'The :attribute file must be at most :sizeMB',
+    'CANT_LOG_IN' => "Can't log in?",
+    'RESTORE_ACCESS_ACCOUNT' => 'Restore access to your account'
 ];

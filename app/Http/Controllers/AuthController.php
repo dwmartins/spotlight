@@ -33,6 +33,18 @@ class AuthController extends Controller
         ]);
     }
 
+    /**
+     * return view to recover password /pages/auth/reset-password.blade.php
+     */
+    public function recoverPasswordView(): View
+    {
+        $webSiteName = config('website_info.websiteName'); 
+
+        return view('pages.auth.reset-password', [
+            'custom_seo_title' => trans('messages.SEO_TITLE_RESET_PASSWORD') . ' | ' . $webSiteName
+        ]);
+    }
+
     public function login(Request $request)
     {
         $validator = Validator::make($request->all(), [
