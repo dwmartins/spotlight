@@ -374,6 +374,12 @@ input[type="checkbox"]:focus {
     border-radius: 1rem;
 }
 
+.registerView .website_logo img{
+    max-width: 200px;
+    max-height: 100px;
+    object-fit: contain;
+}
+
 /*--------------------------------------------------------------
 # Component adminBar
 --------------------------------------------------------------*/
