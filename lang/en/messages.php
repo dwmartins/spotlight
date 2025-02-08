@@ -6,7 +6,8 @@ return [
     'PUBLIC_PATH_REGISTER' => '/register',
     'PUBLIC_PATH_USER_PANEL' => '/user/panel',
     'PUBLIC_PATH_USER_PROFILE' => '/user/profile',
-    'PUBLIC_PATH_RESET_PASSWORD' => '/recover-password',
+    'PUBLIC_PATH_RECOVER_PASSWORD' => '/recover-password',
+    'PUBLIC_PATH_RESET_PASSWORD' => '/reset-password',
 
     // Name of navigation
     'NAV_NAME_HOME' => 'Home',
@@ -35,6 +36,7 @@ return [
     'SEO_TITLE_USER_PANEL' => 'User panel',
     'SEO_TITLE_USER_PROFILE' => 'User profile',
     'SEO_TITLE_REGISTER' => 'register',
+    'SEO_TITLE_RECOVER_PASSWORD' => 'Recover password',
     'SEO_TITLE_RESET_PASSWORD' => 'Reset password',
 
     // Name for pages
@@ -78,6 +80,7 @@ return [
         'defaultImage' => 'Default image'
     ],
 
+    'FATAL_ERROR_MESSAGE' => 'Oops, an error occurred, please try again.',
     'PAGE_NOT_FOUND' => 'The page you tried to access was not found.',
     'NAVIGATION' => 'Navigation',
     'SOCIAL_MEDIA' => 'Social media',
@@ -167,5 +170,15 @@ return [
     'SPECIFY_FILE_TYPE' => 'The :attribute file must be of type :types',
     'SPECIFY_FILE_SIZE' => 'The :attribute file must be at most :sizeMB',
     'CANT_LOG_IN' => "Can't log in?",
-    'RESTORE_ACCESS_ACCOUNT' => 'Restore access to your account'
+    'RESTORE_ACCESS_ACCOUNT' => 'Restore access to your account',
+    'EMAIL_NOT_FOUND' => 'Email not found',
+    'RECOVERY_LINK_HAS_BEEN_SENT' => 'A recovery link has been sent to your email.',
+    'EMAIL_SUBJECT' => 'Password Recovery',
+    'HELLO' => 'Hello',
+    'EMAIL_RECEIVING_RESET_PASSWORD' => 'You are receiving this email because we have received a password reset request for your account.',
+    'EMAIL_CLICK_THE_BUTTON_RESET_PASSWORD' => 'Click the button below to reset your password:',
+    'BTN_TEXT_RESET_PASSWORD_BY_EMAIL' => 'Reset Password',
+    'EMAIL_NOT_REQUEST_PASSWORD_RESET' => 'If you did not request a password reset, please ignore this email.',
+    'EMAIL_HAVE_TROUBLE_CLICKING_THE_BUTTON' => 'If you have trouble clicking the button, please copy and paste the URL below into your browser:',
+    'ALL_RIGHTS_RESERVED' => 'All rights reserved.'
 ];

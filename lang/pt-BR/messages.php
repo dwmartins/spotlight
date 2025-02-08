@@ -6,7 +6,8 @@ return [
     'PUBLIC_PATH_REGISTER' => '/criar-conta',
     'PUBLIC_PATH_USER_PANEL' => '/usuario/painel',
     'PUBLIC_PATH_USER_PROFILE' => '/usuario/perfil',
-    'PUBLIC_PATH_RESET_PASSWORD' => '/recuperar-senha',
+    'PUBLIC_PATH_RECOVER_PASSWORD' => '/recuperar-senha',
+    'PUBLIC_PATH_RESET_PASSWORD' => '/redefinir-senha',
 
     // Name of navigation
     'NAV_NAME_HOME' => 'Início',
@@ -35,7 +36,8 @@ return [
     'SEO_TITLE_USER_PANEL' => 'Painel do usuário',
     'SEO_TITLE_USER_PROFILE' => 'Perfil do usuário',
     'SEO_TITLE_REGISTER' => 'Criar conta',
-    'SEO_TITLE_RESET_PASSWORD' => 'Recuperar senha',
+    'SEO_TITLE_RECOVER_PASSWORD' => 'Recuperar senha',
+    'SEO_TITLE_RESET_PASSWORD' => 'Redefinir senha',
 
     // Name for pages
     'APP_PAGE_EMAIL_SETTINGS' => 'Configurações / E-mail',
@@ -78,6 +80,7 @@ return [
         'defaultImage' => 'Imagem padrão'
     ],
 
+    'FATAL_ERROR_MESSAGE' => 'Ops, ocorreu um erro. Tente novamente.',
     'PAGE_NOT_FOUND' => 'A página que você tentou acessar não foi encontrada.',
     'NAVIGATION' => 'Navegação',
     'SOCIAL_MEDIA' => 'Redes sociais',
@@ -167,5 +170,15 @@ return [
     'SPECIFY_FILE_TYPE' => 'O arquivo :attribute deve ser do tipo :types',
     'SPECIFY_FILE_SIZE' => 'O arquivo :attribute deve ter no máximo :sizeMB',
     'CANT_LOG_IN' => 'Não consegue fazer login?',
-    'RESTORE_ACCESS_ACCOUNT' => 'Restaurar acesso à sua conta'
+    'RESTORE_ACCESS_ACCOUNT' => 'Restaurar acesso à sua conta',
+    'EMAIL_NOT_FOUND' => 'E-mail não encontrado.',
+    'RECOVERY_LINK_HAS_BEEN_SENT' => 'Um link de recuperação foi enviado para o seu e-mail.',
+    'EMAIL_SUBJECT' => 'Recuperação de Senha',
+    'HELLO' => 'Olá',
+    'EMAIL_RECEIVING_RESET_PASSWORD' => 'Você está recebendo este e-mail porque recebemos uma solicitação de redefinição de senha para sua conta.',
+    'EMAIL_CLICK_THE_BUTTON_RESET_PASSWORD' => 'Clique no botão abaixo para redefinir sua senha:',
+    'BTN_TEXT_RESET_PASSWORD_BY_EMAIL' => 'Redefinir Senha',
+    'EMAIL_NOT_REQUEST_PASSWORD_RESET' => 'Se você não solicitou uma redefinição de senha, ignore este e-mail.',
+    'EMAIL_HAVE_TROUBLE_CLICKING_THE_BUTTON' => 'Se você tiver problemas para clicar no botão, copie e cole o URL abaixo no seu navegador:',
+    'ALL_RIGHTS_RESERVED' => 'Todos os direitos reservados.'
 ];

@@ -2,12 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\App\EmailSettingsController;
+use App\Mail\ResetPasswordMail;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Str;
 use Illuminate\View\View;
+use Illuminate\Support\Facades\Mail;
 
 class AuthController extends Controller
 {
@@ -41,7 +47,7 @@ class AuthController extends Controller
         $webSiteName = config('website_info.websiteName'); 
 
         return view('pages.auth.reset-password', [
-            'custom_seo_title' => trans('messages.SEO_TITLE_RESET_PASSWORD') . ' | ' . $webSiteName
+            'custom_seo_title' => trans('messages.SEO_TITLE_RECOVER_PASSWORD') . ' | ' . $webSiteName
         ]);
     }
 
@@ -116,5 +122,80 @@ class AuthController extends Controller
         $request->session()->regenerateToken();
 
         return redirectWithMessage('success', '', trans('messages.LOGOUT_SUCCESSFULLY_MESSAGE'), 'home_page');
+    }
+
+    public function sendResetLinkEmail(Request $request)
+    {
+        $errors = validateFields($request->all());
+        if($errors) {
+            return redirectWithMessage('error', trans('messages.INVALID_FIELDS_MESSAGE'), $errors);
+        }
+
+        $validator = Validator::make($request->all(), [
+            'email' => 'required|email'
+        ]);
+
+        if($validator->fails()) {
+            $errors = $validator->errors();
+
+            return response()->json([
+                'message' => $errors
+            ], 422);
+        }
+
+        $user = User::where('email', $request->email)->first();
+
+        if(!$user) {
+            return response()->json([
+                'message' => trans('messages.EMAIL_NOT_FOUND')
+            ], 422);
+        }
+
+        $token = Str::random(60);
+
+        try {
+            DB::table('password_reset_tokens')->updateOrInsert(
+                ['email' => $user->email],
+                [
+                    'token' => $token,
+                    'created_at' => now()
+                ]
+            );
+    
+            $this->sendResetPasswordEmail($user, $token);
+    
+            return response()->json([
+                'message' => trans('messages.RECOVERY_LINK_HAS_BEEN_SENT')
+            ]);
+        } catch (\Exception $e) {
+            Log::error('Error sending email', [
+                'message' => $e->getMessage(),
+                'email' => $user->email,
+                'stack' => $e->getTraceAsString()
+            ]);
+
+            return response()->json([
+                'message' => trans('messages.FATAL_ERROR_MESSAGE')
+            ], 500);
+        }
+    }
+
+    private function sendResetPasswordEmail($user, $token)
+    {   
+        $emailSettingController = new EmailSettingsController();
+        $emailSetting = $emailSettingController->getEmailSettings();
+
+        if($emailSetting) {
+            config([
+                'mail.mailers.smtp.host' => $emailSetting->host,
+                'mail.mailers.smtp.port' => $emailSetting->port,
+                'mail.mailers.smtp.encryption' => $emailSetting->encryption,
+                'mail.mailers.smtp.username' => $emailSetting->username,
+                'mail.mailers.smtp.password' => $emailSetting->password,
+                'mail.from.address' => $emailSetting->from_address,
+            ]);
+    
+            Mail::to($user->email)->send(new ResetPasswordMail($user, $token));
+        }
     }
 }

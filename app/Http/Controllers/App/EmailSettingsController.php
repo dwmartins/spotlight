@@ -5,11 +5,15 @@ namespace App\Http\Controllers\App;
 use App\Http\Controllers\Controller;
 use App\Models\EmailSetting;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\View\View;
 
 class EmailSettingsController extends Controller
 {
+    private $emailSettingCacheKey = 'email_setting';
+
     public function showSettings(): View
     {
         return view('pages.app.settings.email', [
@@ -51,6 +55,25 @@ class EmailSettingsController extends Controller
             $emailSetting->save();
         }
 
+        Cache::put($this->emailSettingCacheKey, $emailSetting, now()->addMinutes(config('constants.cache_time')));
+
         return redirectWithMessage('success', trans('messages.ALERT_TITLE_SUCCESS'), trans('messages.EMAIL_SETTINGS_UPDATED'), 'app_settings_email');
+    }
+
+    public function getEmailSettings(): ?EmailSetting
+    {
+        $emailSetting = Cache::get($this->emailSettingCacheKey);
+
+        if(!$emailSetting) {
+            $emailSetting = EmailSetting::first();
+            Cache::put($this->emailSettingCacheKey, $emailSetting, now()->addMinutes(config('constants.cache_time')));
+        }
+
+        if($emailSetting) {
+            return $emailSetting;
+        }
+
+        Log::warning('Email settings not found');
+        return null;
     }
 }
