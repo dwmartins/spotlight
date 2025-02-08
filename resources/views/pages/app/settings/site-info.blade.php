@@ -74,7 +74,7 @@
                 <!-- favicon -->
                 <div class="row">
                     <div class="col-sm-12 col-lg-4 mb-4 item_center">
-                        <img src="{{ config('website_info.icon') }}" id="current_favicon" alt="Favicon" class="previewFavicon">
+                        <img src="{{ config('website_info.favicon') }}" id="current_favicon" alt="Favicon" class="previewFavicon">
                         <div class="loading_favicon d-none">
                             <x-loader 
                                 color="primary"
@@ -84,7 +84,7 @@
                     </div>
                     <div class="col-sm-12 col-lg-8">
                         <h6>{{ trans('messages.CHOOSE_YOUR_FAVICON') }}</h6>
-                        <p>{{ trans('messages.FORMAT_ICON') }}</p>
+                        <p>{{ trans('messages.FORMAT_FAVICON') }}</p>
 
                         <div id="favicon_selected" class="d-none d-flex justify-content-between align-items-center gap-2 mt-4">
                             <p class="text-secondary m-0 fileName" id="fileName"></p>

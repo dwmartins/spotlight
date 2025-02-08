@@ -11,6 +11,6 @@ class WebsiteInfo extends Model
     protected $fillable = [
         'webSiteName', 'email', 'phone', 'city', 'state', 'address',
         'instagram', 'facebook', 'x', 'description', 'keywords',
-        'ico', 'logoImage', 'coverImage', 'defaultImage',
+        'favicon', 'logoImage', 'coverImage', 'defaultImage',
     ];
 }

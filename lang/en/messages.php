@@ -148,7 +148,7 @@ return [
     'CHOOSE_YOUR_COVER_IMAGE' => 'Choose cover image',
     'FORMAT_IMAGE' => 'Maximum size 5MB, (JPG, JPEG or PNG)',
     'CHOOSE_YOUR_FAVICON' => 'Choose a favicon for your website',
-    'FORMAT_ICON' => "Favicons are small 16 x 16 pixel images associated with a website, usually displayed in the browser's address bar and bookmarks list.",
+    'FORMAT_FAVICON' => "Favicons are small 16 x 16 pixel images associated with a website, usually displayed in the browser's address bar and bookmarks list.",
     'CHOSE_YOUR_DEFAULT_IMAGE' => 'Choose a default image',
     'DEFAULT_IMAGE_MESSAGE' => 'This image will be used for contents that does not have images.'
 ];

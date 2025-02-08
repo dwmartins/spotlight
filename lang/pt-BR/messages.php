@@ -148,7 +148,7 @@ return [
     'CHOOSE_YOUR_COVER_IMAGE' => 'Escolha a imagem de capa',
     'FORMAT_IMAGE' => 'Tamanho máximo 5MB, (JPG, JPEG ou PNG)',
     'CHOOSE_YOUR_FAVICON' => 'Escolha um favicon para o seu site',
-    'FORMAT_ICON' => 'Favicon são pequenas imagens de 16 x 16 pixels associadas a um site, geralmente mostradas na barra de endereços do navegador e na lista de favoritos.',
+    'FORMAT_FAVICON' => 'Favicon são pequenas imagens de 16 x 16 pixels associadas a um site, geralmente mostradas na barra de endereços do navegador e na lista de favoritos.',
     'CHOSE_YOUR_DEFAULT_IMAGE' => 'Escolha uma imagem padrão',
     'DEFAULT_IMAGE_MESSAGE' => 'Esta imagem será usada para conteúdos que não tenha imagens.'
 ];

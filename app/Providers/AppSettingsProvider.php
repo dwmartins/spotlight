@@ -136,7 +136,7 @@ class AppSettingsProvider extends ServiceProvider
             'x' => $siteInfo ? $siteInfo->x : null,
             'description' => $siteInfo ? $siteInfo->description : null,
             'keywords' => $siteInfo ? $siteInfo->keywords : null,
-            'icon' => $siteInfo && $siteInfo->icon ? "$imagesPath/$siteInfo->icon" : "$defaultPath/icon.ico",
+            'favicon' => $siteInfo && $siteInfo->favicon ? "$imagesPath/$siteInfo->favicon" : "$defaultPath/favicon.ico",
             'logoImage' => $siteInfo && $siteInfo->logoImage ? "$imagesPath/$siteInfo->logoImage" : "$defaultPath/logo.png",
             'coverImage' => $siteInfo && $siteInfo->coverImage ? "$imagesPath/$siteInfo->coverImage" : "$defaultPath/coverImage.jpg",
             'defaultImage' => $siteInfo && $siteInfo->defaultImage ? "$imagesPath/$siteInfo->defaultImage" : "$defaultPath/defaultImg.png",

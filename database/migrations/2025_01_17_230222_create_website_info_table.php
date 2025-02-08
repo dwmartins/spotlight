@@ -24,7 +24,7 @@ return new class extends Migration
             $table->string('x', 255)->nullable();
             $table->longText('description')->nullable();
             $table->longText('keywords')->nullable();
-            $table->string('icon', 255)->nullable();
+            $table->string('favicon', 255)->nullable();
             $table->string('logoImage', 50)->nullable();
             $table->string('coverImage', 50)->nullable();
             $table->string('defaultImage', 50)->nullable();

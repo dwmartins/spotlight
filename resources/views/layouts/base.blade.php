@@ -9,7 +9,7 @@
 
         <meta name="description" content="{{ $seo['description'] }}">
         <meta name="keywords" content="{{ $seo['keywords'] }}">
-        <link rel="icon" href="{{ $seo['icon'] }}">
+        <link rel="icon" href="{{ $seo['favicon'] }}">
 
         <!-- font-awesome -->
         <script src="https://kit.fontawesome.com/b019fa643e.js" crossorigin="anonymous"></script>

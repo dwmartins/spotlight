@@ -48,11 +48,7 @@ class WebsiteInfoController extends Controller
             'instagram'    => 'nullable|url|max:255',
             'facebook'     => 'nullable|url|max:255',
             'x'            => 'nullable|url|max:255',
-            'description'  => 'nullable|string',
-            'icon'         => 'nullable|string|max:255',
-            'logoImage'    => 'nullable|string|max:50',
-            'coverImage'   => 'nullable|string|max:50',
-            'defaultImage' => 'nullable|string|max:50',
+            'description'  => 'nullable|string'
         ]);
 
         if($validator->fails()) {
