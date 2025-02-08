@@ -67,6 +67,13 @@ return [
     'LABEL_X' => 'X',
     'LABEL_KEYWORDS' => 'Palavras chaves',
 
+    'FILE_ATRIBUTES' => [
+        'logoImage' => 'Logo',
+        'coverImage' => 'Imagem de Capa',
+        'favicon' => 'Favicon',
+        'defaultImage' => 'Imagem padrão'
+    ],
+
     'PAGE_NOT_FOUND' => 'A página que você tentou acessar não foi encontrada.',
     'NAVIGATION' => 'Navegação',
     'SOCIAL_MEDIA' => 'Redes sociais',
@@ -140,6 +147,7 @@ return [
     'BASIC_INFO_SETTINGS_TITLE' => 'Informações básicas',
     'OLD_TWITTER' => 'Antigo twitter',
     'SAVED_WEBSITE_INFORMATION' => 'Informações do site salvas com sucesso.',
+    'SAVED_WEBSITE_IMAGES' => 'Imagens do site salvas com sucesso.',
     'PLACEHOLDER_DESCRIPTION' => 'Digite aqui a descrição...',
     'VISUAL_IDENTITY_SETTINGS_TITLE' => 'Identidade visual', 
     'CHOOSE_YOUR_LOGO_IMAGE' => 'Escolha a imagem do seu logotipo',
@@ -150,5 +158,7 @@ return [
     'CHOOSE_YOUR_FAVICON' => 'Escolha um favicon para o seu site',
     'FORMAT_FAVICON' => 'Favicon são pequenas imagens de 16 x 16 pixels associadas a um site, geralmente mostradas na barra de endereços do navegador e na lista de favoritos.',
     'CHOSE_YOUR_DEFAULT_IMAGE' => 'Escolha uma imagem padrão',
-    'DEFAULT_IMAGE_MESSAGE' => 'Esta imagem será usada para conteúdos que não tenha imagens.'
+    'DEFAULT_IMAGE_MESSAGE' => 'Esta imagem será usada para conteúdos que não tenha imagens.',
+    'SPECIFY_FILE_TYPE' => 'O arquivo :attribute deve ser do tipo :types',
+    'SPECIFY_FILE_SIZE' => 'O arquivo :attribute deve ter no máximo :sizeMB',
 ];

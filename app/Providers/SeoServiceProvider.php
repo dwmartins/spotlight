@@ -34,7 +34,7 @@ class SeoServiceProvider extends ServiceProvider
                 'title' => $seoData && $seoData->webSiteName ? $seoData->webSiteName : $defaultSeoData['title'],
                 'description' => $seoData && $seoData->description ? $seoData->description : null,
                 'keywords' => $seoData && $seoData->keywords ? $seoData->keywords : null,
-                'favicon' => $seoData && $seoData->favicon ? "/storage/site/$seoData->favicon" : $defaultSeoData['favicon']
+                'favicon' => $seoData && $seoData->favicon ? "/storage/site/images/$seoData->favicon" : $defaultSeoData['favicon']
             ];
 
             view()->share('seo', $seo);

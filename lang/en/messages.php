@@ -67,6 +67,13 @@ return [
     'LABEL_X' => 'X',
     'LABEL_KEYWORDS' => 'Keywords',
 
+    'FILE_ATRIBUTES' => [
+        'logoImage' => 'Logo',
+        'coverImage' => 'Cover image',
+        'favicon' => 'Favicon',
+        'defaultImage' => 'Default image'
+    ],
+
     'PAGE_NOT_FOUND' => 'The page you tried to access was not found.',
     'NAVIGATION' => 'Navigation',
     'SOCIAL_MEDIA' => 'Social media',
@@ -140,6 +147,7 @@ return [
     'BASIC_INFO_SETTINGS_TITLE' => 'Basic info',
     'OLD_TWITTER' => 'Old twitter',
     'SAVED_WEBSITE_INFORMATION' => 'Website information saved successfully.',
+    'SAVED_WEBSITE_IMAGES' => 'Website images saved successfully.',
     'PLACEHOLDER_DESCRIPTION' => 'Enter the description here...',
     'VISUAL_IDENTITY_SETTINGS_TITLE' => 'Visual identity',
     'CHOOSE_YOUR_LOGO_IMAGE' => 'Choose your logo image',
@@ -150,5 +158,7 @@ return [
     'CHOOSE_YOUR_FAVICON' => 'Choose a favicon for your website',
     'FORMAT_FAVICON' => "Favicons are small 16 x 16 pixel images associated with a website, usually displayed in the browser's address bar and bookmarks list.",
     'CHOSE_YOUR_DEFAULT_IMAGE' => 'Choose a default image',
-    'DEFAULT_IMAGE_MESSAGE' => 'This image will be used for contents that does not have images.'
+    'DEFAULT_IMAGE_MESSAGE' => 'This image will be used for contents that does not have images.',
+    'SPECIFY_FILE_TYPE' => 'The :attribute file must be of type :types',
+    'SPECIFY_FILE_SIZE' => 'The :attribute file must be at most :sizeMB',
 ];

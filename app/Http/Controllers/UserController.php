@@ -80,8 +80,8 @@ class UserController extends Controller
             ], 400);
         }
         
-        $allowedMimeTypes = ['image/jpeg', 'image/png', 'image/jpg'];
-        $maxSize = 2048 * 1024; // 2MB
+        $allowedMimeTypes = config('constants.allowedMimeTypes.images');
+        $maxSize = config('constants.allowedFileSizes.avatars'); // 2MB
         $errors = [];
 
         if (!in_array($file->getMimeType(), $allowedMimeTypes)) {

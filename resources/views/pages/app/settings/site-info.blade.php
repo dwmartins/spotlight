@@ -4,7 +4,7 @@
     <div class="min-height-300 bg-primary w-100 position-absolute top-0 start-0 z-1"></div>
 
     <section class="position-relative z-1 container-fluid site-info-view">
-        <form action="/app/settings/update-images" method="post" class="card mb-4 custom-bg-white custom-text-dark rounded-3 border-0 shadow form-update-images">
+        <form action="/app/settings/update-images" method="post" enctype="multipart/form-data" class="card mb-4 custom-bg-white custom-text-dark rounded-3 border-0 shadow form-update-images">
             @csrf
             <div class="card-body">
                 <h5 class="card-title">{{ trans('messages.VISUAL_IDENTITY_SETTINGS_TITLE') }}</h5>
@@ -138,7 +138,7 @@
                     <x-buttons.btn-primary-outline 
                         text="{{ trans('messages.BTN_TEXT_SAVE_CHANGES') }}" 
                         :use-loader="true"
-                        onclick=""
+                        id="btn_save_files"
                         type="submit"
                     /> 
                 </div>
@@ -232,5 +232,5 @@
         </form>
     </section>
 
-    @vite('resources/js/panel/basicInfo.js')
+    @vite('resources/js/panel/settings/basicInfo.js')
 @endsection

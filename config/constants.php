@@ -19,11 +19,21 @@ return [
 
     // path to user avatars
     'path_to_user_avatars' => '/storage/users/avatars/',
-
-    // paths to default avatar
     'path_to_default_avatar' => '/assets/images/default/avatar.jpg',
 
     //Types of files that the system accepts
     'accepted_image' => 'image/jpeg, image/jpg, image/png',
-    'accepted_favicon' => 'image/vnd.microsoft.icon, image/x-icon, image/jpeg, image/jpg, image/png'
+    'accepted_favicon' => 'image/vnd.microsoft.icon, image/x-icon, image/jpeg, image/jpg, image/png',
+
+    // Accepted file types
+    'allowedMimeTypes' => [
+        'images' => ['image/jpeg', 'image/png', 'image/jpg'],
+        'favicon' => ['image/vnd.microsoft.icon', 'image/x-icon', 'image/jpeg', 'image/jpg', 'image/png']
+    ],
+
+    // Accepted file sizes
+    'allowedFileSizes' => [
+        'images' => 5 * 1024 * 1024, // 5MB
+        'avatars' => 2 * 1024 * 1024, // 2MB
+    ]
 ];

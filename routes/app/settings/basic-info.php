@@ -16,3 +16,6 @@ Route::get('/app/settings/basic-info', [WebsiteInfoController::class, 'index'])
  */
 Route::post('/app/settings/basic-info', [WebsiteInfoController::class, 'save'])
     ->middleware([IsAdmin::class]);
+
+Route::post('/app/settings/update-images', [WebsiteInfoController::class, 'updateFiles'])
+    ->middleware([IsAdmin::class]);

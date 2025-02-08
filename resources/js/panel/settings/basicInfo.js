@@ -1,6 +1,6 @@
 import $ from 'jquery';
-import FileValidator from '../validators/fileValidator';
-import { showAlert, trans } from '../helpers';
+import FileValidator from '../../validators/fileValidator';
+import { showAlert, toggleLoading, trans } from '../../helpers';
 
 $(function() {
     function setupImageUploader(fieldId, previewId, loadingClass, selectedContainerId, uploadContainerId) {
@@ -57,6 +57,7 @@ $(function() {
 
     $('.form-update-images').on('submit', (e) => {
         let hasFile = false;
+        const btn_save_files = document.getElementById('btn_save_files');
         
         $('.form-update-images').find('input').each(function() {
             if($(this).attr('name') == '_token') {
@@ -65,7 +66,6 @@ $(function() {
             
             if($(this).val()) {
                 hasFile = true;
-                console.log($(this).val())
             }
         });
 
@@ -74,5 +74,7 @@ $(function() {
             showAlert('warning', '', trans('MESSAGE_SELECT_IMAGE'));
             return;
         }
+
+        toggleLoading(btn_save_files, true);
     });
 });

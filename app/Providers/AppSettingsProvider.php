@@ -122,7 +122,7 @@ class AppSettingsProvider extends ServiceProvider
         }
 
         $defaultPath = "/assets/images/default";
-        $imagesPath = "/storage/site/";
+        $imagesPath = "/storage/site/images";
 
         $websiteData = [
             'websiteName' => $siteInfo ? $siteInfo->webSiteName : "My listings site",
