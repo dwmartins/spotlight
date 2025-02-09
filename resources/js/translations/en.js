@@ -2,6 +2,8 @@ window.Translations = {
     // Form labels
     LABEL_EMAIL: 'Email',
     LABEL_PASSWORD: 'Password',
+    LABEL_NEW_PASSWORD: 'New password',
+    LABEL_CONFIRM_PASSWORD: 'Confirm password',
 
     INVALID_FIELDS: 'Invalid Fields',
     FIELD_REQUIRED_MESSAGE: 'The ":attribute" field is required.',
@@ -31,8 +33,8 @@ window.Translations = {
         zipCode: 'Zip code',
         state: 'State',
         country: 'Country',
-        currentPassword: 'Senha atual',
-        newPassword: 'Nova senha',
-        confirmPassword: 'Confirmar senha'
+        currentPassword: 'Current password',
+        newPassword: 'New password',
+        confirmPassword: 'Confirm password'
     }
 };

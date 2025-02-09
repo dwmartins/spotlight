@@ -58,4 +58,39 @@ $(function() {
             toggleLoading(btn_send_code, false);
         }
     });
+
+    // Reset password
+    $('#newPassword, #confirmPassword').on('input', function () {
+        const icon = $(this).siblings('.icon_show_password');
+        togglePasswordIcon(this, icon);
+    });
+
+    $('.form_reset_password').on('submit', async (e) => {
+        const btn_change_password = document.getElementById('btn_change_password');
+
+        const formData = {
+            newPassword: $(this).find('#newPassword').val(),
+            confirmPassword: $(this).find('#confirmPassword').val()
+        }
+
+        const requiredFields = {
+            newPassword: { label: trans('LABEL_NEW_PASSWORD'), required: true},
+            confirmPassword: { label: trans('LABEL_CONFIRM_PASSWORD'), required: true}
+        }
+
+        if(!validateForm(formData, requiredFields)) {
+            e.preventDefault();
+            return;
+        }
+
+        toggleLoading(btn_change_password, true);
+    });
+
+    function togglePasswordIcon(input, icon) {
+        if ($(input).val().length > 0) {
+            $(icon).removeClass('d-none');
+        } else {
+            $(icon).addClass('d-none');
+        }
+    }
 })  

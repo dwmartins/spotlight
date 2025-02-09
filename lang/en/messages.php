@@ -180,5 +180,10 @@ return [
     'BTN_TEXT_RESET_PASSWORD_BY_EMAIL' => 'Reset Password',
     'EMAIL_NOT_REQUEST_PASSWORD_RESET' => 'If you did not request a password reset, please ignore this email.',
     'EMAIL_HAVE_TROUBLE_CLICKING_THE_BUTTON' => 'If you have trouble clicking the button, please copy and paste the URL below into your browser:',
-    'ALL_RIGHTS_RESERVED' => 'All rights reserved.'
+    'ALL_RIGHTS_RESERVED' => 'All rights reserved.',
+    'BTN_TEXT_CHANGE_PASSWORD' => 'Change password',
+    'CREATE_A_NEW_PASSWORD_BELOW' => 'Create a new password below. Choose a strong, unique password to keep your account secure.',
+    'LINK_INVALID_OR_EXPIRED' => 'This link is invalid or expired.',
+    'RETURN_HOME_PAGE' => 'Return to home page',
+    'USER_NOT_FOUND' => 'Usuário não encontrado',
 ];

@@ -2,6 +2,8 @@ window.Translations = {
     // Form labels
     LABEL_EMAIL: 'E-email',
     LABEL_PASSWORD: 'Senha',
+    LABEL_NEW_PASSWORD: 'Nova senha',
+    LABEL_CONFIRM_PASSWORD: 'Confirmar senha',
 
     INVALID_FIELDS: 'Campos inválidos',
     FIELD_REQUIRED_MESSAGE: 'O campo ":attribute" é obrigatório.',

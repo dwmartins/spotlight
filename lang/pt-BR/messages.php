@@ -180,5 +180,10 @@ return [
     'BTN_TEXT_RESET_PASSWORD_BY_EMAIL' => 'Redefinir Senha',
     'EMAIL_NOT_REQUEST_PASSWORD_RESET' => 'Se você não solicitou uma redefinição de senha, ignore este e-mail.',
     'EMAIL_HAVE_TROUBLE_CLICKING_THE_BUTTON' => 'Se você tiver problemas para clicar no botão, copie e cole o URL abaixo no seu navegador:',
-    'ALL_RIGHTS_RESERVED' => 'Todos os direitos reservados.'
+    'ALL_RIGHTS_RESERVED' => 'Todos os direitos reservados.',
+    'BTN_TEXT_CHANGE_PASSWORD' => 'Alterar senha',
+    'CREATE_A_NEW_PASSWORD_BELOW' => 'Crie uma nova senha abaixo. Escolha uma senha forte e única para manter sua conta segura.',
+    'LINK_INVALID_OR_EXPIRED' => 'Este link é invalido ou expirou.',
+    'RETURN_HOME_PAGE' => 'Voltar para página inicial',
+    'USER_NOT_FOUND' => 'Usuário não encontrado',
 ];

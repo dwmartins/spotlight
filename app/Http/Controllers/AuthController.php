@@ -4,8 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\App\EmailSettingsController;
 use App\Mail\ResetPasswordMail;
+use App\Models\PasswordReset;
 use App\Models\User;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
@@ -17,6 +20,10 @@ use Illuminate\Support\Facades\Mail;
 
 class AuthController extends Controller
 {
+    /**
+     * return login view /pages/auth/login.blade.php
+     * @return View
+     */
     public function show(): View
     {
         $webSiteName = config('website_info.websiteName');
@@ -40,14 +47,39 @@ class AuthController extends Controller
     }
 
     /**
-     * return view to recover password /pages/auth/reset-password.blade.php
+     * return view to recover password /pages/auth/recover-password.blade.php
+     * @return View
      */
     public function recoverPasswordView(): View
     {
         $webSiteName = config('website_info.websiteName'); 
 
-        return view('pages.auth.reset-password', [
+        return view('pages.auth.recover-password', [
             'custom_seo_title' => trans('messages.SEO_TITLE_RECOVER_PASSWORD') . ' | ' . $webSiteName
+        ]);
+    }
+
+    /**
+     * return view to recover password /pages/auth/reset-password.blade.php
+     * @return View
+     */
+    public function resetPasswordView($token): View|RedirectResponse
+    {
+        $passwordReset = PasswordReset::where('token', $token)->first();
+        
+        if(!$passwordReset || $passwordReset->created_at->addMinutes(60)->isPast()) {
+            return view('pages.auth.link-invalid');
+        }
+
+        $user = User::where('email', $passwordReset->email)->first();
+
+        if(!$user) {
+            return redirectWithMessage('warning', '', trans('messages.USER_NOT_FOUND'), 'home_page');
+        }
+
+        return view('pages.auth.reset-password', [
+            'user' => $user,
+            'token' => $token
         ]);
     }
 
@@ -178,6 +210,44 @@ class AuthController extends Controller
                 'message' => trans('messages.FATAL_ERROR_MESSAGE')
             ], 500);
         }
+    }
+
+    public function resetPassword(Request $request)
+    {
+        $errors = validateFields($request->all());
+        if($errors) {
+            return redirectWithMessage('error', trans('messages.INVALID_FIELDS_MESSAGE'), $errors);
+        }
+
+        $validator = Validator::make($request->all(), [
+            'newPassword' => 'required|string|max:100|min:'. config('website_settings.min_password_length'),
+            'confirmPassword' => 'required|string|max:100',
+        ]);
+
+        if($validator->fails()) {
+            $errors = $validator->errors();
+
+            return redirectWithMessage('error', trans('messages.INVALID_FIELDS_MESSAGE'), $errors);
+        }
+
+        if($request->newPassword !== $request->confirmPassword) {
+            return redirectWithMessage('error', trans('messages.ALERT_TITLE_ERROR'), trans('messages.PASSWORDS_NOT_MATCH'));
+        }
+
+        $passwordReset = PasswordReset::where('token', $request->token)->first();
+        
+        if(!$passwordReset || $passwordReset->created_at->addMinutes(60)->isPast()) {
+            return view('pages.auth.link-invalid');
+        }
+
+        $user = User::where('id', $request->user_id)->first();
+
+        $user->password = Hash::make($request->newPassword);
+        $user->save();
+        
+        PasswordReset::where('email', $user->email)->delete();
+
+        return redirectWithMessage('success', trans('messages.ALERT_TITLE_SUCCESS'), trans('messages.PASSWORD_UPDATE'), 'login', ['email' => $user->email]);
     }
 
     private function sendResetPasswordEmail($user, $token)
