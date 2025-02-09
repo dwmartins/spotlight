@@ -15,7 +15,7 @@ class IsAdmin
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if(auth()->check() && in_array(auth()->user()->role, config('constants.has_access_app'))) {
+        if(auth()->check() && auth()->user()->active === 'Y' && in_array(auth()->user()->role, config('constants.has_access_app'))) {
             return $next($request);
         }
 

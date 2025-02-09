@@ -108,7 +108,7 @@ class AuthController extends Controller
                     
                     $user->updateLastLogin();
         
-                    return redirectWithMessage('success', '', trans('messages.LOGIN_SUCCESSFULLY_MESSAGE'), 'home_page');
+                    return redirectWithMessage('success', '', trans('messages.LOGIN_SUCCESSFULLY_MESSAGE'), 'home_page')->withCookie(cookie('remembered_email', $user->email, 43200)); // 30 days
                 }
             }
         }
@@ -177,9 +177,9 @@ class AuthController extends Controller
 
         $user = User::where('email', $request->email)->first();
 
-        if(!$user) {
+        if(!$user || $user->active === 'N') {
             return response()->json([
-                'message' => trans('messages.EMAIL_NOT_FOUND')
+                'message' => trans('messages.USER_NOT_FOUND')
             ], 422);
         }
 

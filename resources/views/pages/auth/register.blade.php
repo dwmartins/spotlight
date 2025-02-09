@@ -3,7 +3,7 @@
 @section('content')
 
     <section class="registerView container-fluid item_center vh-100 bg-gray-100 position-relative">
-        <div class="cover-image-auth rounded-4" style="background-image: url({{ asset('assets/images/cover-image-auth.jpg') }})"></div>
+        <div class="cover-image-auth rounded-bottom-4" style="background-image: url({{ asset('assets/images/cover-image-auth.jpg') }})"></div>
 
         <form action="/register" method="post" class="form_register w-100 bg-white p-4 rounded-4 position-relative z-1">
             @csrf
@@ -40,7 +40,7 @@
                 :use-loader="true"
                 onclick="toggleLoading(this, true, true)"
                 type="submit"
-                class="w-100"
+                class="w-100 shadow"
             />  
 
             <hr class="text-secondary">

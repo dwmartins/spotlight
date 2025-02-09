@@ -2,7 +2,7 @@
 
 @section('content')
     <section class="recoverPasswordView container-fluid item_center vh-100 bg-gray-100 position-relative">
-        <div class="cover-image-reset-password rounded-4" style="background-image: url({{ asset('assets/images/cover-image-auth.jpg') }})"></div>
+        <div class="cover-image-reset-password rounded-bottom-4" style="background-image: url({{ asset('assets/images/cover-image-auth.jpg') }})"></div>
 
         <form class="form_recover_password w-100 bg-white p-4 rounded-4 position-relative z-1">
             @csrf
