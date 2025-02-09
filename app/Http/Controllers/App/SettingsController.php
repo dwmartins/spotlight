@@ -40,20 +40,27 @@ class SettingsController extends Controller
             $field = $settings['field'];
         }
 
+        $setting = Settings::where('name', $field)->first();
+
         if($isCheckBox) {
             $value = $request->has($field) ? 'on' : 'off';
 
-            $setting = Settings::where('name', $field)->first();
-
-            if($setting) {
-                $setting->update([
-                    'value' => $value
-                ]);
-            }
+            $setting->update([
+                'value' => $value
+            ]);
 
             $this->updateSettingsCache();
             return redirectWithMessage('success', trans('messages.ALERT_TITLE_SUCCESS'), trans('messages.CHANGES_UPDATED_SUCCESSFULLY'), 'app_settings_general');
         }
+
+        $value = $request->input($field);
+
+        $setting->update([
+            'value' => $value
+        ]);
+
+        $this->updateSettingsCache();
+        return redirectWithMessage('success', trans('messages.ALERT_TITLE_SUCCESS'), trans('messages.CHANGES_UPDATED_SUCCESSFULLY'), 'app_settings_general');
     }
 
     /**

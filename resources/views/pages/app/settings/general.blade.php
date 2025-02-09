@@ -5,5 +5,8 @@
 
     <section class="position-relative z-1 container-fluid general-settings-view">
         @include('forms.app.settings.maintenance')
+        @include('forms.app.settings.language')
     </section>
+
+    @vite('resources/js/panel/settings/general.js')
 @endsection

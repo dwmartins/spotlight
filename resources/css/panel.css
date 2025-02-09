@@ -646,3 +646,27 @@ input::-webkit-color-swatch-wrapper {
     max-height: 80px;
     object-fit: cover;
 }
+
+/*--------------------------------------------------------------
+# General settings 
+--------------------------------------------------------------*/
+.general-settings-view .form_language .language-option  {
+    border: 2px solid #ddd;
+    transition: all 0.3s ease;
+    min-width: 200px;
+}
+
+.general-settings-view .form_language .language-option img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.general-settings-view .form_language .language-option.selected {
+    border-color: var(--custom-primary);
+    background-color: #74747410;
+}
+
+.general-settings-view .form_language .language-option input  {
+    display: none;
+}

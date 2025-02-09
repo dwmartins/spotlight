@@ -82,6 +82,11 @@ return [
         'defaultImage' => 'Default image'
     ],
 
+    'LANGUAGES' => [
+        'portuguese' => 'Portuguese',
+        'english' => 'English'
+    ],
+
     'FATAL_ERROR_MESSAGE' => 'Oops, an error occurred, please try again.',
     'PAGE_NOT_FOUND' => 'The page you tried to access was not found.',
     'NAVIGATION' => 'Navigation',
@@ -191,4 +196,5 @@ return [
     'MAINTENANCE_MODE' => 'Maintenance Mode',
     'MAINTENANCE_TEXT' => 'Restrict visitor access to your website while performing maintenance or updates.',
     'CHANGES_UPDATED_SUCCESSFULLY' => 'Changes updated successfully',
+    'LANGUAGE' => 'Language'
 ];

@@ -1,4 +1,4 @@
-<form action="/app/settings/general" method="post" class="form_maintenance card mb-3 custom-bg-white custom-text-dark rounded-3 border-0 shadow">
+<form action="/app/settings/general" method="post" class="form_maintenance card mb-3 custom-bg-white custom-text-dark rounded-3 border-0 shadow mb-4">
     @csrf
     <input type="hidden" name="type" value="checkbox">
     <input type="hidden" name="field" value="maintenance">
