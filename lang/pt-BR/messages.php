@@ -28,6 +28,7 @@ return [
     'NAV_NAME_USER_LOGOUT' => 'Sair',
     'NAV_NAME_BASIC_INFO' => 'Informações básicas',
     'NAV_NAME_SETTINGS_EMAIL' => 'E-mail',
+    'NAV_NAME_SETTINGS_GENERAL' => 'Configurações gerais',
 
     // SEO Titles
     'SEO_TITLE_PAGE_NOT_FOND' => 'Página não encontrada',
@@ -42,6 +43,7 @@ return [
     // Name for pages
     'APP_PAGE_EMAIL_SETTINGS' => 'Configurações / E-mail',
     'APP_PAGE_SITE_INFO' => 'Configurações / Informações básicas',
+    'APP_PAGE_GENERAL_SETTINGS' => 'Configurações / Gerais',
 
     // Form Labels
     'LABEL_EMAIL' => 'E-mail',
@@ -186,4 +188,7 @@ return [
     'LINK_INVALID_OR_EXPIRED' => 'Este link é invalido ou expirou.',
     'RETURN_HOME_PAGE' => 'Voltar para página inicial',
     'USER_NOT_FOUND' => 'Usuário não encontrado',
+    'MAINTENANCE_MODE' => 'Modo de manutenção',
+    'MAINTENANCE_TEXT' => 'Restrinja o acesso de visitantes ao seu site enquanto realiza manutenções ou atualizações.',
+    'CHANGES_UPDATED_SUCCESSFULLY' => 'Alterações atualizadas com sucesso',
 ];

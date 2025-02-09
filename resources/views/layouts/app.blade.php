@@ -240,8 +240,8 @@
                             </a>
                         </li>
                         <li>
-                            <a href="/" class="outline_none custom-text-dark">
-                                <i class="fa-regular fa-circle"></i><span>Configurações gerais</span>
+                            <a href="{{ route('app_settings_general') }}" class="outline_none custom-text-dark">
+                                <i class="fa-regular fa-circle"></i><span>{{ trans('messages.NAV_NAME_SETTINGS_GENERAL') }}</span>
                             </a>
                         </li>
                         <li>

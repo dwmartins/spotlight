@@ -183,8 +183,8 @@ input[type="checkbox"]:focus {
 
 .switch {
     position: relative;
-    height: 1.1rem;
-    width: 2.4rem;
+    min-height: 1.1rem;
+    min-width: 2.4rem;
     cursor: pointer;
     appearance: none;
     -webkit-appearance: none;
@@ -203,8 +203,8 @@ input[type="checkbox"]:focus {
     left: calc(1.2rem - 1.3rem);
     top: calc(1.2rem - 1.3rem);
     display: block;
-    height: 1.3rem;
-    width: 1.3rem;
+    min-height: 1.3rem;
+    min-width: 1.3rem;
     cursor: pointer;
     border: 1px solid rgba(100, 116, 139, 0.527);
     border-radius: 9999px;

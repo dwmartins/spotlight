@@ -9,7 +9,7 @@
             @if(config('website_settings.maintenance') === 'on')
                 <div class="item_center gap-2 publish">
                     <p class="m-0 text-white-50 fs-7">{{ trans('messages.MAINTENANCE_ALERT') }}</p>
-                    <a href="/" class="btn btn-sm btn-outline-primary">{{ trans('messages.PUBLISH') }}</a>
+                    <a href="/app/settings/general" class="btn btn-sm btn-outline-primary">{{ trans('messages.PUBLISH') }}</a>
                 </div>
             @endif
             

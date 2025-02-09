@@ -28,6 +28,7 @@ return [
     'NAV_NAME_USER_LOGOUT' => 'Logout',
     'NAV_NAME_BASIC_INFO' => 'Basic info',
     'NAV_NAME_SETTINGS_EMAIL' => 'Email',
+    'NAV_NAME_SETTINGS_GENERAL' => 'General settings',
 
     // SEO Titles
     'SEO_TITLE_PAGE_NOT_FOND' => 'Page not found',
@@ -42,6 +43,7 @@ return [
     // Name for pages
     'APP_PAGE_EMAIL_SETTINGS' => 'Settings / email',
     'APP_PAGE_SITE_INFO' => 'Settings / basic info',
+    'APP_PAGE_GENERAL_SETTINGS' => 'Setting / General',
 
     // Form Labels
     'LABEL_EMAIL' => 'Email',
@@ -186,4 +188,7 @@ return [
     'LINK_INVALID_OR_EXPIRED' => 'This link is invalid or expired.',
     'RETURN_HOME_PAGE' => 'Return to home page',
     'USER_NOT_FOUND' => 'Usuário não encontrado',
+    'MAINTENANCE_MODE' => 'Maintenance Mode',
+    'MAINTENANCE_TEXT' => 'Restrict visitor access to your website while performing maintenance or updates.',
+    'CHANGES_UPDATED_SUCCESSFULLY' => 'Changes updated successfully',
 ];
