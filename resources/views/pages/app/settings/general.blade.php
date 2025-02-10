@@ -8,5 +8,5 @@
         @include('forms.app.settings.language')
     </section>
 
-    @vite('resources/js/panel/settings/general.js')
+    @vite('resources/js/dashboard/settings/general.js')
 @endsection

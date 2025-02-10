@@ -285,7 +285,7 @@
         @include('modals.change-theme')
     </section>
 
-    @vite('resources/css/panel.css')
-    @vite('resources/js/panel/theme.js')
-    @vite('resources/js/panel/scripts.js')
+    @vite('resources/css/dashboard.css')
+    @vite('resources/js/dashboard/theme.js')
+    @vite('resources/js/dashboard/scripts.js')
 @endsection

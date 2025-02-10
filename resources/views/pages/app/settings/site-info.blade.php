@@ -232,5 +232,5 @@
         </form>
     </section>
 
-    @vite('resources/js/panel/settings/basicInfo.js')
+    @vite('resources/js/dashboard/settings/basicInfo.js')
 @endsection
