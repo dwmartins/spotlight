@@ -24,12 +24,19 @@ class AuthController extends Controller
      * return login view /pages/auth/login.blade.php
      * @return View
      */
-    public function show(): View
+    public function show(Request $request): View
     {
         $webSiteName = config('website_info.websiteName');
+        $cookie = $request->cookie('remembered_email') ?? null;
+        $userName = null;
+
+        if($cookie) {
+            $userName = User::where('email', $cookie)->first()->name;
+        }
 
         return view('pages.auth.login', [
-            'custom_seo_title' => trans('messages.SEO_TITLE_LOGIN') . ' | ' . $webSiteName
+            'custom_seo_title' => trans('messages.SEO_TITLE_LOGIN') . ' | ' . $webSiteName,
+            'userName' => $userName
         ]);
     }
 

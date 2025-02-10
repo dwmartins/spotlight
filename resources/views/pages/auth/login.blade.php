@@ -7,8 +7,13 @@
         <form action="/login" method="post" class="form_login w-100 bg-white p-4 rounded-4 position-relative z-1">
             @csrf
 
-            <div class="mb-5">
-                <h4 class="fw-bold custom_dark">{{ trans('messages.WELCOME_BACK') }}</h4>
+            <div class="mb-4">
+                @if ($userName)
+                    <h5 class="fw-bold custom_dark truncate-text ">{{ trans('messages.WELCOME_BACK') }}, {{ $userName }}!</h5>
+                @else
+                    <h5 class="fw-bold custom_dark">{{ trans('messages.WELCOME') }}</h5>
+                @endif
+
                 <p>{{ trans('messages.ENTER_YOUR_EMAIL_AND_PASSWORD') }}</p>
             </div>
 
