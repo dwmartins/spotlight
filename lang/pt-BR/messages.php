@@ -127,7 +127,7 @@ return [
     'UPDATE_USER_PROFILE' => 'Atualizar',
     'BTN_TEXT_SAVE_CHANGES' => 'Salvar alterações',
     'USER_UPDATE_MESSAGE' => 'Usuário atualizado com sucesso.',
-    'WELCOME_BACK' => 'Bem vindo de volta',
+    'WELCOME_BACK' => 'Que bom ter você de volta',
     'USER_PROFILE_ADDRESS' => 'Endereço',
     'USER_PROFILE_PASSWORD' => 'Senha',
     'USER_PROFILE_SETTINGS' => 'Configurações',
@@ -196,5 +196,6 @@ return [
     'MAINTENANCE_MODE' => 'Modo de manutenção',
     'MAINTENANCE_TEXT' => 'Restrinja o acesso de visitantes ao seu site enquanto realiza manutenções ou atualizações.',
     'CHANGES_UPDATED_SUCCESSFULLY' => 'Alterações atualizadas com sucesso',
-    'LANGUAGE' => 'Linguagem'
+    'LANGUAGE' => 'Linguagem',
+    'NOT_HAVE_ACCESS_THIS_AREA' => 'Você não tem permissão para acessar esta área.'
 ];

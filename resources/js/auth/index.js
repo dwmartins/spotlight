@@ -1,4 +1,4 @@
-import { showAlert, toggleButtonLoading, trans } from "../helpers";
+import { showAlert, toggleButtonLoading, toggleLoading, trans } from "../helpers";
 import $ from 'jquery';
 import { validateForm } from "../validators/user";
 import axios from "axios";
@@ -26,6 +26,28 @@ $(function() {
 
         toggleButtonLoading(btn, true);
     });
+
+    // Form admin login
+    $('.form_admin_login').on('submit', function(e) {
+        const btn = document.getElementById('btn_admin_login');
+
+        const formData = {
+            email: $('#email').val(),
+            password: $('#password').val()
+        }
+
+        const requiredFields = {
+            email: { label: trans('LABEL_EMAIL'), required: true},
+            password: { label: trans('LABEL_PASSWORD'), required: true},
+        }
+
+        if(!validateForm(formData, requiredFields)) {
+            e.preventDefault();
+            return;
+        }
+
+        toggleLoading(btn, true);
+    })
 
     // Send password recovery link
     $('.form_recover_password').on('submit', async (e) => {

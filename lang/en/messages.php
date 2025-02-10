@@ -196,5 +196,6 @@ return [
     'MAINTENANCE_MODE' => 'Maintenance Mode',
     'MAINTENANCE_TEXT' => 'Restrict visitor access to your website while performing maintenance or updates.',
     'CHANGES_UPDATED_SUCCESSFULLY' => 'Changes updated successfully',
-    'LANGUAGE' => 'Language'
+    'LANGUAGE' => 'Language',
+    'NOT_HAVE_ACCESS_THIS_AREA' => 'You do not have permission to access this area.'
 ];

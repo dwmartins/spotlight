@@ -11,6 +11,8 @@ Route::get(trans('messages.PUBLIC_PATH_REGISTER'), [AuthController::class, 'regi
 Route::get(trans('messages.PUBLIC_PATH_RECOVER_PASSWORD'), [AuthController::class, 'recoverPasswordView'])->name('recover_password');
 Route::get(trans('messages.PUBLIC_PATH_RESET_PASSWORD') . '/{token}', [AuthController::class, 'resetPasswordView'])->name('reset_password');
 
+Route::get('/app/login', [AuthController::class, 'AdminLoginView'])->name('admin_login');
+
 /**
  * Methods
  */
@@ -19,3 +21,5 @@ Route::post('/logout', [AuthController::class, 'logout']);
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/recover-password', [AuthController::class, 'sendResetLinkEmail']);
 Route::post('/reset-password', [AuthController::class, 'resetPassword']);
+
+Route::post('/app/login', [AuthController::class, 'AdminLogin']);

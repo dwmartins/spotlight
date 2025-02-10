@@ -578,3 +578,11 @@ input[type="checkbox"]:focus {
     right: 5px;
     bottom: 3px;
 }
+
+/*--------------------------------------------------------------
+# Login admin view
+--------------------------------------------------------------*/
+.adminLoginView .form_admin_login {
+    max-width: 450px;
+    box-shadow: 0 0 2rem 0 rgba(136, 152, 170, .15);
+}

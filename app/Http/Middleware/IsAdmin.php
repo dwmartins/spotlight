@@ -19,6 +19,10 @@ class IsAdmin
             return $next($request);
         }
 
-        return redirectWithMessage('warning', '', 'Você não tem permissão para acessar esta página.', 'home_page');
+        if(auth()->check() && !in_array(auth()->user()->role, config('constants.has_access_app'))) {
+            return redirectWithMessage('warning', '', trans('messages.NOT_HAVE_ACCESS_THIS_AREA'), 'home_page');
+        }
+
+        return redirect()->route('admin_login');
     }
 }
