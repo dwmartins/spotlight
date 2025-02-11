@@ -8,6 +8,7 @@ return [
     'PUBLIC_PATH_USER_PROFILE' => '/user/profile',
     'PUBLIC_PATH_RECOVER_PASSWORD' => '/recover-password',
     'PUBLIC_PATH_RESET_PASSWORD' => '/reset-password',
+    'PUBLIC_PATH_MAINTENANCE' => '/maintenance',
 
     // Name of navigation
     'NAV_NAME_HOME' => 'Home',
@@ -199,5 +200,7 @@ return [
     'MAINTENANCE_TEXT' => 'Restrict visitor access to your website while performing maintenance or updates.',
     'CHANGES_UPDATED_SUCCESSFULLY' => 'Changes updated successfully',
     'LANGUAGE' => 'Language',
-    'NOT_HAVE_ACCESS_THIS_AREA' => 'You do not have permission to access this area.'
+    'NOT_HAVE_ACCESS_THIS_AREA' => 'You do not have permission to access this area.',
+    'MAINTENANCE_TEXT' => 'We are undergoing maintenance, we will be back soon.',
+    'ARE_YOU_AN_ADMINISTRATOR' => 'Are you an administrator?',
 ];

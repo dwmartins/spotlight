@@ -586,3 +586,11 @@ input[type="checkbox"]:focus {
     max-width: 450px;
     box-shadow: 0 0 2rem 0 rgba(136, 152, 170, .15);
 }
+
+/*--------------------------------------------------------------
+# Maintenance view
+--------------------------------------------------------------*/
+
+.maintenanceView img {
+    max-width: 480px;
+}

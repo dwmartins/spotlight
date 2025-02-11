@@ -8,6 +8,7 @@ return [
     'PUBLIC_PATH_USER_PROFILE' => '/usuario/perfil',
     'PUBLIC_PATH_RECOVER_PASSWORD' => '/recuperar-senha',
     'PUBLIC_PATH_RESET_PASSWORD' => '/redefinir-senha',
+    'PUBLIC_PATH_MAINTENANCE' => '/manutencao',
 
     // Name of navigation
     'NAV_NAME_HOME' => 'Início',
@@ -199,5 +200,7 @@ return [
     'MAINTENANCE_TEXT' => 'Restrinja o acesso de visitantes ao seu site enquanto realiza manutenções ou atualizações.',
     'CHANGES_UPDATED_SUCCESSFULLY' => 'Alterações atualizadas com sucesso',
     'LANGUAGE' => 'Linguagem',
-    'NOT_HAVE_ACCESS_THIS_AREA' => 'Você não tem permissão para acessar esta área.'
+    'NOT_HAVE_ACCESS_THIS_AREA' => 'Você não tem permissão para acessar esta área.',
+    'MAINTENANCE_TEXT' => 'Estamos em manutenção, voltaremos em breve.',
+    'ARE_YOU_AN_ADMINISTRATOR' => 'É um administrador?',
 ];
