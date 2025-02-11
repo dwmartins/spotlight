@@ -201,6 +201,6 @@ return [
     'CHANGES_UPDATED_SUCCESSFULLY' => 'Alterações atualizadas com sucesso',
     'LANGUAGE' => 'Linguagem',
     'NOT_HAVE_ACCESS_THIS_AREA' => 'Você não tem permissão para acessar esta área.',
-    'MAINTENANCE_TEXT' => 'Estamos em manutenção, voltaremos em breve.',
+    'MAINTENANCE' => 'Estamos em manutenção, voltaremos em breve.',
     'ARE_YOU_AN_ADMINISTRATOR' => 'É um administrador?',
 ];

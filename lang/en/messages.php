@@ -201,6 +201,6 @@ return [
     'CHANGES_UPDATED_SUCCESSFULLY' => 'Changes updated successfully',
     'LANGUAGE' => 'Language',
     'NOT_HAVE_ACCESS_THIS_AREA' => 'You do not have permission to access this area.',
-    'MAINTENANCE_TEXT' => 'We are undergoing maintenance, we will be back soon.',
+    'MAINTENANCE' => 'We are undergoing maintenance, we will be back soon.',
     'ARE_YOU_AN_ADMINISTRATOR' => 'Are you an administrator?',
 ];
