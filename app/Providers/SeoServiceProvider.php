@@ -3,12 +3,16 @@
 namespace App\Providers;
 
 use App\Models\WebsiteInfo;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 
 class SeoServiceProvider extends ServiceProvider
 {
+    private $siteInfoCacheKey = 'site_info';
+
     /**
      * Register services.
      */
@@ -22,8 +26,19 @@ class SeoServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        if (App::runningInConsole()) {
+            return;
+        }
+
+        $siteInfo = Cache::get($this->siteInfoCacheKey);
+
+        if(!$siteInfo) {
+            $siteInfo = WebsiteInfo::first();
+            Cache::put($this->siteInfoCacheKey, $siteInfo, now()->addMinutes(config('constants.cache_time')));
+        }
+
         if(Schema::hasTable('website_info')) {
-            $seoData = WebsiteInfo::first();
+            $seoData = $siteInfo;
 
             $defaultSeoData = [
                 'title' => 'My listings site',
