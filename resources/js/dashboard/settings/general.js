@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import { showAlert, toggleLoading, trans } from '../../helpers';
+import selectize from '@selectize/selectize';
 
 $(function() {
     // Form language
@@ -12,4 +13,23 @@ $(function() {
             option.querySelector('input').checked = true;
         })
     })
+
+    // Form data and time
+    $('#date_format').selectize({
+        create: false,
+        maxItem: 1,
+        persist: false
+    });
+
+    $('#clock_type').selectize({
+        create: false,
+        maxItem: 1,
+        persist: false
+    });
+
+    $('#timezone').selectize({
+        create: false,
+        maxItem: 1,
+        persist: false
+    });
 });

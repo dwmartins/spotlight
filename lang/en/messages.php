@@ -75,6 +75,9 @@ return [
     'LABEL_KEYWORDS' => 'Keywords',
     'LABEL_YOUR_EMAIL' => 'Your email',
     'LABEL_SEND_RECOVERY_LINK' => 'We will send a recovery link to',
+    'LABEL_DATE_FORMAT' => 'Date format',
+    'LABEL_CLOCK_TYPE' => 'Clock type',
+    'LABEL_TIMEZONE' => 'Timezone',
 
     'FILE_ATRIBUTES' => [
         'logoImage' => 'Logo',
@@ -203,4 +206,6 @@ return [
     'NOT_HAVE_ACCESS_THIS_AREA' => 'You do not have permission to access this area.',
     'MAINTENANCE' => 'We are undergoing maintenance, we will be back soon.',
     'ARE_YOU_AN_ADMINISTRATOR' => 'Are you an administrator?',
+    'FORM_TITLE_DATE_AND_TIME' => 'Date And Time',
+    'DATA_TIME_UPDATED_SUCCESSFULLY' => 'Date and time updated successfully.'
 ];

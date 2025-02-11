@@ -63,6 +63,26 @@ class SettingsController extends Controller
         return redirectWithMessage('success', trans('messages.ALERT_TITLE_SUCCESS'), trans('messages.CHANGES_UPDATED_SUCCESSFULLY'), 'app_settings_general');
     }
 
+    public function dateTime(Request $request)
+    {
+        $settings = [
+            'date_format' => $request->input('date_format'),
+            'clock_type' => $request->input('clock_type'),
+            'timezone' => $request->input('timezone')
+        ];
+
+        foreach ($settings as $setting => $value) {
+            $setting = Settings::where('name', $setting)->first();
+            $setting->update([
+                'value' => $value
+            ]);
+        }
+
+        $this->updateSettingsCache();
+
+        return redirectWithMessage('success', trans('messages.ALERT_TITLE_SUCCESS'), trans('messages.DATA_TIME_UPDATED_SUCCESSFULLY'), 'app_settings_general');
+    }
+
     /**
      * @return Array
      */

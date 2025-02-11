@@ -5,6 +5,7 @@
 
     <section class="position-relative z-1 container-fluid general-settings-view">
         @include('forms.app.settings.maintenance')
+        @include('forms.app.settings.date-time')
         @include('forms.app.settings.language')
     </section>
 

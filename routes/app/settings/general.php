@@ -16,3 +16,6 @@ Route::get('/app/settings/general', [SettingsController::class, 'showView'])
  */
 Route::post('/app/settings/general', [SettingsController::class, 'update'])
     ->middleware([IsAdmin::class]);
+
+Route::post('/app/settings/general/date-time', [SettingsController::class, 'dateTime'])
+    ->middleware([IsAdmin::class]);

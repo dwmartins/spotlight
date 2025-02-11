@@ -75,6 +75,9 @@ return [
     'LABEL_KEYWORDS' => 'Palavras chaves',
     'LABEL_YOUR_EMAIL' => 'Seu e-mail',
     'LABEL_SEND_RECOVERY_LINK' => 'Enviaremos um link de recuperação para',
+    'LABEL_DATE_FORMAT' => 'Formato de data',
+    'LABEL_CLOCK_TYPE' => 'Tipo de relógio',
+    'LABEL_TIMEZONE' => 'Fuso horário',
 
     'FILE_ATRIBUTES' => [
         'logoImage' => 'Logo',
@@ -203,4 +206,6 @@ return [
     'NOT_HAVE_ACCESS_THIS_AREA' => 'Você não tem permissão para acessar esta área.',
     'MAINTENANCE' => 'Estamos em manutenção, voltaremos em breve.',
     'ARE_YOU_AN_ADMINISTRATOR' => 'É um administrador?',
+    'FORM_TITLE_DATE_AND_TIME' => 'Data e hora',
+    'DATA_TIME_UPDATED_SUCCESSFULLY' => 'Data e hora atualizadas com sucesso.',
 ];
