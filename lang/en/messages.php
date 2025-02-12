@@ -91,6 +91,14 @@ return [
         'english' => 'English'
     ],
 
+    'THEME_COLORS' => [
+        'primary' => 'Primary',
+        'success' => 'Success',
+        'warning' => 'Warning',
+        'danger' => 'Danger',
+        'links' => 'Links'
+    ],
+
     'FATAL_ERROR_MESSAGE' => 'Oops, an error occurred, please try again.',
     'PAGE_NOT_FOUND' => 'The page you tried to access was not found.',
     'NAVIGATION' => 'Navigation',
@@ -159,6 +167,7 @@ return [
     'USER_CREATED' => 'User created successfully!',
     'CHANGE_YOUR_THEME_HERE' => 'Change your website theme here',
     'COLORS_UPDATED' => 'Colors updated successfully.',
+    'COLORS' => 'Colors',
     'VISITE_WEBSITE' => 'Visit website',
     'ENTER_YOUR_EMAIL_AND_PASSWORD' => 'Enter your email and password to sign in',
     'ENTER_YOUR_EMAIL_AND_PASSWORD_DASHBOARD' => 'Enter your email and password to access the dashboard',
@@ -200,12 +209,18 @@ return [
     'RETURN_HOME_PAGE' => 'Return to home page',
     'USER_NOT_FOUND' => 'Usuário não encontrado',
     'MAINTENANCE_MODE' => 'Maintenance Mode',
-    'MAINTENANCE_TEXT' => 'Restrict visitor access to your website while performing maintenance or updates.',
+    'MAINTENANCE_TEXT' => 'Restrict visitor access.',
+    'MAINTENANCE_DESCRIPTION' => 'By enabling this option, access to the site will be restricted to authorized users, such as administrators, only. Visitors will be redirected to a maintenance page.',
     'CHANGES_UPDATED_SUCCESSFULLY' => 'Changes updated successfully',
     'LANGUAGE' => 'Language',
     'NOT_HAVE_ACCESS_THIS_AREA' => 'You do not have permission to access this area.',
     'MAINTENANCE' => 'We are undergoing maintenance, we will be back soon.',
     'ARE_YOU_AN_ADMINISTRATOR' => 'Are you an administrator?',
     'FORM_TITLE_DATE_AND_TIME' => 'Date And Time',
-    'DATA_TIME_UPDATED_SUCCESSFULLY' => 'Date and time updated successfully.'
+    'DATA_TIME_UPDATED_SUCCESSFULLY' => 'Date and time updated successfully.',
+    'FORM_TITLE_IMAGE_OPTIMIZATION' => 'Image Optimization',
+    'CHECKBOX_MINIFY_IMAGES' => 'Automatically minify images',
+    'DESCRIPTION_MINIFY_IMAGES' => 'Image minification reduces file sizes without losing visible quality, improving site performance and user experience.',
+    'DATE_24_HOURS' => '24 Hours',
+    'DATE_12_HOURS' => '12 Hours (AM/PM)'
 ];

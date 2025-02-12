@@ -24,6 +24,7 @@ body {
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
+    height: 100%;
 }
 
 input[type="number"]::-webkit-outer-spin-button,
@@ -300,6 +301,13 @@ input[type="checkbox"]:focus {
     .public_nav li {
         font-size: 18px;
     }
+}
+
+.card-info {
+    padding: 10px 10px;
+    background-color: #cff4fc;
+    border-left: 0.25rem solid #9eeaf9;
+    color: #055160;
 }
 
 /*--------------------------------------------------------------

@@ -66,6 +66,7 @@ $(function() {
     });
 
     $(".btn-cancel-colors").on("click", function() {
+        debugger
         $(".customColorInput__select-input").each(function() {
             let inputId = $(this).attr("id").replace("preview-", "");
             let originalColor = initialColors[inputId];
