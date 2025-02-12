@@ -231,7 +231,7 @@
 
                 <li class="nav-item">
                     <a class="nav-link collapsed" data-bs-target="#settings-nav" data-bs-toggle="collapse" href="javascript:void(0);">
-                        <i class="fa-solid fa-gears"></i><span>Configurações</span><i class="fa-solid fa-chevron-down ms-auto"></i>
+                        <i class="fa-solid fa-gears"></i><span>{{ trans('messages.NAV_NAME_SETTINGS') }}</span><i class="fa-solid fa-chevron-down ms-auto"></i>
                     </a>
                     <ul id="settings-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
                         <li>

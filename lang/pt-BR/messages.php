@@ -30,6 +30,7 @@ return [
     'NAV_NAME_BASIC_INFO' => 'Informações básicas',
     'NAV_NAME_SETTINGS_EMAIL' => 'E-mail',
     'NAV_NAME_SETTINGS_GENERAL' => 'Configurações gerais',
+    'NAV_NAME_SETTINGS' => 'Configurações',
 
     // SEO Titles
     'SEO_TITLE_PAGE_NOT_FOND' => 'Página não encontrada',
