@@ -163,18 +163,18 @@
                         <ul class="dropdown-menu dropdown-profile shadow custom-bg-white">
                             <li>
                                 <a href="{{ route('user_panel') }}" class="dropdown-item text-secondary">
-                                    <i class="fa-solid fa-chart-line me-2"></i>{{ trans('messages.NAV_NAME_PANEL') }}
+                                    <i class="fa-solid fa-chart-line me-2"></i>{{ trans('navigation.panel') }}
                                 </a>
                             </li>
                             <li>
                                 <a href="{{ route('user_profile') }}" class="dropdown-item text-secondary">
-                                    <i class="fa-regular fa-user me-2"></i>{{ trans('messages.NAV_NAME_PROFILE') }}
+                                    <i class="fa-regular fa-user me-2"></i>{{ trans('navigation.profile') }}
                                 </a>
                             </li>
                             <li><hr class="dropdown-divider"></li>
                             <li>
                                 <span class="dropdown-item text-secondary cursor_pointer" onclick="document.getElementById('logout-form').submit()">
-                                    <i class="fa-solid fa-right-from-bracket me-2"></i>{{ trans('messages.NAV_NAME_LOGOUT') }}
+                                    <i class="fa-solid fa-right-from-bracket me-2"></i>{{ trans('navigation.logout') }}
                                 </span>
                             </li>
                         </ul><!-- End Profile Dropdown Items -->
@@ -231,22 +231,22 @@
 
                 <li class="nav-item">
                     <a class="nav-link collapsed" data-bs-target="#settings-nav" data-bs-toggle="collapse" href="javascript:void(0);">
-                        <i class="fa-solid fa-gears"></i><span>{{ trans('messages.NAV_NAME_SETTINGS') }}</span><i class="fa-solid fa-chevron-down ms-auto"></i>
+                        <i class="fa-solid fa-gears"></i><span>{{ trans('navigation.settings') }}</span><i class="fa-solid fa-chevron-down ms-auto"></i>
                     </a>
                     <ul id="settings-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
                         <li>
                             <a href="{{ route('app_settings_basic_info') }}" class="outline_none custom-text-dark">
-                                <i class="fa-regular fa-circle"></i><span>{{ trans('messages.NAV_NAME_BASIC_INFO') }}</span>
+                                <i class="fa-regular fa-circle"></i><span>{{ trans('navigation.basic_info') }}</span>
                             </a>
                         </li>
                         <li>
                             <a href="{{ route('app_settings_general') }}" class="outline_none custom-text-dark">
-                                <i class="fa-regular fa-circle"></i><span>{{ trans('messages.NAV_NAME_SETTINGS_GENERAL') }}</span>
+                                <i class="fa-regular fa-circle"></i><span>{{ trans('navigation.settings_general') }}</span>
                             </a>
                         </li>
                         <li>
                             <a href="{{ route('app_settings_email') }}" class="outline_none custom-text-dark">
-                                <i class="fa-regular fa-circle"></i><span>{{ trans('messages.NAV_NAME_SETTINGS_EMAIL') }}</span>
+                                <i class="fa-regular fa-circle"></i><span>{{ trans('navigation.settings_email') }}</span>
                             </a>
                         </li>
                         <li>
@@ -266,7 +266,7 @@
             </ul>
 
             <div class="d-flex justify-content-center">
-                <a href="/" target="_blank"class="btn btn-outline-primary">{{ trans('messages.VISITE_WEBSITE') }} <i class="fa-solid fa-globe"></i></a>
+                <a href="/" target="_blank"class="btn btn-outline-primary">{{ trans('messages.visite_website') }} <i class="fa-solid fa-globe"></i></a>
             </div>
 
         </aside><!-- End Sidebar-->

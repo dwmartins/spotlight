@@ -50,7 +50,7 @@ class SettingsController extends Controller
             ]);
 
             $this->updateSettingsCache();
-            return redirectWithMessage('success', trans('messages.ALERT_TITLE_SUCCESS'), trans('messages.CHANGES_UPDATED_SUCCESSFULLY'), 'app_settings_general');
+            return redirectWithMessage('success', trans('messages.ALERT_TITLE_SUCCESS'), trans('messages.changes_updated_successfully'), 'app_settings_general');
         }
 
         $value = $request->input($field);
@@ -60,7 +60,7 @@ class SettingsController extends Controller
         ]);
 
         $this->updateSettingsCache();
-        return redirectWithMessage('success', trans('messages.ALERT_TITLE_SUCCESS'), trans('messages.CHANGES_UPDATED_SUCCESSFULLY'), 'app_settings_general');
+        return redirectWithMessage('success', trans('messages.ALERT_TITLE_SUCCESS'), trans('messages.changes_updated_successfully'), 'app_settings_general');
     }
 
     public function dateTime(Request $request)
@@ -80,7 +80,7 @@ class SettingsController extends Controller
 
         $this->updateSettingsCache();
 
-        return redirectWithMessage('success', trans('messages.ALERT_TITLE_SUCCESS'), trans('messages.DATA_TIME_UPDATED_SUCCESSFULLY'), 'app_settings_general');
+        return redirectWithMessage('success', trans('messages.ALERT_TITLE_SUCCESS'), trans('messages.data_time_updated_successfully'), 'app_settings_general');
     }
 
     /**

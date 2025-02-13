@@ -37,7 +37,7 @@ class WebsiteInfoController extends Controller
     public function save(Request $request) {
         $errors = validateFields($request->all());
         if($errors) {
-            return redirectWithMessage('error', trans('messages.INVALID_FIELDS_MESSAGE'), $errors);
+            return redirectWithMessage('error', trans('messages.invalid_fields_message'), $errors);
         }
 
         $validator = Validator::make($request->all(), [
@@ -56,7 +56,7 @@ class WebsiteInfoController extends Controller
         if($validator->fails()) {
             $errors = $validator->errors();
 
-            return redirectWithMessage('error', trans('messages.INVALID_FIELDS_MESSAGE'), $errors);
+            return redirectWithMessage('error', trans('messages.invalid_fields_message'), $errors);
         }
 
         $siteInfo = Cache::get($this->siteInfoCacheKey);
@@ -82,7 +82,7 @@ class WebsiteInfoController extends Controller
 
         Cache::put($this->siteInfoCacheKey, $siteInfo, now()->addMinutes(config('constants.cache_time')));
 
-        return redirectWithMessage('success', trans('messages.ALERT_TITLE_SUCCESS'), trans('messages.SAVED_WEBSITE_INFORMATION'), 'app_settings_basic_info');
+        return redirectWithMessage('success', trans('messages.ALERT_TITLE_SUCCESS'), trans('messages.saved_website_information'), 'app_settings_basic_info');
     }
 
     public function updateFiles(Request $request) {
@@ -94,7 +94,7 @@ class WebsiteInfoController extends Controller
         }
         
         if(!$files) {
-            return redirectWithMessage('error', '', trans('messages.NO_FILE_SENT'));
+            return redirectWithMessage('error', '', trans('messages.no_file_sent'));
         }
 
         $allowedMimeTypes = config('constants.allowedMimeTypes.images');
@@ -102,11 +102,11 @@ class WebsiteInfoController extends Controller
         $errors = [];
 
         foreach ($files as $fieldName => $file) {
-            $fileAttribute = trans('messages.FILE_ATRIBUTES.' . $fieldName);
+            $fileAttribute = trans('helper.file_atributes.' . $fieldName);
 
             if(!in_array($file->getMimeType(), $allowedMimeTypes)) {
                 $errors[$fieldName] = [
-                    trans('messages.SPECIFY_FILE_TYPE', [
+                    trans('messages.specify_file_type', [
                         'attribute' => $fileAttribute,
                         'types' => 'jpeg, png, jpg'
                     ])
@@ -115,7 +115,7 @@ class WebsiteInfoController extends Controller
 
             if($file->getSize() > $maxSize) {
                 $errors[$fieldName] = [
-                    trans('messages.SPECIFY_FILE_SIZE', [
+                    trans('messages.specify_file_size', [
                         'attribute' => $fileAttribute,
                         'size' => '5'
                     ])
@@ -144,7 +144,7 @@ class WebsiteInfoController extends Controller
 
         Cache::put($this->siteInfoCacheKey, $websiteInfo, now()->addMinutes(config('constants.cache_time')));
 
-        return redirectWithMessage('success', trans('messages.ALERT_TITLE_SUCCESS'), trans('messages.SAVED_WEBSITE_IMAGES'), 'app_settings_basic_info'); 
+        return redirectWithMessage('success', trans('messages.ALERT_TITLE_SUCCESS'), trans('messages.saved_website_images'), 'app_settings_basic_info'); 
     }
 
     private function getWebsiteInfo(): WebsiteInfo {

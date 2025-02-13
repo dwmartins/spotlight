@@ -22,8 +22,8 @@ class BtnDanger extends Component
     public function __construct($text = "", $text_loading = null, $useLoader = true, $id = null, $size = null, $type = 'button', $onclick = null)
     {
         $this->id = $id;
-        $this->text = $text ? $text : trans('messages.BTN_TEXT_SAVE');
-        $this->text_loading = $text_loading ? $text_loading : trans('messages.BTN_LABEL_LOADING');
+        $this->text = $text ? $text : trans('messages.btn_text_save');
+        $this->text_loading = $text_loading ? $text_loading : trans('messages.btn_label_loading');
         $this->size = $size;
         $this->type = $type;
         $this->onclick = $onclick;

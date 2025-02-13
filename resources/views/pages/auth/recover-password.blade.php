@@ -6,16 +6,16 @@
 
         <form class="form_recover_password w-100 bg-white p-4 rounded-4 position-relative z-1">
             @csrf
-            <h5 class="mb-1">{{ trans('messages.CANT_LOG_IN') }}</h5>
-            <p>{{ trans('messages.RESTORE_ACCESS_ACCOUNT') }}</p>
+            <h5 class="mb-1">{{ trans('messages.cant_log_in') }}</h5>
+            <p>{{ trans('messages.restore_access_account') }}</p>
 
             <div class="mb-4 mt-4">
-                <label for="email" class="fw-bold mb-2 fs-7">{{ trans('messages.LABEL_SEND_RECOVERY_LINK') }}</label>
-                <input type="email" name="email" id="email" autocomplete="email" placeholder="{{ trans('messages.LABEL_YOUR_EMAIL') }}" class="form-control form-control-lg custom_focus text-secondary fs-6" value="{{ old('email') }}">
+                <label for="email" class="fw-bold mb-2 fs-7">{{ trans('form.label_send_recovery_link') }}</label>
+                <input type="email" name="email" id="email" autocomplete="email" placeholder="{{ trans('form.label_your_email') }}" class="form-control form-control-lg custom_focus text-secondary fs-6" value="{{ old('email') }}">
             </div>
 
             <x-buttons.btn-primary 
-                text="{{ trans('messages.BTN_TEXT_RESET_PASSWORD') }}" 
+                text="{{ trans('messages.btn_text_reset_password') }}" 
                 :use-loader="true"
                 id="btn_send_code"
                 type="submit"

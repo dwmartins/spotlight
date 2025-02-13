@@ -20,7 +20,7 @@ class UserController extends Controller
         $websiteName = config('website_info.websiteName');
 
         return view('pages.user.panel', [
-            'custom_seo_title' => trans('messages.SEO_TITLE_USER_PANEL') . ' | ' . $websiteName
+            'custom_seo_title' => trans('seo.user_panel') . ' | ' . $websiteName
         ]);
     }
 
@@ -32,14 +32,14 @@ class UserController extends Controller
         $websiteName = config('website_info.websiteName');
 
         return view('pages.user.profile', [
-            'custom_seo_title' => trans('messages.SEO_TITLE_USER_PROFILE') . ' | ' . $websiteName
+            'custom_seo_title' => trans('seo.user_profile') . ' | ' . $websiteName
         ]);
     }
 
     public function update(Request $request) {
         $errors = validateFields($request->all());
         if($errors) {
-            return redirectWithMessage('error', trans('messages.INVALID_FIELDS_MESSAGE'), $errors);
+            return redirectWithMessage('error', trans('messages.invalid_fields_message'), $errors);
         }
         
         $user = Auth::user();
@@ -63,12 +63,12 @@ class UserController extends Controller
         if($validator->fails()) {
             $errors = $validator->errors();
 
-            return redirectWithMessage('error', trans('messages.INVALID_FIELDS_MESSAGE'), $errors, 'user_profile');
+            return redirectWithMessage('error', trans('messages.invalid_fields_message'), $errors, 'user_profile');
         }
 
         $user->update($request->all());
 
-        return redirectWithMessage('success', '', trans('messages.USER_UPDATE_MESSAGE'), 'user_profile');
+        return redirectWithMessage('success', '', trans('messages.user_update_message'), 'user_profile');
     }
 
     public function updateAvatar(Request $request) {
@@ -76,7 +76,7 @@ class UserController extends Controller
 
         if (!$file) {
             return response()->json([
-                'message' => trans('messages.NO_FILE_SENT'),
+                'message' => trans('messages.no_file_sent'),
             ], 400);
         }
         
@@ -85,11 +85,11 @@ class UserController extends Controller
         $errors = [];
 
         if (!in_array($file->getMimeType(), $allowedMimeTypes)) {
-            $errors['type'] = [trans('messages.FILE_TYPE', ['types' => 'jpeg, png, jpg'])];
+            $errors['type'] = [trans('messages.file_type', ['types' => 'jpeg, png, jpg'])];
         }
 
         if ($file->getSize() > $maxSize) {
-            $errors['size'] = [trans('messages.FILE_MAX_SIZE', ['size' => '2'])];
+            $errors['size'] = [trans('messages.file_max_size', ['size' => '2'])];
         }
 
         if($errors) {
@@ -114,7 +114,7 @@ class UserController extends Controller
             $user->save();
 
             return response()->json([
-                'message' => trans('messages.PROFILE_UPDATED_SUCCESSFULLY'),
+                'message' => trans('messages.profile_updated_successfully'),
                 'avatar' => $this->pathToAvatas .'/'. $user->getAvatar(),
             ], 200);
         }
@@ -123,7 +123,7 @@ class UserController extends Controller
     public function changePassword(Request $request) {
         $errors = validateFields($request->all());
         if($errors) {
-            return redirectWithMessage('error', trans('messages.INVALID_FIELDS_MESSAGE'), $errors);
+            return redirectWithMessage('error', trans('messages.invalid_fields_message'), $errors);
         }
 
         $validator = Validator::make($request->all(), [
@@ -135,23 +135,23 @@ class UserController extends Controller
         if($validator->fails()) {
             $errors = $validator->errors();
 
-            return redirectWithMessage('error', trans('messages.INVALID_FIELDS_MESSAGE'), $errors);
+            return redirectWithMessage('error', trans('messages.invalid_fields_message'), $errors);
         }
 
         if($request->newPassword !== $request->confirmPassword) {
-            return redirectWithMessage('error', trans('messages.ALERT_TITLE_ERROR'), trans('messages.PASSWORDS_NOT_MATCH'));
+            return redirectWithMessage('error', trans('messages.alert_title_error'), trans('messages.passwords_not_match'));
         }
 
         $user = Auth::user();
 
         if (!Hash::check($request->currentPassword, $user->password)) {
-            return redirectWithMessage('error', trans('messages.ALERT_TITLE_ERROR'), trans('messages.CURRENT_PASSWORD_INCORRECT'));
+            return redirectWithMessage('error', trans('messages.alert_title_error'), trans('messages.current_password_incorrect'));
         }
 
         $user->password = Hash::make($request->newPassword);
         $user->save();
 
-        return redirectWithMessage('success', trans('messages.ALERT_TITLE_SUCCESS'), trans('messages.PASSWORD_UPDATE'), 'user_profile');
+        return redirectWithMessage('success', trans('messages.ALERT_TITLE_SUCCESS'), trans('messages.password_update'), 'user_profile');
     }
 
     public function updateSettings(Request $request) {
@@ -160,7 +160,7 @@ class UserController extends Controller
         $user->acceptsEmails = $request->has('acceptsEmails') ? 'Y' : 'N';
         $user->save();
 
-        return redirectWithMessage('success', trans('messages.ALERT_TITLE_SUCCESS'), trans('messages.UPDATED_USER_SETTINGS'), 'user_profile');
+        return redirectWithMessage('success', trans('messages.ALERT_TITLE_SUCCESS'), trans('messages.updated_user_settings'), 'user_profile');
     }
 
     public function deleteAccount(Request $request) {
@@ -175,7 +175,7 @@ class UserController extends Controller
             $user->delete();
             Auth::logout();
 
-            return redirectWithMessage('success', trans('messages.ALERT_TITLE_SUCCESS'), trans('messages.ACCOUNT_DELETED_SUCCESSFULLY'), 'home_page');
+            return redirectWithMessage('success', trans('messages.ALERT_TITLE_SUCCESS'), trans('messages.account_deleted_successfully'), 'home_page');
         }
 
         return back();

@@ -25,18 +25,18 @@
 
                         <li class="nav-item logged_small">
                             <a href="{{ route('user_panel') }}" class="nav-link">
-                                {{ trans('messages.NAV_NAME_PANEL') }}
+                                {{ trans('navigation.panel') }}
                             </a>
                         </li>
 
                         <li class="nav-item logged_small">
                             <a href="{{ route('user_profile') }}" class="nav-link">
-                                {{ trans('messages.NAV_NAME_PROFILE') }}
+                                {{ trans('navigation.profile') }}
                             </a>
                         </li>
                         <li class="nav-item logged_small">
                             <span class="nav-link cursor_pointer" onclick="document.getElementById('logout-form').submit()">
-                                {{ trans('messages.NAV_NAME_LOGOUT') }}
+                                {{ trans('navigation.logout') }}
                             </span>
                         </li>
                     </div>
@@ -44,30 +44,30 @@
 
                 <li class="nav-item">
                     <a href="/" class="nav-link">
-                        {{ trans('messages.NAV_NAME_HOME') }}
+                        {{ trans('navigation.home') }}
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="/" class="nav-link">
-                        {{ trans('messages.NAV_NAME_LISTINGS') }}
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="/" class="nav-link">
-                        {{ trans('messages.NAV_NAME_EVENTS') }}
+                        {{ trans('navigation.listings') }}
                     </a>
                 </li>
 
                 <li class="nav-item">
                     <a href="/" class="nav-link">
-                        {{ trans('messages.NAV_NAME_BLOG') }}
+                        {{ trans('navigation.events') }}
                     </a>
                 </li>
 
                 <li class="nav-item">
                     <a href="/" class="nav-link">
-                        {{ trans('messages.NAV_NAME_CONTACT') }}
+                        {{ trans('navigation.blog') }}
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="/" class="nav-link">
+                        {{ trans('navigation.contact') }}
                     </a>
                 </li>
 
@@ -75,7 +75,7 @@
                     <hr>
                     <li class="nav-item">
                         <a href="{{ route('login') }}" class="nav-link logged_small">
-                            {{ trans('messages.NAV_NAME_LOGIN') }}
+                            {{ trans('navigation.login') }}
                         </a>
                     </li>
                 @endguest
@@ -87,7 +87,7 @@
                 <div class="logged_large">
                     <button class="btn btn-light border btn-sm me-2 fw-semibold text-dark opacity-75">
                         <a href="/" class="nav-link">
-                            {{ trans('messages.BUTTON_ADVERTISE_HERE') }}
+                            {{ trans('navigation.button_advertise_here') }}
                         </a>
                     </button>
 
@@ -98,18 +98,18 @@
                         <ul class="dropdown-menu">
                             <li>
                                 <a href="{{ route('user_panel') }}" class="dropdown-item text-secondary">
-                                    <i class="fa-solid fa-chart-line me-2"></i>{{ trans('messages.NAV_NAME_PANEL') }}
+                                    <i class="fa-solid fa-chart-line me-2"></i>{{ trans('navigation.panel') }}
                                 </a>
                             </li>
                             <li>
                                 <a href="{{ route('user_profile') }}" class="dropdown-item text-secondary">
-                                    <i class="fa-regular fa-user me-2"></i>{{ trans('messages.NAV_NAME_PROFILE') }}
+                                    <i class="fa-regular fa-user me-2"></i>{{ trans('navigation.profile') }}
                                 </a>
                             </li>
                             <li><hr class="dropdown-divider"></li>
                             <li>
                                 <span class="dropdown-item text-secondary cursor_pointer" onclick="document.getElementById('logout-form').submit()">
-                                    <i class="fa-solid fa-right-from-bracket me-2"></i>{{ trans('messages.NAV_NAME_LOGOUT') }}
+                                    <i class="fa-solid fa-right-from-bracket me-2"></i>{{ trans('navigation.logout') }}
                                 </span>
                             </li>
                         </ul>
@@ -120,11 +120,11 @@
             @guest
                 <div class="flex logged_large">
                     <a href="/" class="btn btn-light border btn-sm me-2 fw-semibold text-dark opacity-75">
-                        {{ trans('messages.BUTTON_ADVERTISE_HERE') }}
+                        {{ trans('navigation.button_advertise_here') }}
                     </a>
 
                     <a href="{{ route('login') }}" class="btn btn-primary btn-sm fw-semibold rounded-1">
-                        {{ trans('messages.NAV_NAME_LOGIN') }}
+                        {{ trans('navigation.login') }}
                     </a>
                 </div>
             @endguest

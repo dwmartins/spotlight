@@ -25,7 +25,7 @@ class EmailSettingsController extends Controller
     public function save(Request $request) {
         $errors = validateFields($request->all());
         if($errors) {
-            return redirectWithMessage('error', trans('messages.INVALID_FIELDS_MESSAGE'), $errors);
+            return redirectWithMessage('error', trans('messages.invalid_fields_message'), $errors);
         }
 
         $validator = Validator::make($request->all(), [
@@ -39,7 +39,7 @@ class EmailSettingsController extends Controller
         if($validator->fails()) {
             $errors = $validator->errors();
 
-            return redirectWithMessage('error', trans('messages.INVALID_FIELDS_MESSAGE'), $errors);
+            return redirectWithMessage('error', trans('messages.invalid_fields_message'), $errors);
         }
 
         $emailSetting = EmailSetting::first();
@@ -57,7 +57,7 @@ class EmailSettingsController extends Controller
 
         Cache::put($this->emailSettingCacheKey, $emailSetting, now()->addMinutes(config('constants.cache_time')));
 
-        return redirectWithMessage('success', trans('messages.ALERT_TITLE_SUCCESS'), trans('messages.EMAIL_SETTINGS_UPDATED'), 'app_settings_email');
+        return redirectWithMessage('success', trans('messages.ALERT_TITLE_SUCCESS'), trans('messages.email_settings_updated'), 'app_settings_email');
     }
 
     public function getEmailSettings(): ?EmailSetting

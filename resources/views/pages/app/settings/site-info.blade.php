@@ -7,7 +7,7 @@
         <form action="/app/settings/update-images" method="post" enctype="multipart/form-data" class="card mb-4 custom-bg-white custom-text-dark rounded-3 border-0 shadow form-update-images">
             @csrf
             <div class="card-body">
-                <h5 class="card-title">{{ trans('messages.VISUAL_IDENTITY_SETTINGS_TITLE') }}</h5>
+                <h5 class="card-title">{{ trans('messages.visual_identity_settings_title') }}</h5>
 
                 <!-- Logo Image -->
                 <div class="row mt-4">
@@ -21,17 +21,17 @@
                         </div>
                     </div>
                     <div class="col-sm-12 col-lg-8">
-                        <h6>{{ trans('messages.CHOOSE_YOUR_LOGO_IMAGE') }}</h6>
-                        <p>{{ trans('messages.FORMAT_LOGO_IMAGE') }}</p>
+                        <h6>{{ trans('messages.choose_your_logo_image') }}</h6>
+                        <p>{{ trans('messages.format_logo_image') }}</p>
 
                         <div id="logoImage_selected" class="d-none d-flex justify-content-between align-items-center gap-2 mt-4">
                             <p class="text-secondary m-0 fileName"></p>
-                            <button type="button" class="btn btn-sm btn-danger" id="cancel-LogoImage">{{ trans('messages.BTN_TEXT_CANCEL') }}</button>
+                            <button type="button" class="btn btn-sm btn-danger" id="cancel-LogoImage">{{ trans('messages.btn_text_cancel') }}</button>
                         </div>
 
                         <div id="upload_logoImage" class="d-flex justify-content-center justify-content-lg-start mt-4">
                             <label for="logoImage" class="btn btn-sm btn-primary">
-                                {{ trans('messages.SELECT_FILE') }}<i class="fa-regular fa-file-image ms-1"></i>
+                                {{ trans('messages.select_file') }}<i class="fa-regular fa-file-image ms-1"></i>
                                 <input type="file" id="logoImage" name="logoImage" class="d-none" accept="{{ config('constants.accepted_image') }}">
                             </label>
                         </div>
@@ -52,17 +52,17 @@
                         </div>
                     </div>
                     <div class="col-sm-12 col-lg-8">
-                        <h6>{{ trans('messages.CHOOSE_YOUR_COVER_IMAGE') }}</h6>
-                        <p>{{ trans('messages.FORMAT_IMAGE') }}</p>
+                        <h6>{{ trans('messages.choose_your_cover_image') }}</h6>
+                        <p>{{ trans('messages.format_image') }}</p>
 
                         <div id="coverImage_selected" class="d-none d-flex justify-content-between align-items-center gap-2 mt-4">
                             <p class="text-secondary m-0 fileName"></p>
-                            <button type="button" class="btn btn-sm btn-danger" id="cancel_coverImage">{{ trans('messages.BTN_TEXT_CANCEL') }}</button>
+                            <button type="button" class="btn btn-sm btn-danger" id="cancel_coverImage">{{ trans('messages.btn_text_cancel') }}</button>
                         </div>
                         
                         <div id="upload_coverImage" class="d-flex justify-content-center justify-content-lg-start mt-4">
                             <label for="coverImage" class="btn btn-sm btn-primary">
-                                {{ trans('messages.SELECT_FILE') }}<i class="fa-regular fa-file-image ms-1"></i>
+                                {{ trans('messages.select_file') }}<i class="fa-regular fa-file-image ms-1"></i>
                                 <input type="file" id="coverImage" name="coverImage" class="d-none" accept="{{ config('constants.accepted_image') }}">
                             </label>
                         </div>
@@ -83,17 +83,17 @@
                         </div>
                     </div>
                     <div class="col-sm-12 col-lg-8">
-                        <h6>{{ trans('messages.CHOOSE_YOUR_FAVICON') }}</h6>
-                        <p>{{ trans('messages.FORMAT_FAVICON') }}</p>
+                        <h6>{{ trans('messages.choose_your_favicon') }}</h6>
+                        <p>{{ trans('messages.format_favicon') }}</p>
 
                         <div id="favicon_selected" class="d-none d-flex justify-content-between align-items-center gap-2 mt-4">
                             <p class="text-secondary m-0 fileName" id="fileName"></p>
-                            <button type="button" class="btn btn-sm btn-danger" id="cancel_favicon">{{ trans('messages.BTN_TEXT_CANCEL') }}</button>
+                            <button type="button" class="btn btn-sm btn-danger" id="cancel_favicon">{{ trans('messages.btn_text_cancel') }}</button>
                         </div>
                         
                         <div id="upload_favicon" class="d-flex justify-content-center justify-content-lg-start mt-4">
                             <label for="favicon" class="btn btn-sm btn-primary">
-                                {{ trans('messages.SELECT_FILE') }}<i class="fa-regular fa-file-image ms-1"></i>
+                                {{ trans('messages.select_file') }}<i class="fa-regular fa-file-image ms-1"></i>
                                 <input type="file" id="favicon" name="favicon" class="d-none" accept="{{ config('constants.accepted_favicon') }}">
                             </label>
                         </div>
@@ -114,18 +114,18 @@
                         </div>
                     </div>
                     <div class="col-sm-12 col-lg-8">
-                        <h6>{{ trans('messages.CHOSE_YOUR_DEFAULT_IMAGE') }}</h6>
-                        <p class="mb-0">{{ trans('messages.FORMAT_IMAGE') }}</p>
-                        <p class="fs-8">{{ trans('messages.DEFAULT_IMAGE_MESSAGE') }}</p>
+                        <h6>{{ trans('messages.chose_your_default_image') }}</h6>
+                        <p class="mb-0">{{ trans('messages.format_image') }}</p>
+                        <p class="fs-8">{{ trans('messages.default_image_message') }}</p>
     
                         <div id="defaultImage_selected" class="d-none d-flex justify-content-between align-items-center gap-2 mt-4">
                             <p class="text-secondary m-0 fileName" id="fileName"></p>
-                            <button type="button" class="btn btn-sm btn-danger" id="cancelDefaultImg">{{ trans('messages.BTN_TEXT_CANCEL') }}</button>
+                            <button type="button" class="btn btn-sm btn-danger" id="cancelDefaultImg">{{ trans('messages.btn_text_cancel') }}</button>
                         </div>
                         
                         <div id="upload_defaultImage" class="d-flex justify-content-center justify-content-lg-start mt-4">
                             <label for="defaultImage" class="btn btn-sm btn-primary">
-                                {{ trans('messages.SELECT_FILE') }}<i class="fa-regular fa-file-image ms-1"></i>
+                                {{ trans('messages.select_file') }}<i class="fa-regular fa-file-image ms-1"></i>
                                 <input type="file" id="defaultImage" name="defaultImage" class="d-none" accept="{{ config('constants.accepted_image') }}">
                             </label>
                         </div>
@@ -136,7 +136,7 @@
 
                 <div class="d-flex justify-content-end">
                     <x-buttons.btn-primary-outline 
-                        text="{{ trans('messages.BTN_TEXT_SAVE_CHANGES') }}" 
+                        text="{{ trans('messages.btn_text_save_changes') }}" 
                         :use-loader="true"
                         id="btn_save_files"
                         type="submit"
@@ -148,68 +148,68 @@
         <form action="/app/settings/basic-info" method="post" class="card mb-3 custom-bg-white custom-text-dark rounded-3 border-0 shadow form-basic-info">
             @csrf
             <div class="card-body">
-                <h5 class="card-title">{{ trans('messages.BASIC_INFO_SETTINGS_TITLE') }}</h5>
+                <h5 class="card-title">{{ trans('messages.basic_info_settings_title') }}</h5>
 
                 <div class="row mt-4">
                     <div class="mb-3 col-md-4">
-                        <label for="webSiteName" class="form-label">{{ trans('messages.LABEL_SITE_NAME') }}</label>
+                        <label for="webSiteName" class="form-label">{{ trans('form.label_site_name') }}</label>
                         <input name="webSiteName" type="text" value="{{ old('webSiteName', $siteInfo->webSiteName ?? '') }}" class="form-control custom_focus text-secondary" id="webSiteName">
                     </div>
         
                     <div class="mb-3 col-md-4">
-                        <label for="email" class="form-label">{{ trans('messages.LABEL_EMAIL') }}</label>
+                        <label for="email" class="form-label">{{ trans('form.label_email') }}</label>
                         <input name="email" type="text" value="{{ old('email', $siteInfo->email ?? '') }}" class="form-control custom_focus text-secondary" id="email">
                     </div>
         
                     <div class="mb-3 col-md-4">
-                        <label for="phone" class="form-label">{{ trans('messages.LABEL_PHONE') }}</label>
+                        <label for="phone" class="form-label">{{ trans('form.label_phone') }}</label>
                         <input name="phone" type="number" value="{{ old('number', $siteInfo->number ?? '') }}" class="form-control custom_focus text-secondary" id="phone">
                     </div>
         
                     <div class="mb-3 col-md-4">
-                        <label for="city" class="form-label">{{ trans('messages.LABEL_CITY') }}</label>
+                        <label for="city" class="form-label">{{ trans('form.label_city') }}</label>
                         <input name="city" type="text" value="{{ old('city', $siteInfo->city ?? '') }}" class="form-control custom_focus text-secondary" id="city">
                     </div>
         
                     <div class="mb-3 col-md-4">
-                        <label for="state" class="form-label">{{ trans('messages.LABEL_STATE') }}</label>
+                        <label for="state" class="form-label">{{ trans('form.label_state') }}</label>
                         <input name="state" type="text" value="{{ old('state', $siteInfo->state ?? '') }}" class="form-control custom_focus text-secondary" id="state">
                     </div>
         
                     <div class="mb-3 col-md-4">
-                        <label for="address" class="form-label">{{ trans('messages.LABEL_ADDRESS') }}</label>
+                        <label for="address" class="form-label">{{ trans('form.label_address') }}</label>
                         <input name="address" type="text" value="{{ old('address', $siteInfo->address ?? '') }}" class="form-control custom_focus text-secondary" id="address">
                     </div>
         
                     <div class="mb-3 col-md-4">
-                        <label for="instagram" class="form-label">{{ trans('messages.LABEL_INSTAGRAM') }}</label>
+                        <label for="instagram" class="form-label">{{ trans('form.label_instagram') }}</label>
                         <input name="instagram" type="text" value="{{ old('instagram', $siteInfo->instagram ?? '') }}" class="form-control custom_focus text-secondary" id="instagram">
                     </div>
         
                     <div class="mb-3 col-md-4">
-                        <label for="facebook" class="form-label">{{ trans('messages.LABEL_FACEBOOK') }}</label>
+                        <label for="facebook" class="form-label">{{ trans('form.label_facebook') }}</label>
                         <input name="facebook" type="text" value="{{ old('facebook', $siteInfo->facebook ?? '') }}" class="form-control custom_focus text-secondary" id="facebook">
                     </div>
         
                     <div class="mb-3 col-md-4">
-                        <label for="x" class="form-label">{{ trans('messages.LABEL_X') }} <span class="opacity-75 fs-8">({{ trans('messages.OLD_TWITTER') }})</span></label>
+                        <label for="x" class="form-label">{{ trans('form.label_x') }} <span class="opacity-75 fs-8">({{ trans('messages.old_twitter') }})</span></label>
                         <input name="x" type="text" value="{{ old('x', $siteInfo->x ?? '') }}" class="form-control custom_focus text-secondary" id="x">
                     </div>
         
                     <div class="mb-3 col-md-6">
-                        <label for="description" class="form-label">{{ trans('messages.LABEL_DESCRIPTION') }} <span class="opacity-75 fs-8">(SEO)</span></label>
+                        <label for="description" class="form-label">{{ trans('form.label_description') }} <span class="opacity-75 fs-8">(SEO)</span></label>
                         <x-textarea 
                             id="description" 
                             name="description" 
                             :maxChars="500" 
-                            placeholder="{{ trans('messages.PLACEHOLDER_DESCRIPTION') }}"
+                            placeholder="{{ trans('messages.placeholder_description') }}"
                             rows='4'
                             value="{{ old('description', $siteInfo->description ?? '') }}"
                         />
                     </div>
         
                     <div class="mb-3 col-md-6">
-                        <label for="keywords" class="form-label">{{ trans('messages.LABEL_KEYWORDS') }} <span class="opacity-75 fs-8">(SEO)</span></label>
+                        <label for="keywords" class="form-label">{{ trans('form.label_keywords') }} <span class="opacity-75 fs-8">(SEO)</span></label>
                         <select id="keywords" name="keywords[]" multiple>
                             @if (!empty($siteInfo->keywords))
                                 @foreach ($siteInfo->keywords as $keyword)
@@ -221,7 +221,7 @@
         
                     <div class="d-flex justify-content-end">
                         <x-buttons.btn-primary-outline 
-                            text="{{ trans('messages.BTN_TEXT_SAVE_CHANGES') }}" 
+                            text="{{ trans('messages.btn_text_save_changes') }}" 
                             :use-loader="true"
                             onclick="toggleLoading(this, true, true)"
                             type="submit"

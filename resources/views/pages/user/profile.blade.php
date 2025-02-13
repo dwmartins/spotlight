@@ -3,16 +3,16 @@
 @section('main-content')
 <section class="profileView container-fluid">
     <div class="container my-2 my-sm-5">
-        <h2 class="custom_dark fw-bolder">{{ trans('messages.PERSONAL_INFO') }}</h2>
-        <p class="text-secondary m-0">{{ trans('messages.MANAGE_PERSONAL_HERE') }}</p>
+        <h2 class="custom_dark fw-bolder">{{ trans('messages.personal_info') }}</h2>
+        <p class="text-secondary m-0">{{ trans('messages.manage_personal_here') }}</p>
 
         <div class="row mt-sm-3">
             <div class="col-12 col-lg-7 col-xxl-6">
                 @include('forms.user.changeAvatar')
 
                 <div class="d-flex justify-content-between align-items-center mb-3">
-                    <p class="fs-5 custom_dark mb-0">{{ trans('messages.BASIC_INFO') }}</p>
-                    <button class="btn link-primary fs-7 fw-semibold letter-spacing text-uppercase p-0" data-toggle="basic_info_form">{{ trans('messages.UPDATE_USER_PROFILE') }}</button>
+                    <p class="fs-5 custom_dark mb-0">{{ trans('messages.basic_info') }}</p>
+                    <button class="btn link-primary fs-7 fw-semibold letter-spacing text-uppercase p-0" data-toggle="basic_info_form">{{ trans('messages.update_user_profile') }}</button>
                 </div>
 
                 <div class="basic_info">
@@ -49,8 +49,8 @@
                 </div>
 
                 <div class="d-flex justify-content-between align-items-center mb-3">
-                    <p class="fs-5 custom_dark mb-0">{{ trans('messages.USER_PROFILE_ADDRESS') }}</p>
-                    <button class="btn link-primary fs-7 fw-semibold letter-spacing text-uppercase p-0" data-toggle="address_form">{{ trans('messages.UPDATE_USER_PROFILE') }}</button>
+                    <p class="fs-5 custom_dark mb-0">{{ trans('messages.user_profile_address') }}</p>
+                    <button class="btn link-primary fs-7 fw-semibold letter-spacing text-uppercase p-0" data-toggle="address_form">{{ trans('messages.update_user_profile') }}</button>
                 </div>
 
                 <div class="address">
@@ -83,8 +83,8 @@
                 </div>
 
                 <div class="d-flex justify-content-between align-items-center mb-3">
-                    <p class="fs-5 custom_dark mb-0">{{ trans('messages.USER_PROFILE_PASSWORD') }}</p>
-                    <button class="btn link-primary fs-7 fw-semibold letter-spacing text-uppercase p-0" data-toggle="password_form">{{ trans('messages.UPDATE_USER_PROFILE') }}</button>
+                    <p class="fs-5 custom_dark mb-0">{{ trans('messages.user_profile_password') }}</p>
+                    <button class="btn link-primary fs-7 fw-semibold letter-spacing text-uppercase p-0" data-toggle="password_form">{{ trans('messages.update_user_profile') }}</button>
                 </div>
 
                 <div>
@@ -97,8 +97,8 @@
                 </div>
 
                 <div class="d-flex justify-content-between align-items-center mb-3">
-                    <p class="fs-5 custom_dark mb-0">{{ trans('messages.USER_PROFILE_SETTINGS') }}</p>
-                    <button class="btn link-primary fs-7 fw-semibold letter-spacing text-uppercase p-0" data-toggle="settings_form">{{ trans('messages.UPDATE_USER_PROFILE') }}</button>
+                    <p class="fs-5 custom_dark mb-0">{{ trans('messages.user_profile_settings') }}</p>
+                    <button class="btn link-primary fs-7 fw-semibold letter-spacing text-uppercase p-0" data-toggle="settings_form">{{ trans('messages.update_user_profile') }}</button>
                 </div>
 
                 <div>

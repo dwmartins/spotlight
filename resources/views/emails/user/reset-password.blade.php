@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ trans('messages.EMAIL_SUBJECT') }}</title>
+    <title>{{ trans('messages.email_subject') }}</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -66,21 +66,21 @@
         </div>
 
         <div class="email-body">
-            <h2>{{ trans('messages.HELLO') }}, {{ $user->name }}!</h2>
-            <p>{{ trans('messages.EMAIL_RECEIVING_RESET_PASSWORD') }}</p>
-            <p>{{ trans('messages.EMAIL_CLICK_THE_BUTTON_RESET_PASSWORD') }}</p>
-            <a href="{{ $resetUrl }}" class="reset-button" style="background: {{ config('website_colors.primary') }}">{{ trans('messages.BTN_TEXT_RESET_PASSWORD_BY_EMAIL') }}</a>
-            <p>{{ trans('messages.EMAIL_NOT_REQUEST_PASSWORD_RESET') }}</p>
+            <h2>{{ trans('messages.hello') }}, {{ $user->name }}!</h2>
+            <p>{{ trans('messages.email_receiving_reset_password') }}</p>
+            <p>{{ trans('messages.email_click_the_button_reset_password') }}</p>
+            <a href="{{ $resetUrl }}" class="reset-button" style="background: {{ config('website_colors.primary') }}">{{ trans('messages.btn_text_reset_password_by_email') }}</a>
+            <p>{{ trans('messages.email_not_request_password_reset') }}</p>
         </div>
 
         <div class="email-footer">
             <p>
-                {{ trans('messages.EMAIL_HAVE_TROUBLE_CLICKING_THE_BUTTON') }}
+                {{ trans('messages.email_have_trouble_clicking_the_button') }}
                 <br>
                 <a href="{{ $resetUrl }}">{{ $resetUrl }}</a>
             </p>
             <p>
-                &copy; {{ date('Y') }} {{ config('website_info.websiteName') }}. {{ trans('messages.ALL_RIGHTS_RESERVED') }}
+                &copy; {{ date('Y') }} {{ config('website_info.websiteName') }}. {{ trans('messages.all_rights_reserved') }}
             </p>
         </div>
     </div>

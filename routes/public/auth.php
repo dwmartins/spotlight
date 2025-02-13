@@ -6,10 +6,10 @@ use Illuminate\Support\Facades\Route;
 /**
  * Views
  */
-Route::get(trans('messages.PUBLIC_PATH_LOGIN'), [AuthController::class, 'show'])->name('login');
-Route::get(trans('messages.PUBLIC_PATH_REGISTER'), [AuthController::class, 'registerView'])->name('register');
-Route::get(trans('messages.PUBLIC_PATH_RECOVER_PASSWORD'), [AuthController::class, 'recoverPasswordView'])->name('recover_password');
-Route::get(trans('messages.PUBLIC_PATH_RESET_PASSWORD') . '/{token}', [AuthController::class, 'resetPasswordView'])->name('reset_password');
+Route::get(trans('url.login'), [AuthController::class, 'show'])->name('login');
+Route::get(trans('url.register'), [AuthController::class, 'registerView'])->name('register');
+Route::get(trans('url.recover_password'), [AuthController::class, 'recoverPasswordView'])->name('recover_password');
+Route::get(trans('url.reset_password') . '/{token}', [AuthController::class, 'resetPasswordView'])->name('reset_password');
 
 Route::get('/app/login', [AuthController::class, 'AdminLoginView'])->name('admin_login');
 

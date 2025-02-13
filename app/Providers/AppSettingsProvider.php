@@ -77,28 +77,6 @@ class AppSettingsProvider extends ServiceProvider
             Log::error($errorMessage);
             throw new \Exception($errorMessage);
         }
-
-        // Check if the main translation file exists
-        $translationsPath = $translationsDir . '/messages.php';
-        if (!File::exists($translationsPath)) {
-            $errorMessage = "Translation file for language {$locale} not found at {$translationsPath}";
-            Log::error($errorMessage);
-            throw new \Exception($errorMessage);
-        }
-
-
-        // Check and load additional translation files if needed
-        // Example: Checking extra files like "errors.php", "validation.php", etc.
-        $additionalFiles = config('constants.translation_files', []);
-
-        if(!empty($additionalFiles)) {
-            foreach ($additionalFiles as $file) {
-                $filePath = $translationsDir . '/' . $file;
-                if (!File::exists($filePath)) {
-                    Log::warning("Optional translation file {$file} not found at {$filePath}");
-                }
-            }
-        }
     }
 
     private function setTimezone($settings) {

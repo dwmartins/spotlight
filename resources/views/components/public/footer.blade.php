@@ -16,29 +16,29 @@
             </div>
             <div class="col-12 {{ config('website_info.facebook') ? 'col-sm-4' : 'col-sm-8' }}">
                 <div class="p-2">
-                    <h4 class="custom_dark fs-5">{{ trans('messages.NAVIGATION') }}</h4>
+                    <h4 class="custom_dark fs-5">{{ trans('messages.navigation') }}</h4>
 
                     <div class="row align">
                         <ul class="navbar-nav col px-3">
                             <li class="nav-item">
                                 <a href="{{ url('/') }}" class="nav-link">
-                                    {{ trans('messages.NAV_NAME_HOME') }}
+                                    {{ trans('navigation.home') }}
                                 </a>
                                 <a href="/" class="nav-link">
-                                    {{ trans('messages.NAV_NAME_LISTINGS') }}
+                                    {{ trans('navigation.listings') }}
                                 </a>
                                 <a href="/" class="nav-link">
-                                    {{ trans('messages.NAV_NAME_EVENTS') }}
+                                    {{ trans('navigation.events') }}
                                 </a>
                             </li>
                         </ul>
                         <ul class="navbar-nav col px-3">
                             <li class="nav-item">
                                 <a href="/" class="nav-link">
-                                    {{ trans('messages.NAV_NAME_BLOG') }}
+                                    {{ trans('navigation.blog') }}
                                 </a>
                                 <a href="/" class="nav-link">
-                                    {{ trans('messages.NAV_NAME_CONTACT') }}
+                                    {{ trans('navigation.contact') }}
                                 </a>
                             </li>
                         </ul>
@@ -49,7 +49,7 @@
             @if (config('website_info.facebook'))
                 <div class="col-12 col-sm-4">
                     <div class="p-2">
-                        <h4 class="custom_dark text-center fs-5">{{ trans('messages.SOCIAL_MEDIA') }}</h4>
+                        <h4 class="custom_dark text-center fs-5">{{ trans('messages.social_media') }}</h4>
                         <div class="d-flex gap-3 justify-content-center p-2">
                             @if (config('website_info.x'))
                                 <a href="{{ config('website_info.x') }}" target="_blank" rel="noopener noreferrer">
@@ -76,11 +76,11 @@
         <div class="container">
             <div class="row">
                 <p class="col-12 col-sm-6 text-light m-0 fs-7 text-center mb-2 mb-sm-0">
-                    {{ trans('messages.DEVELOPED_BY') }}
+                    {{ trans('messages.developed_by') }}
                     <a href="https://br.linkedin.com/in/douglas-martins-a36a45185" target="_blank" rel="noopener noreferrer" class="text-white link-offset-2 link-underline link-underline-opacity-0 opacity-75">Douglas Wellington Martins</a>
                 </p>
                 <p class="col-12 col-sm-6 text-light m-0 fs-7 text-center">
-                    {{ trans('messages.ILLUSTRATIONS_BY') }}
+                    {{ trans('messages.illustrations_by') }}
                     <a href="https://storyset.com" target="_blank" rel="noopener noreferrer" class="text-white link-offset-2 link-underline link-underline-opacity-0 opacity-75">Storyset</a>
                 </p>
             </div>

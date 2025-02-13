@@ -20,7 +20,7 @@ class IsAdmin
         }
 
         if(auth()->check() && !in_array(auth()->user()->role, config('constants.has_access_app'))) {
-            return redirectWithMessage('warning', '', trans('messages.NOT_HAVE_ACCESS_THIS_AREA'), 'home_page');
+            return redirectWithMessage('warning', '', trans('messages.not_have_access_this_area'), 'home_page');
         }
 
         return redirect()->route('admin_login');

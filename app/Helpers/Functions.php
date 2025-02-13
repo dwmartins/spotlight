@@ -26,11 +26,11 @@ function setGreeting() {
     $hour = date('G');
 
     if ($hour >= 6 && $hour < 12) {
-        return trans('messages.GOOD_MORNING');
+        return trans('messages.good_morning');
     } elseif ($hour >= 12 && $hour < 18) {
-        return trans('messages.GOOD_AFTERNOON');
+        return trans('messages.good_afternoon');
     } else {
-        return trans('messages.GOOD_NIGHT');
+        return trans('messages.good_night');
     }
 }
 

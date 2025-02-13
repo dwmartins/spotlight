@@ -3,7 +3,7 @@
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
-Route::get(trans('messages.PUBLIC_PATH_MAINTENANCE'), function() {
+Route::get(trans('url.maintenance'), function() {
     return view('pages.maintenance');
 })->name('maintenance');
 

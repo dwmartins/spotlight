@@ -9,13 +9,13 @@
             id="acceptsEmails"
             @if(auth()->user()->acceptsEmails === "Y") checked  @endif
         >
-        {{ trans('messages.AGREE_RECEIVE_MAIL') }}
+        {{ trans('messages.alert_title_error') }}
         </div>
     </label>
 
     <div class="d-flex justify-content-end mt-3">
         <x-buttons.btn-primary-outline 
-            text="{{ trans('messages.BTN_TEXT_SAVE_CHANGES') }}" 
+            text="{{ trans('messages.btn_text_save_changes') }}" 
             :use-loader="true"
             onclick="toggleLoading(this, true, true)"
             type="submit"

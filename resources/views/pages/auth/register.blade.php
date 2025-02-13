@@ -12,31 +12,31 @@
             </div>
             
             <div class="mb-3">
-                <input type="text" name="name" id="name" autocomplete="name" placeholder="{{ trans('messages.LABEL_NAME') }}" class="form-control form-control-lg fs-6 custom_focus" value="{{ old('name')}}">
+                <input type="text" name="name" id="name" autocomplete="name" placeholder="{{ trans('form.label_name') }}" class="form-control form-control-lg fs-6 custom_focus" value="{{ old('name')}}">
             </div>
 
             <div class="mb-3">
-                <input type="text" name="lastName" id="lastName" placeholder="{{ trans('messages.LABEL_LAST_NAME') }}" autocomplete="lastName" class="form-control form-control-lg fs-6 custom_focus" value="{{ old('lastName')}}">
+                <input type="text" name="lastName" id="lastName" placeholder="{{ trans('form.label_last_name') }}" autocomplete="lastName" class="form-control form-control-lg fs-6 custom_focus" value="{{ old('lastName')}}">
             </div>
 
             <div class="mb-3">
-                <input type="email" name="email" id="email" autocomplete="email" placeholder="{{ trans('messages.LABEL_EMAIL') }}" class="form-control form-control-lg fs-6 custom_focus" value="{{ old('email') }}">
+                <input type="email" name="email" id="email" autocomplete="email" placeholder="{{ trans('form.label_email') }}" class="form-control form-control-lg fs-6 custom_focus" value="{{ old('email') }}">
             </div>
 
             <div class="mb-3">
                 <div class="position-relative">
-                    <input type="password" name="password" id="password" class="form-control form-control-lg fs-6 custom_focus" placeholder="{{ trans('messages.LABEL_PASSWORD') }}">
+                    <input type="password" name="password" id="password" class="form-control form-control-lg fs-6 custom_focus" placeholder="{{ trans('form.label_password') }}">
                     <i class="fa-regular icon_show_password fa-eye text-secondary"></i>
                 </div>
             </div>
 
             <div class="fs-8 text-secondary text-center mb-3">
-                {{ trans('messages.ACCEPT_OUR_PRIVACY') }}
-                <a href="/" class="text-primary outline_none">{{ trans('messages.PRIVACY_PAGE') }}</a>
+                {{ trans('messages.accept_our_privacy') }}
+                <a href="/" class="text-primary outline_none">{{ trans('messages.privacy_page') }}</a>
             </div>
 
             <x-buttons.btn-primary 
-                text="{{ trans('messages.BTN_TEXT_CREATE_ACCOUNT') }}" 
+                text="{{ trans('messages.btn_text_create_account') }}" 
                 :use-loader="true"
                 onclick="toggleLoading(this, true, true)"
                 type="submit"
@@ -46,8 +46,8 @@
             <hr class="text-secondary">
 
             <p class="text-secondary text-center">
-                {{ trans('messages.HAVE_ACCOUNT') }}
-                <a href="{{ route('login') }}" class="text-primary outline_none">{{ trans('messages.NAV_NAME_LOGIN') }}</a>
+                {{ trans('messages.have_account') }}
+                <a href="{{ route('login') }}" class="text-primary outline_none">{{ trans('navigation.login') }}</a>
             </p>
         </form>
     </section>

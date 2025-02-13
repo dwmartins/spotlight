@@ -3,12 +3,6 @@
 return [
     // Setting cache time (in minutes)
     'cache_time' => 10080, // 7 days = 10,080 minutes
-    
-    // Translation files
-    'translation_files' => [
-        'messages.php',
-        'validation.php'
-    ],
 
     // List of all roles that exist in the system
     'allowed_roles' => ['support', 'admin', 'mod', 'test', 'visitor', 'sponsor'],

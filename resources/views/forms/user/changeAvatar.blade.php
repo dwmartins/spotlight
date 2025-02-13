@@ -11,11 +11,11 @@
         </div>
 
         <div class="d-flex justify-content-center gap-2 my-2 options d-none">
-            <button id="btn_cancel_img" class="btn btn-sm btn-outline-danger">{{ trans('messages.BTN_TEXT_CANCEL') }}</button>
+            <button id="btn_cancel_img" class="btn btn-sm btn-outline-danger">{{ trans('messages.btn_text_cancel') }}</button>
             
             <x-buttons.btn-primary-outline 
-                text="{{ trans('messages.BTN_TEXT_SAVE') }}" 
-                loading-text="{{ trans('messages.BTN_LABEL_LOADING') }}"
+                text="{{ trans('messages.btn_text_save') }}" 
+                loading-text="{{ trans('messages.btn_label_loading') }}"
                 :use-loader="true" 
                 id="btn_save_img"
             />  
@@ -25,7 +25,7 @@
     <div class="d-flex flex-column align-items-center">
         <p class="custom_dark fw-semibold mt-2 mb-0">{{ auth()->user()->getFullName() }}</p>
         <p class="text-secondary fs-8 text-break">{{ auth()->user()->email }}</p>
-        <p class="custom_dark fw-semibold fs-8 text-break mb-0">{{ trans('messages.MEMBER_SINCE') }}:</p>
+        <p class="custom_dark fw-semibold fs-8 text-break mb-0">{{ trans('messages.member_since') }}:</p>
         <p class="text-secondary fs-8 text-break">{{ getDateAsString(auth()->user()->created_at) }}</p>
     </div>
 </div>

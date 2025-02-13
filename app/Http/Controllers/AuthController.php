@@ -35,7 +35,7 @@ class AuthController extends Controller
         }
 
         return view('pages.auth.login', [
-            'custom_seo_title' => trans('messages.SEO_TITLE_LOGIN') . ' | ' . $webSiteName,
+            'custom_seo_title' => trans('seo.login') . ' | ' . $webSiteName,
             'userName' => $userName
         ]);
     }
@@ -65,7 +65,7 @@ class AuthController extends Controller
         $webSiteName = config('website_info.websiteName');
 
         return view('pages.auth.register', [
-            'custom_seo_title' => trans('messages.SEO_TITLE_REGISTER') . ' | ' . $webSiteName
+            'custom_seo_title' => trans('seo.register') . ' | ' . $webSiteName
         ]);
     }
 
@@ -78,7 +78,7 @@ class AuthController extends Controller
         $webSiteName = config('website_info.websiteName'); 
 
         return view('pages.auth.recover-password', [
-            'custom_seo_title' => trans('messages.SEO_TITLE_RECOVER_PASSWORD') . ' | ' . $webSiteName
+            'custom_seo_title' => trans('seo.recover_password') . ' | ' . $webSiteName
         ]);
     }
 
@@ -97,7 +97,7 @@ class AuthController extends Controller
         $user = User::where('email', $passwordReset->email)->first();
 
         if(!$user) {
-            return redirectWithMessage('warning', '', trans('messages.USER_NOT_FOUND'), 'home_page');
+            return redirectWithMessage('warning', '', trans('messages.user_not_found'), 'home_page');
         }
 
         return view('pages.auth.reset-password', [
@@ -116,7 +116,7 @@ class AuthController extends Controller
         if($validator->fails()) {
             $errors = $validator->errors();
 
-            return redirectWithMessage('error', trans('messages.INVALID_FIELDS_MESSAGE'), $errors);
+            return redirectWithMessage('error', trans('messages.invalid_fields_message'), $errors);
         }
 
         $remember = $request->has('rememberMe');
@@ -131,12 +131,12 @@ class AuthController extends Controller
                     
                     $user->updateLastLogin();
         
-                    return redirectWithMessage('success', '', trans('messages.LOGIN_SUCCESSFULLY_MESSAGE'), 'home_page')->withCookie(cookie('remembered_email', $user->email, 43200)); // 30 days
+                    return redirectWithMessage('success', '', trans('messages.login_successfully_message'), 'home_page')->withCookie(cookie('remembered_email', $user->email, 43200)); // 30 days
                 }
             }
         }
 
-        return redirectWithMessage('error', '', trans('messages.AUTHENTICATION_FAILED'));
+        return redirectWithMessage('error', '', trans('messages.authentication_failed'));
     } 
 
     public function AdminLogin(Request $request)
@@ -149,7 +149,7 @@ class AuthController extends Controller
         if($validator->fails()) {
             $errors = $validator->errors();
 
-            return redirectWithMessage('error', trans('messages.INVALID_FIELDS_MESSAGE'), $errors);
+            return redirectWithMessage('error', trans('messages.invalid_fields_message'), $errors);
         }  
 
         $remember = $request->has('rememberMe');
@@ -165,22 +165,22 @@ class AuthController extends Controller
                         
                         $user->updateLastLogin();
             
-                        return redirectWithMessage('success', '', trans('messages.LOGIN_SUCCESSFULLY_MESSAGE'), 'app_dashboard')->withCookie(cookie('remembered_email', $user->email, 43200)); // 30 days
+                        return redirectWithMessage('success', '', trans('messages.login_successfully_message'), 'app_dashboard')->withCookie(cookie('remembered_email', $user->email, 43200)); // 30 days
                     }
                 } else {
-                    return redirectWithMessage('error', '', trans('messages.NOT_HAVE_ACCESS_THIS_AREA'));
+                    return redirectWithMessage('error', '', trans('messages.not_have_access_this_area'));
                 }
             }
         }
 
-        return redirectWithMessage('error', '', trans('messages.AUTHENTICATION_FAILED'));
+        return redirectWithMessage('error', '', trans('messages.authentication_failed'));
     }
 
     public function register(Request $request)
     {
         $errors = validateFields($request->all());
         if($errors) {
-            return redirectWithMessage('error', trans('messages.INVALID_FIELDS_MESSAGE'), $errors);
+            return redirectWithMessage('error', trans('messages.invalid_fields_message'), $errors);
         }
 
         $validator = Validator::make($request->all(), [
@@ -193,7 +193,7 @@ class AuthController extends Controller
         if($validator->fails()) {
             $errors = $validator->errors();
 
-            return redirectWithMessage('error', trans('messages.INVALID_FIELDS_MESSAGE'), $errors);
+            return redirectWithMessage('error', trans('messages.invalid_fields_message'), $errors);
         }
 
         $validatedData = $validator->validated();
@@ -203,7 +203,7 @@ class AuthController extends Controller
         $user->password = Hash::make($validatedData['password']);
         $user->save();
 
-        return redirectWithMessage('success', trans('messages.ALERT_TITLE_SUCCESS'), trans('messages.USER_CREATED'), 'login', ['email' => $user->email]);
+        return redirectWithMessage('success', trans('messages.ALERT_TITLE_SUCCESS'), trans('messages.user_created'), 'login', ['email' => $user->email]);
     }
 
     public function logout(Request $request)
@@ -213,14 +213,14 @@ class AuthController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-        return redirectWithMessage('success', '', trans('messages.LOGOUT_SUCCESSFULLY_MESSAGE'), 'home_page');
+        return redirectWithMessage('success', '', trans('messages.logout_successfully_message'), 'home_page');
     }
 
     public function sendResetLinkEmail(Request $request)
     {
         $errors = validateFields($request->all());
         if($errors) {
-            return redirectWithMessage('error', trans('messages.INVALID_FIELDS_MESSAGE'), $errors);
+            return redirectWithMessage('error', trans('messages.invalid_fields_message'), $errors);
         }
 
         $validator = Validator::make($request->all(), [
@@ -239,7 +239,7 @@ class AuthController extends Controller
 
         if(!$user || $user->active === 'N') {
             return response()->json([
-                'message' => trans('messages.USER_NOT_FOUND')
+                'message' => trans('messages.user_not_found')
             ], 422);
         }
 
@@ -257,7 +257,7 @@ class AuthController extends Controller
             $this->sendResetPasswordEmail($user, $token);
     
             return response()->json([
-                'message' => trans('messages.RECOVERY_LINK_HAS_BEEN_SENT')
+                'message' => trans('messages.recovery_link_has_been_sent')
             ]);
         } catch (\Exception $e) {
             Log::error('Error sending email', [
@@ -267,7 +267,7 @@ class AuthController extends Controller
             ]);
 
             return response()->json([
-                'message' => trans('messages.FATAL_ERROR_MESSAGE')
+                'message' => trans('messages.fatal_error_message')
             ], 500);
         }
     }
@@ -276,7 +276,7 @@ class AuthController extends Controller
     {
         $errors = validateFields($request->all());
         if($errors) {
-            return redirectWithMessage('error', trans('messages.INVALID_FIELDS_MESSAGE'), $errors);
+            return redirectWithMessage('error', trans('messages.invalid_fields_message'), $errors);
         }
 
         $validator = Validator::make($request->all(), [
@@ -287,11 +287,11 @@ class AuthController extends Controller
         if($validator->fails()) {
             $errors = $validator->errors();
 
-            return redirectWithMessage('error', trans('messages.INVALID_FIELDS_MESSAGE'), $errors);
+            return redirectWithMessage('error', trans('messages.invalid_fields_message'), $errors);
         }
 
         if($request->newPassword !== $request->confirmPassword) {
-            return redirectWithMessage('error', trans('messages.ALERT_TITLE_ERROR'), trans('messages.PASSWORDS_NOT_MATCH'));
+            return redirectWithMessage('error', trans('messages.alert_title_error'), trans('messages.passwords_not_match'));
         }
 
         $passwordReset = PasswordReset::where('token', $request->token)->first();
@@ -307,7 +307,7 @@ class AuthController extends Controller
         
         PasswordReset::where('email', $user->email)->delete();
 
-        return redirectWithMessage('success', trans('messages.ALERT_TITLE_SUCCESS'), trans('messages.PASSWORD_UPDATE'), 'login', ['email' => $user->email]);
+        return redirectWithMessage('success', trans('messages.ALERT_TITLE_SUCCESS'), trans('messages.password_update'), 'login', ['email' => $user->email]);
     }
 
     private function sendResetPasswordEmail($user, $token)

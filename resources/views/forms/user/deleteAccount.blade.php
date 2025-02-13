@@ -1,14 +1,14 @@
 <form id="formDeleteAccount" action="/user/delete" method="post" class="mt-5">
     @csrf
-    <p class="fs-5 custom_dark mb-3">{{ trans('messages.USER_PROFILE_DELETE') }}</p>
+    <p class="fs-5 custom_dark mb-3">{{ trans('messages.user_profile_delete') }}</p>
 
     <div class="alert-danger alert border-0 d-flex flex-nowrap gap-4">
         <div>
             <i class="fa-solid fa-triangle-exclamation text-danger fs-1"></i>
         </div>
         <div>
-            <p class="text-danger fw-semibold mb-0 fs-7">{{ trans('messages.DELETE_ACCOUNT_TEXT') }}</p>
-            <p class="text-danger mb-0 fs-7">{{ trans('messages.ACTION_CANNOT_UNDONE') }}</p>
+            <p class="text-danger fw-semibold mb-0 fs-7">{{ trans('messages.delete_account_text') }}</p>
+            <p class="text-danger mb-0 fs-7">{{ trans('messages.action_cannot_undone') }}</p>
         </div>
     </div>
 
@@ -20,13 +20,13 @@
             class="form-check-input custom_focus p-2"
             id="confirmAccountDeletion"
             >
-            {{ trans('messages.CONFIRM_DELETE_ACCOUNT') }}
+            {{ trans('messages.confirm_delete_account') }}
         </div>
     </label>
 
     <div class="d-flex justify-content-end mt-3">
         <x-buttons.btn-danger
-            text="{{ trans('messages.BTN_TEXT_DELETE_ACCOUNT') }}" 
+            text="{{ trans('messages.btn_text_delete_account') }}" 
             :use-loader="true"
             type="submit"
             id="btn_delete_account"

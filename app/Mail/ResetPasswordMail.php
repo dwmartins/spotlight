@@ -31,7 +31,7 @@ class ResetPasswordMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: trans('messages.EMAIL_SUBJECT'),
+            subject: trans('messages.email_subject'),
         );
     }
 
@@ -47,7 +47,7 @@ class ResetPasswordMail extends Mailable
             with: [
                 'websiteLogo' => $logo,
                 'user'=> $this->user,
-                'resetUrl' => url(trans('messages.PUBLIC_PATH_RESET_PASSWORD') . '/' . $this->token)
+                'resetUrl' => url(trans('navigation.reset_password') . '/' . $this->token)
             ]
         );
     }

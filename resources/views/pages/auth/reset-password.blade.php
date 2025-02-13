@@ -13,25 +13,25 @@
                 <img src="{{ config('website_info.logoImage') }}" alt="Logo">
             </div>
 
-            <h4 class="mb-4 truncate-text">{{ trans('messages.HELLO') }}, {{ $user->name }}</h4>
-            <p class="fs-7">{{ trans('messages.CREATE_A_NEW_PASSWORD_BELOW') }}</p>
+            <h4 class="mb-4 truncate-text">{{ trans('messages.hello') }}, {{ $user->name }}</h4>
+            <p class="fs-7">{{ trans('messages.create_a_new_password_below') }}</p>
             
             <div class="mb-4">
                 <div class="position-relative">
-                    <input type="password" name="newPassword" id="newPassword" class="form-control form-control-lg fs-6 custom_focus" placeholder="{{ trans('messages.LABEL_NEW_PASSWORD') }}">
+                    <input type="password" name="newPassword" id="newPassword" class="form-control form-control-lg fs-6 custom_focus" placeholder="{{ trans('form.label_new_password') }}">
                     <i class="fa-regular icon_show_password fa-eye text-secondary d-none"></i>
                 </div>
             </div>
 
             <div class="mb-4">
                 <div class="position-relative">
-                    <input type="password" name="confirmPassword" id="confirmPassword" class="form-control form-control-lg fs-6 custom_focus" placeholder="{{ trans('messages.LABEL_CONFIRM_PASSWORD') }}">
+                    <input type="password" name="confirmPassword" id="confirmPassword" class="form-control form-control-lg fs-6 custom_focus" placeholder="{{ trans('form.label_confirm_password') }}">
                     <i class="fa-regular icon_show_password fa-eye text-secondary d-none"></i>
                 </div>
             </div>
 
             <x-buttons.btn-primary 
-                text="{{ trans('messages.BTN_TEXT_CHANGE_PASSWORD') }}" 
+                text="{{ trans('messages.btn_text_change_password') }}" 
                 :use-loader="true"
                 type="submit"
                 class="w-100 shadow"

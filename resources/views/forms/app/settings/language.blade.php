@@ -3,12 +3,12 @@
     <input type="hidden" name="field" value="language">
 
     <div class="card-body">
-        <h6 class="card-title mb-4">{{ trans('messages.LANGUAGE') }}</h6>
+        <h6 class="card-title mb-4">{{ trans('messages.language') }}</h6>
 
         <div class="d-flex flex-wrap justify-content-center gap-3 mb-4">
             @foreach([
-                'pt-BR' => ['flag' => 'https://flagcdn.com/br.svg', 'label' => trans('messages.LANGUAGES.portuguese')],
-                'en' => ['flag' => 'https://flagcdn.com/us.svg', 'label' => trans('messages.LANGUAGES.english')],
+                'pt-BR' => ['flag' => 'https://flagcdn.com/br.svg', 'label' => trans('helper.language.portuguese')],
+                'en' => ['flag' => 'https://flagcdn.com/us.svg', 'label' => trans('helper.language.english')],
             ] as $value => $data)
                 <label class="language-option p-2 rounded-3 cursor_pointer {{ $settings['language'] === $value ? 'selected' : '' }}" for="language_{{ $value }}">
                     <img src="{{ $data['flag'] }}" alt="{{ $data['label'] }}">
@@ -20,7 +20,7 @@
         
         <div class="d-flex justify-content-end">
             <x-buttons.btn-primary-outline 
-                text="{{ trans('messages.BTN_TEXT_SAVE_CHANGES') }}" 
+                text="{{ trans('messages.btn_text_save_changes') }}" 
                 :use-loader="true"
                 onclick="toggleLoading(this, true, true)"
                 type="submit"

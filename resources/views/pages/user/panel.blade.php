@@ -14,14 +14,14 @@
                     <div class="d-flex flex-column align-items-center">
                         <p class="custom_dark fw-semibold mt-2 mb-0">{{ auth()->user()->getFullName() }}</p>
                         <p class="text-secondary fs-8 text-break">{{ auth()->user()->email }}</p>
-                        <p class="custom_dark fw-semibold fs-8 text-break mb-0">{{ trans('messages.MEMBER_SINCE') }}:</p>
+                        <p class="custom_dark fw-semibold fs-8 text-break mb-0">{{ trans('messages.member_since') }}:</p>
                         <p class="text-secondary fs-8 text-break">{{ getDateAsString(auth()->user()->created_at) }}</p>
 
                         @if(auth()->user()->city && auth()->user()->state)
                             <p class="text-secondary fs-8 text-break">{{ auth()->user()->city }}, {{ auth()->user()->state }}</p>
                         @endif
 
-                        <a href="{{ route('user_profile') }}" class="btn btn-sm btn-primary">{{ trans('messages.EDIT_PROFILE') }}<i class="fa-solid fa-user-pen ms-2"></i></a>
+                        <a href="{{ route('user_profile') }}" class="btn btn-sm btn-primary">{{ trans('messages.edit_profile') }}<i class="fa-solid fa-user-pen ms-2"></i></a>
                     </div>
                 </div>
             </div>
@@ -29,15 +29,15 @@
                 <!-- Contents -->
                 <div class="p-3">
                     <h5 class="custom_dark fw-semibold">{{ setGreeting() }} {{ auth()->user()->name }}</h5>
-                    <p class="text-secondary">{{ trans('messages.WELCOME_TO_YOU_AREA') }}</p>
+                    <p class="text-secondary">{{ trans('messages.welcome_to_you_area') }}</p>
                 </div>
 
                 <hr class="text-secondary">
 
                 <div class="d-flex flex-column align-items-center">
                     <img src="{{ asset('assets/svg/empty.svg') }}" class="img_no_ads" alt="No data">
-                    <p class="text-secondary text-center">{{ trans('messages.DONT_HAVE_ADS') }}</p>
-                    <a href="/" class="btn btn-outline-primary">{{ trans('messages.ADVERTISE_NOW') }}<i class="fa-solid fa-arrow-up-right-from-square ms-2"></i></a>
+                    <p class="text-secondary text-center">{{ trans('messages.dont_have_ads') }}</p>
+                    <a href="/" class="btn btn-outline-primary">{{ trans('messages.advertise_now') }}<i class="fa-solid fa-arrow-up-right-from-square ms-2"></i></a>
                 </div>
             </div>
         </div>
