@@ -26,6 +26,6 @@ class WebsiteColorsController extends Controller
         $colors = WebsiteColors::all();
         Cache::put($this->websiteColors, $colors, now()->addMinutes(config('constants.cache_time')));
 
-        return redirectWithMessage('success', trans('messages.ALERT_TITLE_SUCCESS'), trans('messages.colors_updated'), 'app_dashboard');
+        return redirectWithMessage('success', trans('messages.alert_title_success'), trans('messages.colors_updated'), 'app_dashboard');
     }
 }

@@ -13,12 +13,12 @@ class FileValidator {
         }  
 
         if(image.size > this.imgSize) {
-            showAlert('warning', '', trans('IMG_MAX_SIZE', { attribute: size}));
+            showAlert('warning', '', trans('img_max_size', { attribute: size}));
             return false;
         }
 
         if (!this.imgExtensions.includes(image.type)) {
-            showAlert('warning', '', trans('IMG_FORMAT'));
+            showAlert('warning', '', trans('img_format'));
             return false;
         }
 
@@ -31,7 +31,7 @@ class FileValidator {
         }
 
         if (favicon.size > this.faviconFileSize) {
-            showAlert('warning', '', trans('IMG_MAX_SIZE', { attribute: size}));
+            showAlert('warning', '', trans('img_max_size', { attribute: size}));
             return false;
         }
     

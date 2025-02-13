@@ -71,7 +71,7 @@ $(function() {
 
         if(!hasFile) {
             e.preventDefault();
-            showAlert('warning', '', trans('MESSAGE_SELECT_IMAGE'));
+            showAlert('warning', '', trans('message_select_image'));
             return;
         }
 

@@ -57,7 +57,7 @@ class EmailSettingsController extends Controller
 
         Cache::put($this->emailSettingCacheKey, $emailSetting, now()->addMinutes(config('constants.cache_time')));
 
-        return redirectWithMessage('success', trans('messages.ALERT_TITLE_SUCCESS'), trans('messages.email_settings_updated'), 'app_settings_email');
+        return redirectWithMessage('success', trans('messages.alert_title_success'), trans('messages.email_settings_updated'), 'app_settings_email');
     }
 
     public function getEmailSettings(): ?EmailSetting

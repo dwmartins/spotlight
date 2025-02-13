@@ -15,8 +15,8 @@ $(function() {
         }
 
         const requiredFields = {
-            email: { label: trans('LABEL_EMAIL'), required: true},
-            password: { label: trans('LABEL_PASSWORD'), required: true},
+            email: { label: trans('label_email'), required: true},
+            password: { label: trans('label_password'), required: true},
         }
 
         if(!validateForm(formData, requiredFields)) {
@@ -37,8 +37,8 @@ $(function() {
         }
 
         const requiredFields = {
-            email: { label: trans('LABEL_EMAIL'), required: true},
-            password: { label: trans('LABEL_PASSWORD'), required: true},
+            email: { label: trans('label_email'), required: true},
+            password: { label: trans('label_password'), required: true},
         }
 
         if(!validateForm(formData, requiredFields)) {
@@ -60,7 +60,7 @@ $(function() {
         }
 
         const requiredFields = {
-            email: { label: trans('LABEL_EMAIL'), required: true},
+            email: { label: trans('label_email'), required: true},
         }
 
         if(!validateForm(formData, requiredFields)) {
@@ -96,8 +96,8 @@ $(function() {
         }
 
         const requiredFields = {
-            newPassword: { label: trans('LABEL_NEW_PASSWORD'), required: true},
-            confirmPassword: { label: trans('LABEL_CONFIRM_PASSWORD'), required: true}
+            newPassword: { label: trans('label_new_password'), required: true},
+            confirmPassword: { label: trans('label_confirm_password'), required: true}
         }
 
         if(!validateForm(formData, requiredFields)) {

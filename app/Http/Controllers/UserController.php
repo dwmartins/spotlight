@@ -151,7 +151,7 @@ class UserController extends Controller
         $user->password = Hash::make($request->newPassword);
         $user->save();
 
-        return redirectWithMessage('success', trans('messages.ALERT_TITLE_SUCCESS'), trans('messages.password_update'), 'user_profile');
+        return redirectWithMessage('success', trans('messages.alert_title_success'), trans('messages.password_update'), 'user_profile');
     }
 
     public function updateSettings(Request $request) {
@@ -160,7 +160,7 @@ class UserController extends Controller
         $user->acceptsEmails = $request->has('acceptsEmails') ? 'Y' : 'N';
         $user->save();
 
-        return redirectWithMessage('success', trans('messages.ALERT_TITLE_SUCCESS'), trans('messages.updated_user_settings'), 'user_profile');
+        return redirectWithMessage('success', trans('messages.alert_title_success'), trans('messages.updated_user_settings'), 'user_profile');
     }
 
     public function deleteAccount(Request $request) {
@@ -175,7 +175,7 @@ class UserController extends Controller
             $user->delete();
             Auth::logout();
 
-            return redirectWithMessage('success', trans('messages.ALERT_TITLE_SUCCESS'), trans('messages.account_deleted_successfully'), 'home_page');
+            return redirectWithMessage('success', trans('messages.alert_title_success'), trans('messages.account_deleted_successfully'), 'home_page');
         }
 
         return back();

@@ -82,7 +82,7 @@ class WebsiteInfoController extends Controller
 
         Cache::put($this->siteInfoCacheKey, $siteInfo, now()->addMinutes(config('constants.cache_time')));
 
-        return redirectWithMessage('success', trans('messages.ALERT_TITLE_SUCCESS'), trans('messages.saved_website_information'), 'app_settings_basic_info');
+        return redirectWithMessage('success', trans('messages.alert_title_success'), trans('messages.saved_website_information'), 'app_settings_basic_info');
     }
 
     public function updateFiles(Request $request) {
@@ -144,7 +144,7 @@ class WebsiteInfoController extends Controller
 
         Cache::put($this->siteInfoCacheKey, $websiteInfo, now()->addMinutes(config('constants.cache_time')));
 
-        return redirectWithMessage('success', trans('messages.ALERT_TITLE_SUCCESS'), trans('messages.saved_website_images'), 'app_settings_basic_info'); 
+        return redirectWithMessage('success', trans('messages.alert_title_success'), trans('messages.saved_website_images'), 'app_settings_basic_info'); 
     }
 
     private function getWebsiteInfo(): WebsiteInfo {

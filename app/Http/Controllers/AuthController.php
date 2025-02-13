@@ -203,7 +203,7 @@ class AuthController extends Controller
         $user->password = Hash::make($validatedData['password']);
         $user->save();
 
-        return redirectWithMessage('success', trans('messages.ALERT_TITLE_SUCCESS'), trans('messages.user_created'), 'login', ['email' => $user->email]);
+        return redirectWithMessage('success', trans('messages.alert_title_success'), trans('messages.user_created'), 'login', ['email' => $user->email]);
     }
 
     public function logout(Request $request)
@@ -307,7 +307,7 @@ class AuthController extends Controller
         
         PasswordReset::where('email', $user->email)->delete();
 
-        return redirectWithMessage('success', trans('messages.ALERT_TITLE_SUCCESS'), trans('messages.password_update'), 'login', ['email' => $user->email]);
+        return redirectWithMessage('success', trans('messages.alert_title_success'), trans('messages.password_update'), 'login', ['email' => $user->email]);
     }
 
     private function sendResetPasswordEmail($user, $token)

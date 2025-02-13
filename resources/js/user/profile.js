@@ -54,11 +54,11 @@ $(async function() {
             $(this).removeClass('invalid_field');
             const fieldName = $(this).attr('name');
             const fieldValue = $(this).val();
-            const translatedFieldName = trans(`ATTRIBUTES.${fieldName}`);
+            const translatedFieldName = trans(`attributes.${fieldName}`);
 
             if(!fieldValue) {
                 errors[fieldName] = [
-                    trans('FIELD_REQUIRED_MESSAGE', { attribute: translatedFieldName })
+                    trans('field_required_message', { attribute: translatedFieldName })
                 ];
 
                 $(this).addClass('invalid_field');
@@ -68,21 +68,21 @@ $(async function() {
         if(Object.keys(errors).length > 0) {
             e.preventDefault();
             toggleLoading(btn, false);
-            showAlert('error', trans('INVALID_FIELDS'), errors);
+            showAlert('error', trans('invalid_fields'), errors);
             return;
         }
 
         if($('#newPassword').val() !== $('#confirmPassword').val()) {
             e.preventDefault();
             toggleLoading(btn, false);
-            showAlert('error', trans('ALERT_TITLE_ERROR'), trans('PASSWORDS_NOT_MATCH'));
+            showAlert('error', trans('alert_title_error'), trans('passwords_not_match'));
         }
     });
 
     // Form Delete account
     $('#formDeleteAccount').on('submit', (e) => {
         if(!$("#confirmAccountDeletion").is(":checked")) {
-            showAlert('warning', '', trans('ALERT_DELETE_ACCOUNT'));
+            showAlert('warning', '', trans('alert_delete_account'));
             e.preventDefault();
             return;
         }
