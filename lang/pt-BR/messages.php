@@ -11,7 +11,7 @@ return [
     'app_page_general_settings' => 'Configurações / Gerais',
 
     'fatal_error_message' => 'Ops, ocorreu um erro. Tente novamente.',
-    'page_not_found' => 'A página que você tentou acessar não foi encontrada.',
+    'title_page_not_found' => 'A página que você tentou acessar não foi encontrada.',
     'navigation' => 'Navegação',
     'social_media' => 'Redes sociais',
     'developed_by' => 'Desenvolvido por',

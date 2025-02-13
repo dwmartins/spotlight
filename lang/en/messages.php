@@ -7,7 +7,7 @@ return [
     'APP_PAGE_GENERAL_SETTINGS' => 'Setting / General',
 
     'fatal_error_message' => 'Oops, an error occurred, please try again.',
-    'page_not_found' => 'The page you tried to access was not found.',
+    'title_page_not_found' => 'The page you tried to access was not found.',
     'navigation' => 'Navigation',
     'social_media' => 'Social media',
     'developed_by' => 'Developed by',

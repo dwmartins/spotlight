@@ -20,7 +20,7 @@ class UserController extends Controller
         $websiteName = config('website_info.websiteName');
 
         return view('pages.user.panel', [
-            'custom_seo_title' => trans('seo.user_panel') . ' | ' . $websiteName
+            'custom_seo_title' => trans('seo.title_user_panel') . ' | ' . $websiteName
         ]);
     }
 
@@ -32,7 +32,7 @@ class UserController extends Controller
         $websiteName = config('website_info.websiteName');
 
         return view('pages.user.profile', [
-            'custom_seo_title' => trans('seo.user_profile') . ' | ' . $websiteName
+            'custom_seo_title' => trans('seo.title_user_profile') . ' | ' . $websiteName
         ]);
     }
 

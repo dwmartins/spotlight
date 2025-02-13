@@ -35,7 +35,7 @@ class AuthController extends Controller
         }
 
         return view('pages.auth.login', [
-            'custom_seo_title' => trans('seo.login') . ' | ' . $webSiteName,
+            'custom_seo_title' => trans('seo.title_login') . ' | ' . $webSiteName,
             'userName' => $userName
         ]);
     }
@@ -65,7 +65,7 @@ class AuthController extends Controller
         $webSiteName = config('website_info.websiteName');
 
         return view('pages.auth.register', [
-            'custom_seo_title' => trans('seo.register') . ' | ' . $webSiteName
+            'custom_seo_title' => trans('seo.title_register') . ' | ' . $webSiteName
         ]);
     }
 
@@ -78,7 +78,7 @@ class AuthController extends Controller
         $webSiteName = config('website_info.websiteName'); 
 
         return view('pages.auth.recover-password', [
-            'custom_seo_title' => trans('seo.recover_password') . ' | ' . $webSiteName
+            'custom_seo_title' => trans('seo.title_recover_password') . ' | ' . $webSiteName
         ]);
     }
 

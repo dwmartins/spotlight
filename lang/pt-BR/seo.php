@@ -1,12 +1,12 @@
 <?php
 
 return [
-    'page_not_found' => 'Página não encontrada',
-    'login' => 'Entrar',
-    'home_page' => 'Página inicial',
-    'user_panel' => 'Painel do usuário',
-    'user_profile' => 'Perfil do usuário',
-    'register' => 'Criar conta',
-    'recover_password' => 'Recuperar senha',
-    'reset_password' => 'Redefinir senha',
+    'title_page_not_found' => 'Página não encontrada',
+    'title_login' => 'Entrar',
+    'title_home_page' => 'Página inicial',
+    'title_user_panel' => 'Painel do usuário',
+    'title_user_profile' => 'Perfil do usuário',
+    'title_register' => 'Criar conta',
+    'title_recover_password' => 'Recuperar senha',
+    'title_reset_password' => 'Redefinir senha',
 ];

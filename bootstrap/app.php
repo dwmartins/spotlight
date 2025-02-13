@@ -32,8 +32,8 @@ return Application::configure(basePath: dirname(__DIR__))
             }
 
             return response()->view('errors.pageNotFound', [
-                'message' => trans('messages.page_not_found'),
-                'seo_title' => trans('seo.page_not_found')
+                'message' => trans('messages.title_page_not_found'),
+                'seo_title' => trans('seo.title_page_not_found')
             ], 404);
         });
 
